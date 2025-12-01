@@ -3,72 +3,20 @@ import { motion } from 'framer-motion';
 import { Newspaper, TrendingUp, Globe, AlertTriangle } from 'lucide-react';
 
 const PoliticalNews = () => {
-    const newsItems = [
-        {
-            id: 1,
-            category: 'Macro',
-            title: "Japan's 10-Year Bond Yields Cross 1%",
-            content: "Significant move in global bond markets as Japan moves away from yield curve control. Could impact global liquidity flows.",
-            sentiment: 'neutral',
-            date: 'Today'
-        },
-        {
-            id: 2,
-            category: 'Crypto',
-            title: "Bitcoin Surges Past $96k",
-            content: "Crypto markets rally on institutional adoption and ETF inflows. MicroStrategy (MSTR) continues aggressive accumulation.",
-            sentiment: 'positive',
-            date: 'Today'
-        },
-        {
-            id: 6,
-            category: 'Politics',
-            title: "Trump Cabinet Picks",
-            content: "Markets reacting to potential deregulation with Trump's new cabinet appointments. Financials and Energy sectors seeing inflows.",
-            sentiment: 'positive',
-            date: 'Today'
-        },
-        {
-            id: 3,
-            category: 'Economy',
-            title: "US PMI Data Shows Expansion",
-            content: "Manufacturing and Services PMI came in stronger than expected, suggesting the US economy remains resilient despite high rates.",
-            sentiment: 'positive',
-            date: 'Yesterday'
-        },
-        {
-            id: 7,
-            category: 'Macro',
-            title: "DXY Strength",
-            content: "US Dollar Index strengthening as other central banks cut rates faster than the Fed, putting pressure on emerging markets.",
-            sentiment: 'neutral',
-            date: 'Yesterday'
-        },
-        {
-            id: 4,
-            category: 'Politics',
-            title: "Fed Chair Powell Signals Caution",
-            content: "Federal Reserve emphasizes data dependence, dampening hopes for immediate aggressive rate cuts.",
-            sentiment: 'negative',
-            date: 'Yesterday'
-        },
-        {
-            id: 8,
-            category: 'Crypto',
-            title: "Solana ETF Hopes",
-            content: "Speculation mounts over a potential Solana ETF approval following Ethereum's lead, driving altcoin momentum.",
-            sentiment: 'positive',
-            date: '2 days ago'
-        },
-        {
-            id: 5,
-            category: 'Commodities',
-            title: "Silver Prices Breakout",
-            content: "Industrial demand and safe-haven buying pushing silver to multi-year highs.",
-            sentiment: 'positive',
-            date: '2 days ago'
-        }
-    ];
+    const [newsItems, setNewsItems] = React.useState([]);
+
+    React.useEffect(() => {
+        const fetchNews = async () => {
+            try {
+                const response = await fetch(`${import.meta.env.BASE_URL}news.json`);
+                const data = await response.json();
+                setNewsItems(data);
+            } catch (error) {
+                console.error("Failed to fetch news:", error);
+            }
+        };
+        fetchNews();
+    }, []);
 
     const getIcon = (category) => {
         switch (category) {
