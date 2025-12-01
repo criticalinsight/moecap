@@ -23,7 +23,7 @@ const Dashboard = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const response = await axios.get('/data.json');
+                const response = await axios.get(`${import.meta.env.BASE_URL}data.json`);
                 setData(response.data);
                 if (response.data.length > 0) {
                     setSelectedTicker(response.data[0]);

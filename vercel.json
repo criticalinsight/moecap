@@ -8,8 +8,20 @@
             "destination": "/100/web/dist/index.html"
         },
         {
+            "source": "/100/assets/:path*",
+            "destination": "/100/web/dist/assets/:path*"
+        },
+        {
+            "source": "/100/data.json",
+            "destination": "/100/web/dist/data.json"
+        },
+        {
+            "source": "/100/vite.svg",
+            "destination": "/100/web/dist/vite.svg"
+        },
+        {
             "source": "/100/:path*",
-            "destination": "/100/web/dist/:path*"
+            "destination": "/100/web/dist/index.html"
         }
     ],
     "headers": [
