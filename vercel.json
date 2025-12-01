@@ -2,23 +2,19 @@
     "buildCommand": "npm run build",
     "outputDirectory": ".",
     "installCommand": "npm install",
-    "devCommand": "echo 'Dev server not configured'",
-    "routes": [
+    "rewrites": [
         {
-            "src": "/100/(.*)",
-            "dest": "/100/web/dist/$1"
+            "source": "/100",
+            "destination": "/100/web/dist/index.html"
         },
         {
-            "src": "/100",
-            "dest": "/100/web/dist/index.html"
-        },
-        {
-            "handle": "filesystem"
+            "source": "/100/:path*",
+            "destination": "/100/web/dist/:path*"
         }
     ],
     "headers": [
         {
-            "source": "/100/(.*)",
+            "source": "/100/assets/:path*",
             "headers": [
                 {
                     "key": "Cache-Control",
