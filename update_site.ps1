@@ -40,6 +40,7 @@ $nav = @"
 		<a href='#compilations'>Compilations</a>
 		<a href='#alice-schroeder'>Alice Schroeder Interview</a>
 		<a href='#fund-letters'>13F Letters</a>
+		<a href='/100'>100-Bagger Analysis</a>
 	</nav>
 "@
 
