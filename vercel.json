@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/100/:path*",
+            "destination": "https://100-bagger-analysis.vercel.app/:path*"
+        },
+        {
+            "source": "/100",
+            "destination": "https://100-bagger-analysis.vercel.app/"
+        }
+    ]
+}
