@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const StockAnalysis = ({ ticker, analysis }) => {
+const StockAnalysis = ({ ticker, analysis, news }) => {
     if (!analysis) {
         return (
             <div className="glass-card p-8 rounded-2xl text-center">
@@ -10,6 +10,9 @@ const StockAnalysis = ({ ticker, analysis }) => {
             </div>
         );
     }
+
+    // Merge dynamic news with static analysis news
+    const displayNews = [...(news || []), ...(analysis.news || [])];
 
     return (
         <div className="space-y-8">
@@ -26,7 +29,7 @@ const StockAnalysis = ({ ticker, analysis }) => {
             </motion.div>
 
             {/* Recent Updates / News */}
-            {analysis.news && analysis.news.length > 0 && (
+            {displayNews.length > 0 && (
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -37,7 +40,7 @@ const StockAnalysis = ({ ticker, analysis }) => {
                         Recent Updates
                     </h3>
                     <div className="space-y-4">
-                        {analysis.news.map((item, idx) => (
+                        {displayNews.map((item, idx) => (
                             <div key={idx} className="border-b border-white/5 last:border-0 pb-3 last:pb-0">
                                 <div className="flex justify-between items-center mb-1">
                                     <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">{item.title}</span>

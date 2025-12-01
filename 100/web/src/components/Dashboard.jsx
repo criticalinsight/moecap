@@ -272,6 +272,7 @@ const Dashboard = () => {
                         <StockAnalysis
                             ticker={selectedTicker.ticker}
                             analysis={stockAnalysis[selectedTicker.ticker.replace('.US', '')]}
+                            news={selectedTicker.news}
                         />
                     )}
                 </div>
