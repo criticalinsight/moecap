@@ -7,6 +7,7 @@ import SectorAnalysis from './SectorAnalysis';
 import ComparisonTool from './ComparisonTool';
 import StockAnalysis from './StockAnalysis';
 import PoliticalNews from './PoliticalNews';
+import Marquee from './Marquee';
 import { stockAnalysis } from '../data/stockAnalysis';
 
 const Dashboard = () => {
@@ -25,7 +26,18 @@ const Dashboard = () => {
             try {
                 const response = await axios.get(`${import.meta.env.BASE_URL}data.json`);
                 setData(response.data);
-                if (response.data.length > 0) {
+
+                const queryParams = new URLSearchParams(window.location.search);
+                const tickerParam = queryParams.get('ticker');
+
+                if (tickerParam) {
+                    const found = response.data.find(d => d.ticker === tickerParam);
+                    if (found) {
+                        setSelectedTicker(found);
+                    } else if (response.data.length > 0) {
+                        setSelectedTicker(response.data[0]);
+                    }
+                } else if (response.data.length > 0) {
                     setSelectedTicker(response.data[0]);
                 }
             } catch (error) {
@@ -78,7 +90,8 @@ const Dashboard = () => {
     }
 
     return (
-        <div className="min-h-screen p-8 font-sans text-slate-200">
+        <div className="min-h-screen p-8 font-sans text-slate-200 pt-16">
+            <Marquee data={data} />
             <header className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div>
                     <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-500 bg-clip-text text-transparent tracking-tight">
