@@ -1,0 +1,17 @@
+# Ignore unnecessary files during build
+node_modules
+.git
+*.py
+*.md
+!README.md
+.env
+.idea
+__pycache__
+*.pyc
+.DS_Store
+100/eodhd
+100/strategies
+100/visuals
+100/*.py
+100/web/node_modules
+wealth_manager/node_modules

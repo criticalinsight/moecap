@@ -1,0 +1,10 @@
+{
+    "name": "moecap",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "npm run build:100",
+        "build:100": "cd 100/web && npm install && npm run build"
+    },
+    "description": "MoeCapital - Financial Analysis Platform"
+}

@@ -1,12 +1,30 @@
 {
-    "rewrites": [
+    "buildCommand": "npm run build",
+    "outputDirectory": ".",
+    "installCommand": "npm install",
+    "devCommand": "echo 'Dev server not configured'",
+    "routes": [
         {
-            "source": "/100/:path*",
-            "destination": "https://100-bagger-analysis.vercel.app/:path*"
+            "src": "/100/(.*)",
+            "dest": "/100/web/dist/$1"
         },
         {
-            "source": "/100",
-            "destination": "https://100-bagger-analysis.vercel.app/"
+            "src": "/100",
+            "dest": "/100/web/dist/index.html"
+        },
+        {
+            "handle": "filesystem"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/100/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
         }
     ]
 }
