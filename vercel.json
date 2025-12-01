@@ -16,6 +16,10 @@
             "destination": "/100/web/dist/data.json"
         },
         {
+            "source": "/100/news.json",
+            "destination": "/100/web/dist/news.json"
+        },
+        {
             "source": "/100/vite.svg",
             "destination": "/100/web/dist/vite.svg"
         },
