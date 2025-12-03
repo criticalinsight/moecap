@@ -1,5 +1,133 @@
 [
     {
+        "id": 4956589600527811193,
+        "category": "Macro",
+        "title": "$MRVL Q3'26 Earnings Highlights",
+        "content": "$MRVL Q3'26 Earnings Highlights\n🔹\n Revenue: $2.08B (Est. $2.07B) \n🟢\n; UP +37% YoY\n🔹\n EPS (non-GAAP): $0.76 (Est. $0.74) \n🟢\nGuidance:\n🔹\n Q4'26 Revenue: $2.20B (Est. $2.17B) \n🟢\n🔹\n Q4'26 EPS (non-GAAP): $0.74–$0.84 (Est. $0.77) \n🟡\nOther Metrics:\n🔹\n Net Revenue (company reported): $2.075B; new record\n🔹\n Gross Margin (non-GAAP): 59.7%\n🔹\n Net Income (non-GAAP): $655.0M\n🔹\n Cash Flow from Operations: $582.3M\nCommentary:\n🔸\n CEO Matt Murphy: “Marvell delivered record third-quarter revenue of $2.075 billion, exceeding the midpoint of guidance, driven by strong demand for our data center products.”\n🔸\n Company expects full-year revenue growth to exceed 40% and sees accelerating demand for data center products into next year.\n🔸\n Announced acquisition of Celestial AI for $3.25B upfront (cash plus stock), adding Photonic Fabric optical interconnect technology aimed at next-gen AI data center scale-up connectivity.",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": -8721820064168861639,
+        "category": "Macro",
+        "title": "$GTLB Q3'26 Earnings Highlights",
+        "content": "$GTLB Q3'26 Earnings Highlights\n🔹\n Revenue: $244.4M (Est. $239.09M) \n🟢\n; UP +25% YoY\n🔹\n EPS: $0.25 (Est. $0.20) \n🟢\n🔸\n GitLab appointed Jessica Ross as Chief Financial Officer effective January 15, 2026, succeeding interim CFO James Shen.\nGuidance:\n🔹\n FY'26 Revenue: $946M–$947M (Est. $942M) \n🟢\n🔹\n FY'26 EPS: $0.95–$0.96 (Est. $0.84) \n🟢\n🔸\n CEO Bill Staples: “New CFO brings extensive public company experience and a proven track record leading finance, strategy, and operational excellence at some of the world’s most respected technology companies.”",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": -8630246400371511701,
+        "category": "Macro",
+        "title": "$AEO Q3'25 Earnings Highlights",
+        "content": "$AEO Q3'25 Earnings Highlights\n🔹\n Revenue: $1.36B (Est. $1.32B) \n🟢\n🔹\n EPS: $0.53 (Est. $0.43) \n🟢\nQ4'25 Outlook:\n🔹\n Oper. Income: $155M–$160M (prior $125M–$130M) \n🟢\n🔹\n Comparable Sales: +8% to +9%\n🔹\n Total Revenue: similar growth to comps\n🔹\n Gross Margin: expected DOWN YoY\n🔹\n Net Tariff Impact: ~+$50M\n🔹\n SG&A: dollars UP low to mid single digit\n🔹\n D&A: ~$56M\n🔹\n Tax Rate: ~28%\n🔹\n Weighted Avg Shares: ~173M\nFY'25 Outlook:\n🔹\n Adjusted Operating Income: $303M–$308M (prior $255M–$265M) \n🟢\n🔹\n Comparable Sales: low single digits (prior flat)\n🔹\n Gross Margin: expected DOWN YoY\n🔹\n Net Tariff Impact: ~+$70M\n🔹\n SG&A: dollars UP low to mid single digit\n🔹\n D&A: ~$216M\n🔹\n Tax Rate: ~27%\n🔹\n Weighted Avg Shares: ~174M",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": -4574809927629103231,
+        "category": "Macro",
+        "title": "NEW: 66% chance Epstein files are released before ...",
+        "content": "NEW: 66% chance Epstein files are released before December 20th according to Kalshi.",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": -832776549597986852,
+        "category": "Macro",
+        "title": "RT ",
+        "content": "RT \n@wallstengine\n: $IBM CEO says that at today’s costs it takes about $80B to build & fill a 1 GW AI data center, so the ~100 GW of announced capacity implies roughly $8T of capex & “no way you’re going to get a return on that,” since you’d need “about $800B of profit just to pay for the interest” \nhttps://t.co/76I5OpsRTa",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": 7850619505845652325,
+        "category": "Politics",
+        "title": "NEW: 75% chance that the Supreme Court rules again...",
+        "content": "NEW: 75% chance that the Supreme Court rules against Trump tariffs according to Kalshi data.",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": 853083938166715104,
+        "category": "Macro",
+        "title": "NEW: ICE to conduct large-scale operation in Minne...",
+        "content": "NEW: ICE to conduct large-scale operation in Minnesota targeting Somalian illegal immigrants.",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": -4056811590925204327,
+        "category": "Macro",
+        "title": "CrowdStrike Delivers Beat-And-Raise Q3: 'One Of Ou...",
+        "content": "CrowdStrike Delivers Beat-And-Raise Q3: 'One Of Our Best Quarters In Company History' - CEO",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": 8071942120086472603,
+        "category": "Macro",
+        "title": "$MRVL CEO on Celestial AI deal:",
+        "content": "$MRVL CEO on Celestial AI deal:\n“We are continuing to double down on data center with the acquisition of Celestial AI. This positions us to further capitalize on the massive opportunity in accelerated infrastructure.”\n“Industry analysts are forecasting the merchant portion of the scale up switch market to approach 6 billion in revenue in 2030… the opportunity actually doubles, meaning over 10 billion. These are both very large and exciting incremental opportunities for Marvell.”\n“We see even greater potential for Celestial AI’s photonic fabric to transform the scale up interconnect market.”\n“Celestial AI’s first generation product… is the industry’s first scale up optical solution, delivering an unprecedented 16 terabits per second of bandwidth in a single chiplet.”\n“Celestial AI is deeply engaged with multiple hyperscalers… [and] has already secured a major design win with one of the world’s largest hyperscalers who plans to use Celestial AI’s PEF chiplets in its next generation scale up architecture.”\n“Our base case forecast shows Celestial AI’s revenue reaching a 500 million annualized run rate in the fourth quarter of fiscal 2028, doubling to a 1 billion run rate by the fourth quarter of fiscal 2029.”",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": 7609944727533541535,
+        "category": "Macro",
+        "title": "MEDLINE IS SAID TO WEIGH MARKETING $5B US IPO AS S...",
+        "content": "MEDLINE IS SAID TO WEIGH MARKETING $5B US IPO AS SOON AS MONDAY",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": 6658737711150759620,
+        "category": "Macro",
+        "title": "Artemis Global Select Fund on Contemporary Amperex...",
+        "content": "Artemis Global Select Fund on Contemporary Amperex Technology Co., Limited (CATL) $300750 CH\nThesis: Contemporary Amperex Technology (CATL) is the world's largest lithium-ion battery manufacturer, poised for significant growth due to its scale, innovation, strong market position in electric vehicles, and positive financial outlook.\n(From their Q3’25 letter — link in bio)",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": 4984814208458577935,
+        "category": "Macro",
+        "title": "Look at that RUN!",
+        "content": "Look at that RUN!\n \nhttps://t.co/V8SqtEsaih",
+        "sentiment": "neutral",
+        "date": "2025-12-02"
+    },
+    {
+        "id": -4337379921896769007,
+        "category": "Macro",
+        "title": "Wild, if true.",
+        "content": "Wild, if true.\nThis is WILD.\nTesla just showed Optimus running. Not the stiff, pre-programmed movements we've seen before, actual running with coordinated legs and real stride patterns. \nRunning is fundamentally harder than walking because the robot loses ground contact and has to solve balance in mid air while controlling energy output. If they're comfortable showing this publicly, their motor control and AI training have leveled up significantly.\nThis matters because a humanoid that can run and navigate dynamic environments isn't confined to factory floors anymore. \nYou're talking about real deployment potential in warehouses, construction sites and service work, places designed for human bodies. That's when the unit economics and scaling potential actually become viable.\nTesla's the only player positioned to win here. They own the vertical stack, proprietary AI, sensor data from millions of vehicles feeding back into training, their own chips, and manufacturing that actually scales. \nBoston Dynamics and Figure AI might have better algorithms on paper but they don't have a flywheel or the ability to produce thousands of units cost effectively. Tesla's already built the supply chain for complexity and mass production.\nMost of the market still sees Optimus as 2030 science fair material but if they're casually demoing running robots now and can solve the cost problem, that's a multi hundred billion dollar business hiding in plain sight.\nThe real bet is whether Tesla can actually execute on production and cost which given their track record with EVs is more plausible than people think. \n- \nMilk Road AI",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": 2037027329947216688,
+        "category": "Macro",
+        "title": "OpenAI just admitted it is no longer running unopp...",
+        "content": "OpenAI just admitted it is no longer running unopposed in frontier AI. \nGoogle’s Gemini 3 is good enough and growing fast enough, that Sam Altman reportedly told teams to halt side projects and go all‑in on improving ChatGPT.\nThat is the same existential threat to the core product language Google used internally when it flagged ChatGPT as a risk to search in 2022.​\nThis is already showing up in the numbers. In the two weeks since the Gemini launch, ChatGPT’s unique daily active users on a 7‑day average are down about 6%, a real hit for a product at this scale. \nThat pullback explains why management is willing to freeze things like ads and side experiments and force the company back into pure product defense mode.​\nFor the AI trade, this is bullish competition and brutal margin pressure at the same time. \nLabs are now forced to spend more on compute, data and talent just to avoid losing share, which is great for the full AI stack from GPUs to power infrastructure, but less great for model only economics. \nThe bigger picture, the disruptor that once triggered Google’s code red is now issuing its own over a Google product, which shows how quickly leadership can flip in this cycle and how valuable the real picks and shovels will be as the model layer starts to look more and more like a commodity.\nOPENAI'S \"CODE RED\" ANNOUNCEMENT:\nThe irony of this announcement is that Google was the FIRST tech giant to issue a \"code red.\"\nOn December 21st, 2022, exactly 3 WEEKS after ChatGPT was announced, Google issued their \"code red.\"\nGoogle was concerned about ChatGPT's threat to \"the future of Google's search engine.\"\nToday, OpenAI has issued their first \"code red\" as Google's Gemini 3 model has seen massive growth.\nOpenAI is now pausing many of their \"side projects\" to focus on improving ChatGPT amid increased competition.\nWhat does this all mean?\nIn our view, this is extremely bullish and yet another sign of the technological revolution we are in now.\nThe immense competition we are seeing in AI is the perfect example of why capitalism is the backbone of innovation.\nMore competition = more innovation = more value creation.\nAsset owners will win. \n- \nThe Kobeissi Letter",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": -6071254584150316041,
+        "category": "Macro",
+        "title": "JUST IN: Representative Elise Stefanik has said th...",
+        "content": "JUST IN: Representative Elise Stefanik has said that a bill should be passed which forces Nancy Pelosi to pay back profits from stock trades made while in office.\nPelosi has a net worth of approximately $281M, per our portfolio tracking.",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": 619497274689020904,
+        "category": "Macro",
+        "title": "$BOX's (-5.54%) conservative outlook overshadowed ...",
+        "content": "$BOX's (-5.54%) conservative outlook overshadowed the quarterly beat & buyback expansion, signaling potential headwinds.. currently trading near its 52-week low of $28\n🔁\nBoard authorized a $150 million expansion of its share repurchase plan (3.4% of its current market cap)\n📊\n Fiscal Q3 Highlights:\n• Revenue $301.1M, +9% YoY (+8% cc)\n• RPO $1.5B, +18% (+19% cc); short-term +14%, long-term +25%\n• Billings $296M, +12%\n• Op cash flow $73M, +17%\n• Free cash flow $61.4M, +7%",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
         "id": -8404022441601439702,
         "category": "Macro",
         "title": "Amazon planning a new ultrafast delivery offering ...",
@@ -270,125 +398,5 @@
         "content": "South Korea got its first ~13k $NVDA GPUs, including B200s, as part of a plan to deploy 260k chips that analysts peg at about $10.4B. \nhttps://t.co/W8tnezuk5Z",
         "sentiment": "neutral",
         "date": "2025-12-01"
-    },
-    {
-        "id": 6954603871612777150,
-        "category": "Macro",
-        "title": "Heartland Mid Cap Value Plus Fund on Brady Corp. $...",
-        "content": "Heartland Mid Cap Value Plus Fund on Brady Corp. $BRC US\nThesis: Brady Corp. is a well-managed company wisely allocating capital through stock buybacks, increasing dividends, and strategic acquisitions, with strong growth potential in Aerospace and Data Centers, and a reasonable stock valuation.\n(From their Q3’25 letter — link in bio)",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 7041479684092599356,
-        "category": "Macro",
-        "title": "$LYFT says its new AI support system built with AW...",
-        "content": "$LYFT says its new AI support system built with AWS and Anthropic is now handling driver and rider issues, cutting average resolution time by 87%, with over half of cases resolved in under 3 minutes and driver usage up ~70% in 2025. \nhttps://t.co/YfybQssswD",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 2722941628955670567,
-        "category": "Macro",
-        "title": "RT ",
-        "content": "RT \n@wallstengine\n: SOFTBANK CEO SON: \n\"I didn’t want to sell a single share of $NVDA, but I needed the money to invest in OpenAI and other opportunities.\"\n\"When superintelligence comes, at least 10% of global GDP will be replaced by AI and AI robots.\" \nhttps://t.co/Xik3euU9xr",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -3079037210200515662,
-        "category": "Macro",
-        "title": "Microsoft $MSFT CEO Satya Nadella said Monday that...",
-        "content": "Microsoft $MSFT CEO Satya Nadella said Monday that his company is increasingly looking to Europe \n🇪🇺\n as a key region for its AI strategy - Politico",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 1083639490533457805,
-        "category": "Macro",
-        "title": "$MSFT increasingly looking to Europe as a key regi...",
-        "content": "$MSFT increasingly looking to Europe as a key region for its AI strategy - Politico",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 1513467153915314287,
-        "category": "Macro",
-        "title": "$SNPS NVIDIA investment implies attractive risk/re...",
-        "content": "$SNPS NVIDIA investment implies attractive risk/reward in SNPS stock - PT $600 Mizuho",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 6949511627471688797,
-        "category": "Macro",
-        "title": "U.S. Republican Senator calls for DoJ and DHS to i...",
-        "content": "U.S. Republican Senator calls for DoJ and DHS to investigate Shein, $PDD's Temu for counterfeiting - Reuters \nhttps://t.co/Tc62iuMf1g",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 1,
-        "category": "Macro",
-        "title": "Japan's 10-Year Bond Yields Cross 1%",
-        "content": "Significant move in global bond markets as Japan moves away from yield curve control. Could impact global liquidity flows.",
-        "sentiment": "neutral",
-        "date": "Today"
-    },
-    {
-        "id": 2,
-        "category": "Crypto",
-        "title": "Bitcoin Surges Past $96k",
-        "content": "Crypto markets rally on institutional adoption and ETF inflows. MicroStrategy (MSTR) continues aggressive accumulation.",
-        "sentiment": "positive",
-        "date": "Today"
-    },
-    {
-        "id": 6,
-        "category": "Politics",
-        "title": "Trump Cabinet Picks",
-        "content": "Markets reacting to potential deregulation with Trump's new cabinet appointments. Financials and Energy sectors seeing inflows.",
-        "sentiment": "positive",
-        "date": "Today"
-    },
-    {
-        "id": 3,
-        "category": "Economy",
-        "title": "US PMI Data Shows Expansion",
-        "content": "Manufacturing and Services PMI came in stronger than expected, suggesting the US economy remains resilient despite high rates.",
-        "sentiment": "positive",
-        "date": "Yesterday"
-    },
-    {
-        "id": 7,
-        "category": "Macro",
-        "title": "DXY Strength",
-        "content": "US Dollar Index strengthening as other central banks cut rates faster than the Fed, putting pressure on emerging markets.",
-        "sentiment": "neutral",
-        "date": "Yesterday"
-    },
-    {
-        "id": 4,
-        "category": "Politics",
-        "title": "Fed Chair Powell Signals Caution",
-        "content": "Federal Reserve emphasizes data dependence, dampening hopes for immediate aggressive rate cuts.",
-        "sentiment": "negative",
-        "date": "Yesterday"
-    },
-    {
-        "id": 8,
-        "category": "Crypto",
-        "title": "Solana ETF Hopes",
-        "content": "Speculation mounts over a potential Solana ETF approval following Ethereum's lead, driving altcoin momentum.",
-        "sentiment": "positive",
-        "date": "2 days ago"
-    },
-    {
-        "id": 5,
-        "category": "Commodities",
-        "title": "Silver Prices Breakout",
-        "content": "Industrial demand and safe-haven buying pushing silver to multi-year highs.",
-        "sentiment": "positive",
-        "date": "2 days ago"
     }
 ]
