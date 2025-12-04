@@ -1,5 +1,133 @@
 [
     {
+        "id": -502879377712938179,
+        "category": "Macro",
+        "title": "Bloomberg says Intel $INTC finished a strategic re...",
+        "content": "Bloomberg says Intel $INTC finished a strategic review of its networking division and decided to keep it in house rather than sell or spin it.",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": -5613662667771661823,
+        "category": "Macro",
+        "title": "NEW: Over 54% of Americans, approximately 130 mill...",
+        "content": "NEW: Over 54% of Americans, approximately 130 million people, now read below a 6th grade level according to National Literacy Institute data.",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": -2825196756531022747,
+        "category": "Politics",
+        "title": "TRUMP PRAISES $F FORD'S F-150",
+        "content": "TRUMP PRAISES $F FORD'S F-150",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": -6658512087290400513,
+        "category": "Macro",
+        "title": "$CRM",
+        "content": "$CRM\nQ3 EPS $3.25, $2.86 Est\nRevenue $10.3B, $10.27B Est\nGUIDANCE:\nQ4 2026 EPS $3.02-$3.04, $3.03 Est\nQ4 2026 revenue $11.13-11.23B, $10.91B Est",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": -6490579138154472339,
+        "category": "Macro",
+        "title": "$CRM Q3'26 Earnings Highlights",
+        "content": "$CRM Q3'26 Earnings Highlights\n🔹\n Revenue: $10.3B (Est. $10.27B) \n🟢\n; UP +9% YoY \n🔹\n Diluted EPS: $3.25 (Est. $2.86) \n🟢\n🔹\n Subscription & Support: $9.7B; UP +10% YoY \n🔹\n Current RPO: $29.4B; UP +11% YoY\n🔹\n Total RPO: $59.5B; UP +12% YoY\nQ4'26 Guide:\n🔹\n Revenue: $11.13B–$11.23B (Est. $10.91B) \n🟢\n; +11%–12% YoY (+10%–11% CC; ~3 pts from Informatica)\n🔹\n Non-GAAP EPS: $3.02–$3.04 (Est. $3.03) \n🟡\n🔹\n GAAP EPS: $1.47–$1.49\n🔹\n cRPO Growth: ~+15% YoY (~+13% CC; ~4 pts from Informatica)\nFY26 Guide:\n🔹\n Revenue: $41.45B–$41.55B; +9%–10% YoY (~+9% CC; ~80 bps from Informatica)\n🔹\n GAAP Operating Margin: 20.3%\n🔹\n Non-GAAP Operating Margin: 34.1%\n🔹\n GAAP EPS: $7.22–$7.24\n🔹\n Non-GAAP EPS: $11.75–$11.77\n🔹\n Operating Cash Flow Growth: ~+13%–14% YoY\n🔹\n Free Cash Flow Growth: ~+13%–14% YoY\n🔹\n Subscription & Support Revenue Growth: slightly above +10% YoY (slightly below +10% CC; ~80 bps from Informatica)\nQ3 Segment Performance:\n🔹\n Agentforce & Data 360 ARR: ~$1.4B; UP +114% YoY\n🔹\n Agentforce ARR: >$0.5B in Q3; UP +330% YoY\n🔹\n Agentforce Accounts in Production: +70% QoQ\n🔹\n Agentforce & Data 360 Q3 Bookings: ~50% from existing customer expansion\nOther Metrics:\n🔹\n GAAP Operating Margin: 21.3%\n🔹\n Non-GAAP Operating Margin: 35.5%\n🔹\n Operating Cash Flow: $2.3B; UP +17% YoY\n🔹\n Free Cash Flow: $2.2B; UP +22% YoY\n🔹\n Agentforce Deals Since Launch: >18,500 total; >9,500 paid deals, UP +50% QoQ\n🔹\n Agentforce Tokens Processed: >3.2 trillion through LLM gateway\n🔹\n Data 360 Records Ingested in Q3: 32 trillion; UP +119% YoY\n🔹\n Zero Copy Records: 15 trillion; UP +341% YoY\n🔹\n Unstructured Data Processed: +390% YoY\n🔹\n Nearly 90% of Forbes Top 50 AI companies run on Salesforce, with an average of 4 clouds\nCapital Return:\n🔹\n Capital Returned to Shareholders: $4.2B in Q3\n🔹\n Share Repurchases: $3.8B\n🔹\n Dividends: $395M\n🔹\n Free Cash Flow (Q3): $2.2B; UP +22% YoY\nCommentary:\n🔸\n “We are raising fiscal year 2026 revenue guidance to $41.45 billion to $41.55 billion, and Q3 cRPO was exceptional, up 11% year-over-year at $29.4 billion, signaling a powerful pipeline of future revenue.” – Marc Benioff, Chair & CEO\n🔸\n “Our Agentforce and Data 360 products are the momentum drivers, hitting nearly $1.4 billion in ARR—an explosive 114% year-over-year gain. We now have over 9,500 paid Agentforce deals and 3.2 trillion tokens processed, underscoring our leadership in building the Agentic Enterprise and driving real outcomes.” – Marc Benioff\n🔸\n “Our Q3 momentum and continued Agentforce adoption further reinforces our path to achieve our $60 billion plus organic revenue target and our Profitable Growth Framework target of 50 by FY30.” – Robin Washington, President and CFO/COO",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": 7618632680900233627,
+        "category": "Macro",
+        "title": "Snowflake and Anthropic announce $200M AI partners...",
+        "content": "Snowflake and Anthropic announce $200M AI partnership expansion",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": 8979381407922850746,
+        "category": "Macro",
+        "title": "$PATH Q3'26 Earnings Highlights",
+        "content": "$PATH Q3'26 Earnings Highlights\n🔹\n Revenue: $411.11M (Est. $391.98M) \n🟢\n; UP +16% YoY\n🔹\n EPS: $0.16 (Est. $0.15) \n🟢\n🔹\n ARR: $1.782B; UP +11% YoY\n🔹\n Non-GAAP Gross Margin: 85%\nGuidance:\n🔹\n Q4 Revenue: $462M–$467M (Est. $463.3M) \n🟡\n🔹\n Q4 ARR: $1.844B–$1.849B\n🔹\n Q4 Non-GAAP Operating Income: ~$140M\nSegment Performance:\n🔹\n Net New ARR: $59M\n🔹\n Dollar-Based Net Retention Rate: 107%\nOther Metrics:\n🔹\n GAAP Gross Margin: 83%\n🔹\n GAAP Operating Income: $13M\n🔹\n Non-GAAP Operating Income: $88M\n🔹\n Net Cash Flow from Operations: $28M\n🔹\n Non-GAAP Adjusted Free Cash Flow: $28M\n🔹\n Cash, Cash Equivalents & Marketable Securities: $1.52B\nCommentary:\n🔸\n “I am pleased with our third quarter results delivering ARR of $1.782 billion, up 11 percent year-over-year, a testament to the team’s focus, consistent execution, and the momentum we're seeing as customers scale agentic automation across the enterprise.” – Daniel Dines, Founder & CEO\n🔸\n “Enterprises are accelerating their AI and automation strategies, and they’re looking for a unified platform rather than standalone tools. Our ability to bring deterministic automation, agentic automation, and orchestration together in one trusted, governed system is a true differentiator.” – Daniel Dines\n🔸\n “We delivered solid third quarter results, exceeding guidance across the board and achieving our first GAAP profitable third quarter.” – Ashim Gupta, COO & CFO",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": 7435043714750850664,
+        "category": "Macro",
+        "title": "$PVH Q3'26 Earnings Highlights",
+        "content": "$PVH Q3'26 Earnings Highlights\n🔹\n Revenue: $2.29B (Est. $2.28B) \n🟢\n🔹\n EPS: $2.83 (Est. $2.53) \n🟢\n🔹\n Sees FY26 EPS: $10.85–$11.00 (Est. $10.88) \n🟡",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": 6965526017453231207,
+        "category": "Macro",
+        "title": "$SYM launched a 10M share Class A offering, with 6...",
+        "content": "$SYM launched a 10M share Class A offering, with 6.5M new shares from the company and 3.5M from SoftBank’s SVF Sponsor III, plus a 30 day option for another 1.5M shares. \nhttps://t.co/KO0kcFso7Q",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": -5895429872053014290,
+        "category": "Macro",
+        "title": "Alaska Air Group $ALK cut its Q4 2024 EPS guide to...",
+        "content": "Alaska Air Group $ALK cut its Q4 2024 EPS guide to about $0.10 from at least $0.40, citing roughly $0.25 hit from an October IT/cloud outage, about $0.15 from shutdown-driven FAA flight cuts (~600 cancellations, 40,000 passengers), plus higher fuel and taxes. Revenue is back to positive YoY but still below pre-shutdown trends.",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": -7448541041894442574,
+        "category": "Politics",
+        "title": "NEW: President Trump doubles down, reiterating tha...",
+        "content": "NEW: President Trump doubles down, reiterating that he thinks affordability issues are a hoax,\n“I think affordability is the greatest con job.”",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": 3136309395985563841,
+        "category": "Macro",
+        "title": "PARAMOUNT $PSKY RAISES BREAKUP FEE IN WARNER BROS....",
+        "content": "PARAMOUNT $PSKY RAISES BREAKUP FEE IN WARNER BROS. $WBD BID TO $5 BILLION",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": -6000378134258658594,
+        "category": "Macro",
+        "title": "NEW: Candace Owens has agreed to a public discussi...",
+        "content": "NEW: Candace Owens has agreed to a public discussion with TPUSA to discuss her theories regarding the murder of founder Charlie Kirk.",
+        "sentiment": "neutral",
+        "date": "2025-12-03"
+    },
+    {
+        "id": 2650039526336623357,
+        "category": "Macro",
+        "title": "BREAKING: Representatives Brian Fitzpatrick has si...",
+        "content": "BREAKING: Representatives Brian Fitzpatrick has signed Rep. Luna's discharge petition to force a vote on a congressional stock trading ban. \nhttps://t.co/vvb7gjVfBJ",
+        "sentiment": "neutral",
+        "date": "2025-12-04"
+    },
+    {
+        "id": -922586645586520875,
+        "category": "Macro",
+        "title": "JUST IN: Representative Mike Lawler has signed Rep...",
+        "content": "JUST IN: Representative Mike Lawler has signed Rep. Luna's discharge petition to force a vote on a congressional stock trading ban. \nhttps://t.co/S3J3OGJWCZ",
+        "sentiment": "neutral",
+        "date": "2025-12-04"
+    },
+    {
+        "id": -6690572044665879325,
+        "category": "Macro",
+        "title": "TLT short interest shows a textbook mismatch betwe...",
+        "content": "TLT short interest shows a textbook mismatch between what traders are betting on and what the actual market is doing. \nShort interest in TLT (a 20+ year Treasury bond ETF) has hit an all-time high while the ETF price itself has been declining from recent peaks. \nBasically, a massive number of traders have borrowed TLT shares and sold them short, betting the price will keep falling. \nTLT prices move inverse to interest rates, when rates fall, bonds rally hard. \nRight now, the labor market is weakening faster than expected, and the market is pricing in a significant probability of a Fed rate cut at the December meeting. \nIf rates do come down, TLT doesn't just go up a little, it can spike significantly, especially on a 20-year duration bond.\n All those shorts who are underwater would be forced to cover by buying back their shares, which creates a feedback loop that pushes prices even higher. \nThe really interesting part is how much of this short position is actually driven by options dealers hedging call options rather than pure directional bets.\n$TLT short interest jumps to an all-time high \n📈\n📈\n Here we go! https://t.co/QXqs0VNfUQ \n- \nBarchart",
+        "sentiment": "neutral",
+        "date": "2025-12-04"
+    },
+    {
         "id": 4956589600527811193,
         "category": "Macro",
         "title": "$MRVL Q3'26 Earnings Highlights",
@@ -268,134 +396,6 @@
         "category": "Macro",
         "title": "BNEF now sees US data center power demand jumping ...",
         "content": "BNEF now sees US data center power demand jumping from ~40 GW today to 106 GW by 2035, nearly 3x and 36% above its April outlook. \nAverage new sites top 100 MW, almost 25% above 500 MW, as AI nears 40% of compute. \nhttps://t.co/hntPuugDXb",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -8686754012060075123,
-        "category": "Macro",
-        "title": "re:Invent: New agentic capabilities in AWS Transfo...",
-        "content": "re:Invent: New agentic capabilities in AWS Transform enable rapid modernization of any code or application",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 4099822757758552900,
-        "category": "Macro",
-        "title": "Deutsche Bank’s Bankim Chadha is calling for the S...",
-        "content": "Deutsche Bank’s Bankim Chadha is calling for the S&P 500 $SPX to hit 8,000 by the end of 2026, about 18% above here, on earnings growth broadening beyond megacap tech. Says positioning is only “pretty close to neutral” and multiples can stay elevated. \nhttps://t.co/QrLsYRfG0p",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -953976399167514664,
-        "category": "Macro",
-        "title": "Starbucks $SBUX reaches $38.9 million settlement w...",
-        "content": "Starbucks $SBUX reaches $38.9 million settlement with NYC on worker protection violations - WSJ",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 8853765881997788472,
-        "category": "Macro",
-        "title": "RT ",
-        "content": "RT \n@_Investinq\n: Japan's bond market is in crisis. Investors are aggressively shorting Japanese government bonds, open interest hit 188,000 contracts, the highest since September 2024. \nBond prices fell 2.6% and yields jumped to 1.81%, the highest since 2008. The structural support that held this market together for decades is breaking down. The Bank of Japan and domestic insurance companies used to automatically buy Japanese bonds, keeping yields artificially low. Now the BoJ is reducing purchases, life insurers are net sellers and foreign investors are leaving. Meanwhile, Japan's government announced massive stimulus spending, meaning more debt issuance when fewer buyers exist.\nThis creates a vicious cycle. As yields rise, bond prices fall, creating losses for Japanese banks and insurers. When losses mount, they're forced to sell more bonds, pushing yields even higher. The government then needs to borrow more just to pay interest on existing debt. \nFor Japan's economy, higher borrowing costs directly reduce spending and hit purchasing power at the wrong time. For global markets, forced selling by Japanese institutions could create contagion across stocks, bonds, and currencies. The Bank of Japan is trapped, support the market and weaken the yen or let yields rise and risk a financial crisis. Decades of automatic buying are ending, and Japanese yields are finally pricing in real fiscal risk.\nPressure on Japanese government bonds is surging:\nOpen interest in the front month of Japan’s 10Y government bond futures just hit 188,000 contracts, the highest since September 2024.\nThe number of outstanding futures contracts that are still active has surged +65,000 since June.\nSince then, Japan’s 10Y bond futures have declined -2.6%, to 135, near the lowest since June 2008.\nDuring the same period, the 10Y government bond yield has risen +34 basis points, to 1.81%, the highest since June 2008.\nRising open interest, along with falling prices, suggests a growing accumulation of short positions among investors.\nJapan's bond market is in trouble. \n- \nThe Kobeissi Letter",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 2200521724630349805,
-        "category": "Macro",
-        "title": "$ORCL Deutsche Bank",
-        "content": "$ORCL Deutsche Bank\nWith shares currently trading at 27x consensus CY26 EPS (which is burdened by upfront costs in scaling the AI business) there appears to be limited appetite to underwrite much more than what can be demonstrated in the here and now. While we appreciate the financial and operational risks, our view is that these are much more than offset by the very real opportunity as OpenAI backlog represents solid ROI business, continues to advance as planned, and validates Oracle's leadership in deploying AI cloud infrastructure at scale. This exercise intends to help frame the risk/reward currently embedded in shares, which we'd argue skews strongly to the upside and amidst the pullback presents an attractive entry point for investors when looking at Oracle's business in totality. We reiterate our Buy rating and DCF derived target price of $375, which implies ~38x our CY27E non-GAAP EPS",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -7355687878286921381,
-        "category": "Crypto",
-        "title": "RT ",
-        "content": "RT \n@_Investinq\n: Bitcoin’s selling off because macro and positioning lined up badly at the same time. Japanese 2 year bond yields popping above 1% for the first time since 2008 is the market’s way of saying the Bank of Japan might actually tighten after years of ultra cheap money.  When that backdrop shifts, global risk gets repriced, volatility picks up and the fastest thing big money can hit is liquid high beta stuff like BTC. \nThis move is really about leverage getting flushed. That initial macro driven drop was enough to crack some short term support levels and trigger stops, which then started liquidating crowded long perp positions. Once exchanges are force selling hundreds of millions of dollars of leveraged longs into a thin overnight order book, you get that straight down candle, each liquidation chews through bids, gaps the book and drags the next group of margin stretched traders into the same trap.\nThe bigger point is that Bitcoin is behaving like a macro asset that’s very sensitive to interest rate expectations and global liquidity not as some isolated digital gold immune from the rest of the system. As long as the story is that yields can rise and safe assets pay more, BTC faces a headwind and trades as high beta risk.\nBREAKING: Bitcoin falls -$4,000 in 2 hours as mass liquidations return.\n$400 million worth of levered longs have been liquidated over the last 60 minutes. https://t.co/qKB7MYJapu \n- \nThe Kobeissi Letter",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -5337614467222375028,
-        "category": "Macro",
-        "title": "RT ",
-        "content": "RT \n@cultured\n: A record breaking $188M was earned by people on Whop last month.\n> 120+ people made more than $250K\n> 300+ people made more than $100K\n> 600+ people made more than $50K\n> 2,000+ earned more than $10K\n> 35,000+ earned more than $1\n \nThere has never been a more important time for an open internet market to exist, where people can exchange ideas, software, and even physical products.\nWith support for physical products added a month ago, we’ve already created an extra $36M in annualized revenue for our merchant base.\nWe are now working hard to make it easier for more people to create quality offerings, opening up our payments and payouts infrastructure for other platforms, and expanding our affiliates + advertising products so that everyone has out of the box distribution by selling on Whop. \nNext up, we’ll be releasing new things you can do with your earned money on Whop.\nMore soon \n🚀",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -7799825769091566101,
-        "category": "Macro",
-        "title": "Klarna reported a 45% surge in U.S sales leading u...",
-        "content": "Klarna reported a 45% surge in U.S sales leading up to Black Friday, driven by shoppers buying big ticket items like Apple AirPods 4, PS5s, and Birkenstocks. While millions of consumers wanted these premium goods, most chose to finance them rather than paying cash upfront. This massive shift confirms that Buy Now, Pay Later has become a mainstream habit, allowing people to lock in luxury items while spreading out the cost to manage their cash flow.  \nThis trend is a textbook example of the K shaped economy. In this split reality, wealthier shoppers are doing just fine, comfortably buying expensive tech and luxury goods. Meanwhile, lower and middleincome consumers are feeling the squeeze from inflation and high costs, so they are forced to rely on financing tools just to participate in the holiday season. It creates a deceptive picture, retail numbers look great because the dollar amounts are high but the underlying story is that many people are borrowing against their future just to keep up with the present.  \nThe implication is that our economy is becoming increasingly divided. Retailers are surviving because the haves are still spending and the have nots are leveraging debt to act like they are. Flexible payment options have become the bridge keeping this two tier system connected, ensuring sales volume stays high even as financial stability for many shoppers becomes more fragile. Ultimately, we are seeing a holiday season fueled as much by credit and financing as by actual disposable income.\nKLARNA REPORTS 45% BLACK FRIDAY GROWTH\nKlarna saw a 45% year-over-year increase in U.S. sales from November 1 through Black Friday. Footwear, tech, beauty, and home goods all performed strongly.\nBirkenstock led footwear, Apple AirPods 4 topped tech, PS5 models led gaming, and Baccarat Rouge 540 ranked first in beauty. Ninja products dominated home goods, with mattresses jumping to second place.\nKlarna’s data is based on online and in-app activity during Black Friday weekend. The company serves 114 million users and 850,000 retailers globally. \n- \n*Walter Bloomberg",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -8490327995938209572,
-        "category": "Macro",
-        "title": "RT ",
-        "content": "RT \n@_Investinq\n: Japan’s 10 year government bond yield jumping to around 1.8% basically means Japan’s borrowing cost is suddenly way higher than it has been in almost two decades (save this). \nFor years, Japan lived in a world of near zero interest rates where the central bank bought a ton of government bonds and kept yields pinned down. Now inflation has picked up, the central bank is slowly stepping back and the new government is planning a big, debt funded spending package so investors are demanding more interest to keep lending to Japan’s government.\nTo Put simply, markets are starting to worry about how much Japan has borrowed and whether the government is being disciplined. When that trust weakens, bond prices fall and yields shoot up which is what the chart is showing. \nHigher yields mean, the government has to spend more just to pay interest on its huge debt, banks and insurers that hold those bonds can take mark to market hits, and borrowing costs across the economy (for mortgages, business loans, etc.) drift higher over time\nThere are knock on effects for the rest of the world too. Japan is one of the biggest players in global bond markets, and its ultra low yields have long funded carry trades into foreign assets; as Japanese yields rise, some of that money can get pulled back home which can pressure other bond markets and risk assets.\nBREAKING: Japan's 10Y Government Bond Yield surges to 1.84%, its highest level since April 2008.\nThis chart is concerning to say the least. https://t.co/fBkMMyBnqy \n- \nThe Kobeissi Letter",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -6335512123342661905,
-        "category": "Macro",
-        "title": "Interactive Brokers $IBKR November activity: ",
-        "content": "Interactive Brokers $IBKR November activity: \nDARTs were 4.27M, up 29% YoY but 4% below October. \nClient equity came in at $770B, up 34% YoY, with 4.31M accounts (+33% YoY). \nMargin loans hit $83B (+38% YoY) and client cash/credit balances were $154B (+30% YoY).",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -3183881932802291249,
-        "category": "Macro",
-        "title": "BloombergNEF has bumped its US data center power f...",
-        "content": "BloombergNEF has bumped its US data center power forecast by 36%. \nThey now see demand hitting about 106 GW by 2035, with AI workloads rising from roughly 12% of capacity today to close to 40%. \nFor context, 1 GW is about one nuclear unit’s output.",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -1842921501607436282,
-        "category": "Politics",
-        "title": "NEW: President Trump has again invited Israeli PM ...",
-        "content": "NEW: President Trump has again invited Israeli PM Benjamin Netanyahu to the White House for what will be his fifth visit of Trump’s second term.",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": 3764445519656029301,
-        "category": "Politics",
-        "title": "President Trump's meme coin has now fallen 92% fro...",
-        "content": "President Trump's meme coin has now fallen 92% from its all-time high.\nStill have not seen any politicians buying it.",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -7730004833970011841,
-        "category": "Macro",
-        "title": "RT ",
-        "content": "RT \n@bubbleboi\n: 7 Predictions for the Next 3 Years\n- Intel becomes a trillion dollar company as it takes away half of TSMC’s market cap as well as cutting out Broadcom Marvell & MediaTek as middle men\n- Nvidia loses pricing power and margins as all big tech companies come together and invest in their own ASIC stack & maybe collaborate on things like XLA & PyTorch support. \n- Google with Gemini becomes the defacto standard LLM for most applications and Google dominates the application layer (Windsurf acquisition was just a hint of that)  \n- HBM becomes much less important as models scale to hundreds of trillions of parameters. Having fast dense flash memory on boards with a small amount of DDR memory in between as a buffer becomes the right architecture hiding any bandwidth or latency issues. \n- China created a 5 nm equivalent node and makes HBM, DDR, NAND that is competitive on the global scale. \n- Taiwan gets either a blockade or an invasion leading to chips and defense stocks with mainly U.S. production spiking to the stratosphere expect Micron, Dell, & Intel Ofc to become trillion dollar companies during this brief period.\n- Bubble Boi gets a six pack and a sharp jaw line as he engages in a looksmaxxing transformation by following Clavicular’s routine.",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -5955241926179625073,
-        "category": "Macro",
-        "title": "Jane Street and Citadel Securities reported higher...",
-        "content": "Jane Street and Citadel Securities reported higher Q3 trading revenue, with Jane Street at about record $6.83B, up 18% YoY and Citadel Securities at about record $2.64B, up 9%. \nhttps://t.co/LDCDqdnSVR",
-        "sentiment": "neutral",
-        "date": "2025-12-01"
-    },
-    {
-        "id": -2387883802650724748,
-        "category": "Macro",
-        "title": "South Korea got its first ~13k $NVDA GPUs, includi...",
-        "content": "South Korea got its first ~13k $NVDA GPUs, including B200s, as part of a plan to deploy 260k chips that analysts peg at about $10.4B. \nhttps://t.co/W8tnezuk5Z",
         "sentiment": "neutral",
         "date": "2025-12-01"
     }
