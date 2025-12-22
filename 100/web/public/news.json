@@ -1,5 +1,69 @@
 [
     {
+        "id": 1856438845422623627,
+        "category": "Macro",
+        "title": "“what’s your greatest weakness”",
+        "content": "“what’s your greatest weakness”\nI’m too stupid to know when to give up\n“what’s your greatest strength”\nI’m too stupid to know when to give up \nhttps://t.co/NHHyG3YLrT",
+        "sentiment": "neutral",
+        "date": "2025-12-21"
+    },
+    {
+        "id": -8643869029758753084,
+        "category": "Macro",
+        "title": "Sands Capital Global Growth on 3i Group $III LN",
+        "content": "Sands Capital Global Growth on 3i Group $III LN\nThesis: 3i Group is a London-based private equity firm with a strategic investment in Action, Europe's largest non-food discount retailer, poised for significant expansion and underpinned by strong unit economics and operational efficiency.\n(From their Q3’25 letter — link in bio)",
+        "sentiment": "neutral",
+        "date": "2025-12-21"
+    },
+    {
+        "id": -3568031266970077821,
+        "category": "Macro",
+        "title": "The quality of US economic data is deteriorating i...",
+        "content": "The quality of US economic data is deteriorating in ways that matter for anyone trying to understand the economy or make financial decisions. \nThe Current Population Survey which measures unemployment and labor market health each month, is becoming increasingly unreliable because fewer people are responding to it.\nThe response rate has crashed to just 64%, the lowest on record, down from over 90% before 2012. \nThat's a 30 point decline since 2020 alone. \nPeople are simply less willing to participate in government surveys anymore due to privacy concerns, distrust, or just being busier. \nThe government's job market data now comes from a shrinking and unrepresentative slice of the population.​\nWhen fewer people respond, the people who do respond tend to be systematically different from those who don't. \nResearch shows that survey respondents are wealthier and have more stable employment than non respondents. \nThis creates a blind spot in the data, unemployment and job growth statistics are biased toward capturing the experience of more affluent workers while missing important signals from other parts of the economy.​\nThe BLS tries to fix this with mathematical adjustments to compensate for missing responses but as rates have fallen, these adjustments have become enormous and unreliable.\n It's like estimating what an entire population looks like based on just 64% of responses, with that 64% being increasingly unrepresentative. \nThe unemployment rate and employment statistics you see each month may not be accurately capturing the true state of the labor market and research suggests the real unemployment rate could be meaningfully higher than officially reported. \nSince the entire financial system and Fed policy decisions depend on this data being accurate, this deterioration in data quality introduces real uncertainty into every major economic decision\nThe quality of US economic data continues to deteriorate:\nThe Current Population Survey response rate, which the BLS uses to calculate the unemployment rate, is down to 64%, the lowest on record.\nThis is even lower than the brief drop seen during the 2020 pandemic.\nSince the start of 2020, the response rate has fallen ~30 points.\nTo put this into perspective, the response rate was over 90% before 2012.\nIn other words, fewer people are answering the survey the BLS uses to measure unemployment, labor force participation, full-time and part-time jobs, and other key metrics.\nAs a result, labor market estimates are relying on less complete information and may be less accurate.\nWhat is happening here? \n- \nThe Kobeissi Letter",
+        "sentiment": "neutral",
+        "date": "2025-12-21"
+    },
+    {
+        "id": 2799309624581702862,
+        "category": "Macro",
+        "title": "Sands Capital Emerging Markets Growth on Bharti Ai...",
+        "content": "Sands Capital Emerging Markets Growth on Bharti Airtel $BHARTI IN\nThesis: Bharti Airtel is a strong Indian telecom leader poised for growth, benefiting from an expanding market, improved pricing power, and rising profitability due to enhanced operational efficiency and reduced capital expenditures.\n(From their Q3’25 letter — link in bio)",
+        "sentiment": "neutral",
+        "date": "2025-12-21"
+    },
+    {
+        "id": -3819224056631551967,
+        "category": "Politics",
+        "title": "NEW: Israeli PM Benjamin Netanyahu reportedly set ...",
+        "content": "NEW: Israeli PM Benjamin Netanyahu reportedly set to ask Trump for direct US involvement in new strikes on Iran during coming visit to Mar-a-Lago.",
+        "sentiment": "neutral",
+        "date": "2025-12-21"
+    },
+    {
+        "id": -5577289743382849626,
+        "category": "Macro",
+        "title": "Gabelli Funds on National Fuel Gas Co. $NFG US",
+        "content": "Gabelli Funds on National Fuel Gas Co. $NFG US\nThesis: National Fuel Gas Co. is a growing gas and pipeline utility with a strong exploration and production business, benefiting from rising gas prices and data center demand while returning value to shareholders through stock buybacks and increased dividends.\n(From their Q3’25 letter — link in bio)",
+        "sentiment": "neutral",
+        "date": "2025-12-21"
+    },
+    {
+        "id": 7611526437608570199,
+        "category": "Macro",
+        "title": "TCW Relative Value Large Cap on Entergy Corporatio...",
+        "content": "TCW Relative Value Large Cap on Entergy Corporation $ETR US\nThesis: Entergy Corporation is a vertically integrated electric utility with significant growth potential due to new management initiatives and increasing demand from hyperscale customers.\n(From their Q3’25 letter — link in bio)",
+        "sentiment": "neutral",
+        "date": "2025-12-21"
+    },
+    {
+        "id": 5144882525065037939,
+        "category": "Macro",
+        "title": "TAMIM Global Equities High Conviction 0825 on Evon...",
+        "content": "TAMIM Global Equities High Conviction 0825 on Evonik $EVK GR\nThesis: Evonik is a global leader in specialty chemicals with strong growth prospects in amino acids, resilient profitability, and a solid dividend yield above 7%, despite facing short-term challenges from a weaker European economy.\n(From their Q3’25 letter — link in bio)",
+        "sentiment": "neutral",
+        "date": "2025-12-21"
+    },
+    {
         "id": -6958228540816770045,
         "category": "Macro",
         "title": "BREAKING: Fox News is reporting that “politically ...",
@@ -332,70 +396,6 @@
         "category": "Macro",
         "title": "Brown Advisory Small Cap Fundamental Value on Cush...",
         "content": "Brown Advisory Small Cap Fundamental Value on Cushman & Wakefield $CWK US\nThesis: Cushman & Wakefield is a global commercial real estate broker poised for growth and reduced debt, potentially narrowing its valuation gap with peers.\n(From their Q3’25 letter — link in bio) \nhttps://t.co/rveaElGsbJ",
-        "sentiment": "neutral",
-        "date": "2025-12-18"
-    },
-    {
-        "id": 6943838008502063361,
-        "category": "Macro",
-        "title": "EMCOR Group, Inc. announces a dividend increase an...",
-        "content": "EMCOR Group, Inc. announces a dividend increase and boosts its existing share repurchase authorization by an additional $500 million\n$EME",
-        "sentiment": "neutral",
-        "date": "2025-12-18"
-    },
-    {
-        "id": -2098877570907640413,
-        "category": "Macro",
-        "title": "NEW: ADL CEO Jonathan Greenblatt says X users shou...",
-        "content": "NEW: ADL CEO Jonathan Greenblatt says X users should be personally held responsible for the “growing cesspool of antisemitism that is fueling violence against Jewish people across the world.”",
-        "sentiment": "neutral",
-        "date": "2025-12-18"
-    },
-    {
-        "id": -2771759553747459064,
-        "category": "Macro",
-        "title": "Greenhaven Road Capital on Cellebrite $CLBT US",
-        "content": "Greenhaven Road Capital on Cellebrite $CLBT US\nThesis: Cellebrite is well-positioned for future growth due to its unique products, high customer value, and upcoming AI tools, despite current market challenges.\n(From their Q3’25 letter — link in bio) \nhttps://t.co/vrYgAFc6zP",
-        "sentiment": "neutral",
-        "date": "2025-12-18"
-    },
-    {
-        "id": 1581658978624008259,
-        "category": "Macro",
-        "title": "BREAKING: Police identify Brown University shootin...",
-        "content": "BREAKING: Police identify Brown University shooting suspect, issue warrant for their arrest.",
-        "sentiment": "neutral",
-        "date": "2025-12-18"
-    },
-    {
-        "id": 694103227084405853,
-        "category": "Macro",
-        "title": "BREAKING: Police identify Brown University shootin...",
-        "content": "BREAKING: Police identify Brown University shooting suspect, issue warrant for his arrest.",
-        "sentiment": "neutral",
-        "date": "2025-12-18"
-    },
-    {
-        "id": -6545624873002635698,
-        "category": "Macro",
-        "title": "NEW: Justice Department reportedly frustrated and ...",
-        "content": "NEW: Justice Department reportedly frustrated and racing to redact Epstein files before deadline.",
-        "sentiment": "neutral",
-        "date": "2025-12-18"
-    },
-    {
-        "id": -4671984006193929801,
-        "category": "Macro",
-        "title": "OpenAI’s new fundraising round could value its at ...",
-        "content": "OpenAI’s new fundraising round could value its at as much as $830 billion - WSJ\n- OpenAI is reportedly seeking to raise as much as $100 billion",
-        "sentiment": "neutral",
-        "date": "2025-12-18"
-    },
-    {
-        "id": 179775036899856461,
-        "category": "Macro",
-        "title": "Sands Capital Technology Innovators on Figma $FIG ...",
-        "content": "Sands Capital Technology Innovators on Figma $FIG US\nThesis: Figma is a leading digital design platform with a dominant market share and strong potential for growth in an evolving landscape, particularly as thoughtful design remains a key differentiator.\n(From their Q3’25 letter — link in bio)",
         "sentiment": "neutral",
         "date": "2025-12-18"
     }
