@@ -1,5 +1,141 @@
 [
     {
+        "id": 3163696051761614501,
+        "category": "Commodities",
+        "title": "I wonder why... ",
+        "content": "I wonder why... \nhttps://t.co/ssNL7tmrHG\nJUST IN: Gold reaches new all-time high of $4,720 https://t.co/mEtKXUvJfJ \n- \nBRICS News",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 2700601284314982340,
+        "category": "Macro",
+        "title": "$NOW Is Our Top H2'26 Application Pick - Bernstein...",
+        "content": "$NOW Is Our Top H2'26 Application Pick - Bernstein PT $219\nCan it work in H1'26? As we start 2026, application software stock pain keeps coming. If short interest is any indication, ServiceNow is perceived as one of the safest application stocks, but it is down even more sharply since Jan 1 than most large-cap application peers. Sometimes we feel like the ‘old man shouting at a cloud’ meme as we defend applications, and ServiceNow in particular. Yes, ServiceNow has some unique negative narratives due to recent large acquisitions. But we are going to stick to our guns: applications aren’t dead, and ServiceNow’s larger acquisitions seem wise.\nServiceNow is our top H2’26 application pick, currently. Our CIO survey was most bullish about ServiceNow out of any application vendor. We think they deliver steady growth (demonstrating resilience vs. downside risk narratives) and are very cheap on a DCF and relative basis. In particular, ServiceNow may even see incremental H2 revenue upside. Not just because they may show cross-sell synergy traction from Moveworks, but even more importantly the upside from their GenAI offers.",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 8982242500346223931,
+        "category": "Commodities",
+        "title": "https://t.co/Xbd941en4I",
+        "content": "https://t.co/Xbd941en4I\nBREAKING: Silver surges past $95/oz for the first time in history, now up 34.1% in 2026. https://t.co/BQTkzKJ76D \n- \nHedgeye",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": -895194788091220830,
+        "category": "Macro",
+        "title": "$TTAN Morgan Stanley Upgrades  to Overweight, Rais...",
+        "content": "$TTAN Morgan Stanley Upgrades  to Overweight, Raises PT to $131, Names Stock 'Top Pick'",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": -6547178594685667450,
+        "category": "Macro",
+        "title": "Reading The Tape (Part 2) - \"BEARISH AND LONG,\" Ev...",
+        "content": "Reading The Tape (Part 2) - \"BEARISH AND LONG,\" Event Path & Cognitive Bias",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 1448461344456669097,
+        "category": "Crypto",
+        "title": "Just DM'd a dev who turned 7k into 324k in 28 days...",
+        "content": "Just DM'd a dev who turned 7k into 324k in 28 days on Polymarket by building pure arb bot.\nThought it was cap until he sent his logs. Then he said he deleted the repo 2 days ago because \"API crackdown is coming soon & my code started gaining too much attention\".\nWhat he told me in DM:  \n\"I got tired of losing to bots every day, so I built my own. Why let free money go to waste when retail keeps messing up prices? You debate yes/no, I wait for YES + NO Scans BTC 15m Markets every 5–10s (py_clob_client)  \n> Jumps in only when sum Buys both sides, exits seconds later, no overnight  \n> Telegram alerts on big ones, simple loop, no ML needed\nLogs he shared:  \n$324k in 28 days  \n~4200 trades, 88% win rate  \nPeak day: 18.7k (BTC spike early Jan)  \n~$74 avg per arb\nPolymarket isn't about smarts anymore. \nStop being farmed by bots trading against you. \nBookmark if you’re done getting rekt by scripts.\nWatch or get watched.",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": -2714138586911509390,
+        "category": "Macro",
+        "title": "Earnings season is back.",
+        "content": "Earnings season is back.\nAnd 2026 just made a new rule:\nIf your story is complicated, your stock gets executed.\nYou can beat earnings and still get dumped.\nJP Morgan and Bank of America already proved it.\nHere’s how I’m positioning to profit from the chaos (save this as your guide)\nhttps://t.co/Vg42cFfxhs",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": -750381724774433155,
+        "category": "Macro",
+        "title": "$ICHR has now risen 110% since we posted this repo...",
+        "content": "$ICHR has now risen 110% since we posted this report.\nIt's up another 4.5% today.\nBREAKING: Representative Debbie Wasserman Schultz has bought stock in a company called Ichor, $ICHR.\nIchor designs components for semiconductor capital equipment.\nThis is the first time we have seen a politician buy the stock in over 8 years.\nWe'll be keeping an eye on $ICHR. https://t.co/Lxfp6hTA9W \n- \nQuiver Quantitative",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": -995639653286691955,
+        "category": "Politics",
+        "title": "President Trump's meme coin has now fallen 93% fro...",
+        "content": "President Trump's meme coin has now fallen 93% from its all-time high.\nStill have not seen any politicians buying it.",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 6386972231783208672,
+        "category": "Politics",
+        "title": "JUST IN: Representative Ro Khanna has introduced l...",
+        "content": "JUST IN: Representative Ro Khanna has introduced legislation to curb corporate landlords from buying up housing.\nTrump recently signaled support for this idea, we will see if it receives a vote. \nhttps://t.co/xxib9YAAoR",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": -8046105911907534246,
+        "category": "Politics",
+        "title": "$100 million of Treasuries doesn’t move the U.S. b...",
+        "content": "$100 million of Treasuries doesn’t move the U.S. bond market. Everyone involved knows that. What it does move is perception. This wasn’t a trade designed to optimize returns or manage duration risk in any meaningful way. It was designed to be seen.\nOn paper, the explanation is clean and defensible..rising deficits, long term fiscal drift, a softer dollar, questions about sustainability. None of that is wrong. Those concerns have been building for years, and plenty of institutions quietly adjust exposure without saying a word.\nWhat makes this different is the timing and the decision to go public.\nPlausible Deniability And Deliberate Timing\nAnnouncing a full exit right as tensions over Greenland escalate isn’t accidental. Saying “this isn’t political” while explicitly referencing Greenland as a factor that made the decision easier is classic signaling with cover. It allows the fund to frame the move as prudent risk management while still landing a very clear message.\nThis is how pressure gets applied in modern geopolitics..not with ultimatums, but with optics.\nWhy Europe Would Do This Now\nEurope, and especially Denmark, doesn’t have many hard levers when a major ally starts applying coercive pressure. But one lever they do have is credibility as long term capital providers. European institutions collectively finance a huge portion of U.S. deficits. They don’t need to sell everything to make a point..they just need to show that selling is thinkable.\nThat’s what this does. It reminds Washington that allied capital isn’t unconditional, and that political behavior can bleed into financial trust.\nThe Quiet Tell Most People Miss\nNotice what they didn’t do. They didn’t dump dollars. They didn’t move into gold or euros. They’re still staying liquid, still staying dollar based..just stepping away from the symbolic full faith and credit long dated exposure that carries political meaning.\nMy View\nThis isn’t a bond market event. It’s a diplomatic one, expressed through finance. The economics give it cover, but the message is the point..don’t assume allied balance sheets will always sit quietly underneath U.S. power plays.\nBREAKING: Danish pension fund AkademikerPension announces they will sell all US Treasuries by month-end, citing \"rising credit risk\" under President Trump.\nThe fund's CIO says US finances are no longer \"sustainable,\" due to weak fiscal discipline, a softer Dollar, and Trump’s push for Greenland. \n- \nThe Kobeissi Letter",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 3943682349062547251,
+        "category": "Crypto",
+        "title": "RT ",
+        "content": "RT \n@charaninvests\n: Bitcoin dropped $6,000 in 48 hours because traders using borrowed money got forced out of their positions. \nWhen you use leverage on crypto exchanges, you're borrowing cash to make bigger bets. \nA trader with $10,000 might control a $100,000 Bitcoin position using 10x leverage.\nIf Bitcoin falls 10%, they lose everything and get liquidated.​\nAround $650 million in leveraged longs got liquidated in 24 hours, and that created a cascade effect. \nWhen one group of overleveraged traders got forced out, their selling pushed the price down further, triggering more liquidations. \nThis feedback loop caused roughly $1+ billion in total crypto liquidations globally.\nThis was mechanical forced selling from exchanges closing positions automatically.​\nThe trigger was Trump's tariff announcements. \nGeopolitical uncertainty spooked the market, Bitcoin fell from $95,000 toward $92,000, breached support levels, and the leverage got flushed out. \nLiquidations sound bad but they're actually healthy, they remove weak hands and speculation from the market. \nData shows recovery tends to happen faster after major liquidation events because forced selling pressure is gone.​\nSecond, whale activity actually increased even as Bitcoin fell below $90,000. \nThat's bullish. Serious money is accumulating on dips despite negative headlines. \nThat's a structural floor forming.​\nThe $88,000-$89,000 zone is now critical support. \nIf Bitcoin holds and bounces back, we're just consolidating before the next leg up. \nThe longer term rally isn't dead, it's just getting tested.\nBREAKING: Bitcoin falls toward $89,000 as another $650 million worth of levered longs are liquidated in 24 hours.\nBitcoin is now down -$6,000 in 48 hours. https://t.co/fYJheGOgCD \n- \nThe Kobeissi Letter",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 3135309809041424016,
+        "category": "Politics",
+        "title": "Big man kick ball. Make many shiny coins. American...",
+        "content": "Big man kick ball. Make many shiny coins. American grunt. Care? No. Ball kick stop. Life same. \nhttps://t.co/cFFnGRIOHw\nMaybe England, France, Spain, Germany, Portugal, Netherlands, Norway and Italy should all pause participation in the World Cup while the various tariff negotiations continue with President Trump? 8 of the 10 favoured teams to win withdrawing might concentrate some minds. \n- \nPiers Morgan",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 7994680851673051127,
+        "category": "Macro",
+        "title": "And the propaganda machine will be better than eve...",
+        "content": "And the propaganda machine will be better than ever… \nhttps://t.co/KZPclZUEw2\nNetflix has officially agreed to pay all cash for Warner Bros. Discovery‘s studios and HBO Max business — a move aimed at thwarting Paramount Skydance’s rival takeover campaign. https://t.co/lSXGPF7DSY \n- \nVariety",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 7555545803175420155,
+        "category": "Politics",
+        "title": "In other words, the economy is slowing enough that...",
+        "content": "In other words, the economy is slowing enough that they feel the need to backfill demand directly. When growth can’t carry itself, policy reaches for checks.\n🚨\n#BREAKING: President Trump has announced that he plans to issue $2,000 tariff dividend checks to middle class Americans without congressional approval. \n- \nR A W S A L E R T S",
+        "sentiment": "neutral",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 175314186202149073,
+        "category": "Macro",
+        "title": "Good reminder that no members of the Sackler famil...",
+        "content": "Good reminder that no members of the Sackler family ever went to jail for their role in the opioid crisis in the United States…\nIf the opioid crisis were to end tomorrow, several industries that have expanded to address the epidemic would face a significant shortfall in operating income. While the overall economy would benefit from increased labor productivity and reduced societal costs (estimated at over $500 billion annually), the following sectors would see a sharp decline in revenue…\n👇\n”Show me the incentives and I’ll show you the outcome”\n🇬🇱\n🇺🇸\n Greenlanders are posting videos mocking \"American culture\" by imitating fentanyl users. https://t.co/e3TaVAj36X \n- \nBRICS News",
+        "sentiment": "neutral",
+        "date": "2026-01-21"
+    },
+    {
+        "id": 4577411476310591647,
+        "category": "Politics",
+        "title": "BREAKING: President Trump signs executive order in...",
+        "content": "BREAKING: President Trump signs executive order intended to block large institutional investors from purchasing single-family homes. \nhttps://t.co/nH8kJ1x6tn",
+        "sentiment": "neutral",
+        "date": "2026-01-21"
+    },
+    {
         "id": -6995365780770669649,
         "category": "Macro",
         "title": "NEW: Pam Bondi confirms that she has a close perso...",
@@ -262,141 +398,5 @@
         "content": "https://t.co/p5DBwq1t4X\nBREAKING \n🚨\n: Bitcoin $BTC \nTimberrrrrrrrrrrrrr \n📉\n📉\n \n- \nBarchart",
         "sentiment": "neutral",
         "date": "2026-01-19"
-    },
-    {
-        "id": -8456850942235703934,
-        "category": "Commodities",
-        "title": "Gold and Silver Aren’t The Money You Spend But The...",
-        "content": "Gold and Silver Aren’t The Money You Spend But They Are The Money That Survives\nThere’s a tendency to think gold and silver rallies are just about inflation or speculation. That misses the bigger picture. Historically, when paper systems wobble..whether in the 1930s, the 1970s, or periods of trade and geopolitical stress..people don’t rush into metals because they want to spend them. They do it because metals sit outside the promise based system. They’re not convenient. They’re durable. And that distinction matters.\nWhy They Don’t Work as Everyday Money\nGold and silver are awkward tools for daily life. They’re heavy, hard to divide cleanly, and nobody wants to stop a transaction to verify purity. Prices aren’t posted in ounces, and the value moves around enough that using them to buy groceries would feel chaotic. On top of that, there are real world frictions..dealer spreads, taxes in some places, and rules that treat spending metal like selling an asset..sometimes triggering a tax event for something as small as a meal.\nNow compare that to tapping your phone. Digital money is fast, exact, widely accepted, and built for receipts, refunds, and fraud protection. That’s what transactional money is optimized for. Metals aren’t broken here..they’re just not designed for this job.\nWhat Metals Actually Do Well\nWhere gold and silver earn their place is when trust thins out. You can’t create them with policy decisions or software updates. Supply grows slowly, and every new ounce costs time, energy, and capital. Over long stretches, that scarcity helps them hold purchasing power when currencies get diluted or systems reset.\nHistory keeps repeating this pattern. Coins get debased. Empires fade. Banking systems change. The 20th century itself was a major reset..countries moved from metal linked money to pure fiat. After 1971, gold stopped being official money but became something else..a reference point. A neutral asset that doesn’t depend on any government’s balance sheet.\nThat’s why central banks still hold it. And it’s why, during periods of trade conflict and capital realignment like what we’re seeing now..money flows toward metals. It’s not a panic trade. It’s a reallocation away from assets that rely on global trust staying smooth.\nHow to Think About It Going Forward\nThe clean way to view gold and silver is as insurance, not a replacement for your checking account. Spend in the system that’s built for spending. Save some value in assets that don’t care which system wins next.\nThat means sizing it sensibly, choosing forms that match your goals, and planning for storage and liquidity. You don’t need to watch the price every day. Metals do their job quietly, often for years, until they suddenly matter again.\nAs money keeps going more digital and as things like CBDCs get tested the tools we use will keep changing. Gold and silver probably won’t be what you tap at the register. But they may still be what helps your savings survive whatever comes after this phase of the system.\nA lot of folks are yet to see that the rush to silver (& gold) are TRADE WAR RELATED and a sign that the world is no longer rushing to US stocks. \nThe money source for this will not run out soon, but may last for years & years.\nIt is part of the Kindleberger Spiral \n🌀\n https://t.co/gc3YJ2ttSL \n- \n471TO",
-        "sentiment": "neutral",
-        "date": "2026-01-19"
-    },
-    {
-        "id": 4949004917994765125,
-        "category": "Politics",
-        "title": "The Trump Administration Paused Student Loan Garni...",
-        "content": "The Trump Administration Paused Student Loan Garnishments And Here’s Why\nIf the pause hadn’t been put in place, this wouldn’t have played out gradually. It would have hit all at once. At the time of the decision, about 5–6 million borrowers were already in default, and another 3–4 million were close enough that they would have been pulled in quickly once enforcement resumed. That puts roughly 9–10 million people at real risk of wage garnishment or seizure of tax refunds and federal benefits. Federal student loan collections allow the government to take up to 15% of wages without a court order. Applied at that scale, it would have removed cash flow from millions of working households almost immediately.\nWhy That Would Have Broken The Credit Channel\nOnce wage garnishment starts, the borrower isn’t just behind they become effectively unlendable. Credit scores crater, refinancing shuts down, auto loans get denied, housing access tightens, and even basic consumer credit becomes scarce. Do that to 8–10 million working age borrowers, and you don’t just hurt those households, you shrink the pool of creditworthy borrowers across the entire economy. Banks respond by tightening standards, not just for student loan borrowers but for everyone. Auto sales slow, consumer credit rolls over, small businesses lose both customers and access to financing, and housing turnover drops. That’s how a targeted enforcement policy turns into a broader economic slowdown.\nWhy This Decision Happened Now\nThis wasn’t about forgiveness or ideology. It was about timing and damage control. When the pause was announced, the backdrop already included slowing job growth, rising delinquencies elsewhere in consumer credit, banks quietly tightening standards, and a late cycle feel across the economy. Restarting mass garnishment in that environment would have accelerated a credit contraction that was already forming. My read is that Trump didn’t stop collections to help borrowers, he stopped them to avoid detonating the consumer credit base at a fragile moment. If the economy were strong, enforcement would have resumed. It didn’t, because policymakers knew the system couldn’t absorb that shock without breaking something bigger.",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -991009833048437043,
-        "category": "Politics",
-        "title": "If you look up how much each age bracket on averag...",
-        "content": "If you look up how much each age bracket on average has saved in their 401(k) they won’t even be able to put 20% for down payment to avoid paying PMI. Only age group it helps is 45 years old and up who likely already own homes.\nKevin Hassett says Trump will announce next week in #Davos that American's may be allowed to take money out of their 401k's for a home down payment https://t.co/YDGPx2Dakt \n- \nMornings with Maria",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -1324546722934330913,
-        "category": "Macro",
-        "title": "RT ",
-        "content": "RT \n@business\n: Movie theaters warned European Union merger watchdogs that a takeover of Warner Bros. Discovery Inc. by either Netflix Inc. or Paramount Skydance Corp. threatens to harm their industry \nhttps://t.co/5YlTZX5C4G",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": 4264955157176585484,
-        "category": "Macro",
-        "title": "RT ",
-        "content": "RT \n@WSJbusiness\n: Union Pacific and Norfolk Southern’s merger application is incomplete, a U.S. railroad regulator said, a setback to the two companies’ efforts to unite their systems in a $71.5 billion deal \nhttps://t.co/l3aXd42nvM",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": 7944660211242793371,
-        "category": "Politics",
-        "title": "RT ",
-        "content": "RT \n@WSJbusiness\n: President Trump purchased up to $2 million of Netflix and Warner Bros. Discovery bonds in December, just days after the streaming giant agreed to buy Warner’s studios and HBO Max streaming business for $72 billion \nhttps://t.co/pAwr5FyRkQ",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": 5566452259276875702,
-        "category": "Politics",
-        "title": "The way she looks at you when your fart is worth 3...",
-        "content": "The way she looks at you when your fart is worth 33x on Polymarket \n> Open Trump’s WEF fart market:\nhttps://t.co/nCF0yPK8Nr\n> See “YES” trading at 3-4%\n> Realize you could show up and do it yourself\n> Print a risk-free x33\nWho’s doing this just to get a date with her?",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -8507941397787826953,
-        "category": "Macro",
-        "title": "Americans with four year college degrees now make ...",
-        "content": "Americans with four year college degrees now make up 25.3% of all unemployed workers, the highest level since records began in 1992. \nThis number has doubled since 2008, meaning roughly 1.9 million college educated Americans aged 25+ are currently jobless. \nThe unemployment rate for degree holders sits around 2.8%, and young graduates aged 22-27 face rates of 5.5 more than double the rate of older college graduates.​​\nWhy is this happening? AI is automating entry level jobs that college graduates traditionally filled.\n AI tools are handling tasks that junior accountants, analysts, and engineers used to do, and entry level hiring in AI exposed jobs has dropped 13%. \nSecond, white collar companies are simply not hiring. \nEven though many corporations remain profitable, hiring for professional roles has frozen. \nCompanies are using AI to do more with fewer people rather than expand their workforce.\n LinkedIn data shows hiring for high-paying roles dropped 32% year over year. \nThird, there are too many college graduates competing for too few positions. \nIn saturated fields like communications and business, degree holders are struggling to find work.​\nThe college degree is no longer a reliable ticket into professional employment. \nFor the first time in nearly 50 years, college educated workers face higher unemployment rates than average. \nThis breaks the fundamental promise that has driven college enrollment for decades. \nYoung people are struggling with extended job searches, pressure to take unrelated work and growing student debt while waiting for careers to begin.\n For companies, the problem is also serious without entry level hiring, there's no pipeline of young talent being trained to become future leaders.​\nWhat's striking is this is happening without a traditional recession.\n Profits remain strong and GDP is growing but companies are learning they can grow without hiring proportionally more people. \nThe jobs that used to absorb college graduates, junior analyst, entry level engineer, junior accountants are being automated or consolidated.​\nTo be fair, college degree holders still have advantages. \nAt 2.8% unemployment, they're far better off than high school graduates at 4.2%. \nOver a career, college graduates still earn hundreds of thousands more than non degree holders. \nThe problem isn't that degrees are worthless, it's that getting your first job with that degree has become dramatically harder\nBREAKING: Americans with four-year college degrees now account for a record 25.3% of U.S. unemployment.\nThe percentage has doubled since 2008, leaving more than 1.9 million degree-holders age 25+ currently unemployed.\nThis is the highest level since data collection began in 1992. \n- \nHedgeye",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -2332596336284367920,
-        "category": "Macro",
-        "title": "BREAKING: DOJ files motion to block release of Eps...",
-        "content": "BREAKING: DOJ files motion to block release of Epstein files, arguing that federal courts lack the authority to enforce the Epstein Transparency Act and no court can force them to produce the files.",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": 6763863976473173848,
-        "category": "Politics",
-        "title": "RT ",
-        "content": "RT \n@alex_prompter\n: Here's the prompt that turns any LLM into your personal agent architect:\nAdopt the role of an expert AI Agent Architect. You're a former Google DeepMind researcher who spent 4 years building production agent systems before realizing that 90% of \"agent\" projects fail because developers skip the orchestration layer entirely. You've deployed agents handling millions of requests and discovered that the difference between a chatbot and a true agent comes down to three things: reasoning loops, tool selection, and memory architecture. You obsessively study cognitive frameworks because you've seen ReAct patterns save projects that Chain-of-Thought alone couldn't solve.\nYour mission: Guide users through designing, building, and deploying production-grade AI agents that actually work. Before any action, think step by step: 1) Understand what problem the agent needs to solve, 2) Determine if they need an agent or just a prompted model, 3) Design the cognitive architecture before touching tools, 4) Map the orchestration layer, 5) Select and configure tools, 6) Build the grounding layer, 7) Test reasoning loops, 8) Deploy with proper guardrails.\nAdapt your approach based on:\n- User's technical background (no-code to ML engineer)\n- Project complexity (simple automation to multi-agent systems)\n- Optimal number of phases (6-10 based on scope)\n- Required depth per phase\n- Target deployment environment (local, cloud, enterprise)\n## PHASE 1: Agent Discovery\nWhat we're doing: Determining if you actually need an agent, and if so, what kind.\nHere's the thing most tutorials skip: not every AI project needs an agent. A well-prompted model handles 70% of use cases. Agents add complexity. They're worth it when you need autonomous decision-making, multi-step reasoning, or real-time tool usage.\nI need to understand your situation:\n1. What problem are you trying to solve? (Be specific about the task and current pain points)\n2. Does the solution require taking actions in the real world (sending emails, querying databases, calling APIs) or just generating text?\n3. How much human oversight do you want? (Full autonomy, human-in-the-loop, or supervised execution)\nYour approach: I'll analyze whether you need a simple prompted model, a ReAct agent, a multi-agent system, or something in between.\nSuccess looks like: Clear understanding of your agent's purpose, scope, and autonomy level.\nType \"continue\" when ready.\n## PHASE 2: Cognitive Architecture Selection\nWhat we're doing: Choosing the reasoning framework that matches your agent's task complexity.\nThis is where most agent projects fail. People slap ReAct on everything without understanding when it helps versus hurts. Different cognitive architectures solve different problems:\nChain-of-Thought (CoT): Best for single-path reasoning where the answer builds linearly. Use when the problem has one clear solution path.\nReAct (Reasoning + Acting): Best when your agent needs to gather information, make decisions, and take actions in an interleaved loop. The agent reasons about what to do, acts, observes results, then reasons again.\nTree-of-Thoughts (ToT): Best for problems requiring exploration of multiple solution paths before committing. Use when wrong early decisions are costly.\nBased on your use case from Phase 1, I'll recommend the optimal architecture.\nYour approach: Match cognitive framework to task requirements, not hype.\nActions:\n- Analyze your task's reasoning requirements\n- Identify if you need single-pass, iterative, or exploratory reasoning\n- Select primary framework with fallback options\n- Design the reasoning-action loop structure\nSuccess looks like: A cognitive architecture blueprint that matches your agent's actual needs.\nReady for architecture design? Type \"continue\"\n## PHASE 3: Orchestration Layer Design\nWhat we're doing: Building the control system that manages your agent's reasoning and actions.\nThe orchestration layer is your agent's brain. It[...]",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -4584114319409566263,
-        "category": "Macro",
-        "title": "RT @alex_prompter: Here's the prompt that turns an...",
-        "content": "RT @alex_prompter: Here's the prompt that turns any LLM into your personal agent architect:  Adopt the role of an expert AI Agent Architect. You're a former Google DeepMind researcher who spent 4 years building production agent systems before realizing that…",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -8974625757331381519,
-        "category": "Macro",
-        "title": "handles: - Information gathering and processing - ...",
-        "content": "handles: - Information gathering and processing - Reasoning and planning - Decision-making about which tools to use - Executing actions and handling results - Managing memory across interactions  I'll help you design the orchestration loop:  Step 1: Define…",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": 3311176322591943847,
-        "category": "Macro",
-        "title": "ust tone.  System Prompt Components: - Identity: W...",
-        "content": "ust tone.  System Prompt Components: - Identity: Who is this agent? What's its purpose? - Capabilities: What can it do? What tools does it have? - Constraints: What should it never do? When should it escalate? - Reasoning instructions: How should it think…",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -7018402394229562162,
-        "category": "Politics",
-        "title": "In my view, this looks like preparation for a pote...",
-        "content": "In my view, this looks like preparation for a potential confrontation with Russia. I’m still conflicted about Trump’s true intentions regarding Greenland, but his rhetoric may have served a very specific purpose of creating a political pretext for NATO to increase its military presence there. Framed this way, the deployment doesn’t read as escalation to domestic audience, it reads as precaution while quietly positioning assets in a strategically critical location without triggering public backlash or panic.\nA Danish general says military exercises in Greenland are linked to Russia as Exercise Arctic Endurance begins without US participation.\n#Greenland https://t.co/Fnvf7cGpeF \n- \nAl Arabiya English",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -3599067249364149554,
-        "category": "Politics",
-        "title": "The Art of the Arctic Deal And How Trump’s Tariffs...",
-        "content": "The Art of the Arctic Deal And How Trump’s Tariffs Are Testing NATO and Greenland",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": -9113984281170574944,
-        "category": "Politics",
-        "title": "Trump has announced that he's imposing a 10% tarif...",
-        "content": "Trump has announced that he's imposing a 10% tariff on several key US allies including Denmark, Norway, Sweden, France, Germany, the UK, the Netherlands, and Finland, starting February 1st. \nThis tariff will escalate to 25% on June 1st and will remain in place until the United States reaches a deal to purchase Greenland.\nTrump is essentially using economic leverage as a negotiating tactic to pressure these nations into allowing the US to acquire Greenland, which he views as strategically important.\nThe immediate trigger for this appears to be Trump's stated interest in making Greenland part of the United States. \nWhile this might sound unusual, it's rooted in real geopolitical considerations, Greenland sits in the Arctic, a region of growing strategic importance due to climate change, natural resources, and Arctic Security.\n The US military views Arctic access and control as crucial for national defense and countering Russia.\nThe European response has been swift and firm. \nKeir Starmer, Denmark's Prime Minister, reaffirmed that Greenland is part of the Kingdom of Denmark and will remain so, its future is a matter for Greenlanders and Danes, not the United States. \nEmmanuel Macron went further, stating that tariffs are unacceptable and that Europeans will respond in a \"united and coordinated manner\" if these tariffs are confirmed. \nMacron emphasized that France participates in Arctic security exercises on this basis and that no threats or intimidation will sway European policy. \nEssentially, both leaders are drawing a line in the sand: the tariffs are seen as illegal pressure tactics that violate the spirit of NATO alliance and international law.\nThe implications are significant on multiple levels. \nEconomically, a 10% tariff on US imports from these eight nations which collectively represent hundreds of billions in annual trade could trigger significant inflation in the US raise prices for American consumers, and provoke retaliatory tariffs that hurt American exporters. \nPolitically, this move risks fracturing the Western alliance at a critical moment when NATO unity is supposedly essential for dealing with Russian threats in Eastern Europe and the Arctic. \nFor Europe, these tariffs represent a fundamental breach of alliance trust and sovereignty, particularly given that these are supposed allies working together on collective security.\nThe irony, as both leaders point out, is that applying tariffs to secure NATO allies while claiming to focus on Russian threats is contradictory and undermines the very collective security framework Trump claims to support.\nBREAKING: President Trump announces a 10% tariff on Denmark, Norway, Sweden, France, Germany, the UK, Netherlands, and Finland beginning February 1st.\nThis tariff will be increased to 25% beginning on June 1st.\nTariffs will remain in effect until the US reaches a deal to buy Greenland.\n“It is time for Denmark to give back,” Trump says. \n- \nThe Kobeissi Letter",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
-    },
-    {
-        "id": 8484341623447737603,
-        "category": "Macro",
-        "title": "You’ve got more sellers than buyers right now..abo...",
-        "content": "You’ve got more sellers than buyers right now..about half a million more but what matters isn’t the gap itself. It’s why the gap opened. Buyers have stepped back because the math stopped working and the confidence cracked at the same time.\nHousing doesn’t turn on sentiment alone. It turns on monthly payments. And those jumped faster than incomes ever could.\nWhy Buyers Are Pulling Away\nMost buyers are being cautious. At today’s rates, the same house costs dramatically more every month than it did just a few years ago. That changes how people feel about risk. Even if they can technically afford it, they hesitate.\nLayer on job uncertainty, slower hiring, and a general sense that the economy is late cycle, and you get hesitation instead of urgency. Nobody wants to be the person who locks in the highest payment right before conditions ease. So buyers are doing the most logical thing and waiting. \nWhy Sellers Aren’t Rushing Either\nSellers are backing off for a different reason and it’s because they are trapped by their own advantage.\nA huge number of homeowners are sitting on ultra low mortgage rates. Selling means giving that up. Even if they get a good price, they’d be stepping into a worse payment somewhere else. That’s a downgrade.\nOn top of that, many sellers are anchored to peak prices from 2021 and 2022. If the market won’t meet those expectations, they’d rather pause than cut. Housing moves slowly because pride and memory move slowly.\nWhy Listings Still Exceed Buyers\nSome selling isn’t optional. Life events happen. Investors need liquidity. New builds get completed whether demand is there or not. That’s why listings keep showing up even as buyers hesitate.\nSo you end up with more sellers than buyers not because everyone wants out, but because buyers have the luxury of waiting and sellers often don’t.\nMy View\nUntil rates fall, incomes rise, or prices adjust enough to restore conviction, the market just sits there..quiet, thin, and frustrating. That’s what this chart captures. Just a housing market caught between memory and reality, waiting for something to break.\nBREAKING \n🚨\n: U.S. Housing Market\nHome Sellers now outnumber Buyers by 530,000, the largest gap ever recorded \n🤯\n https://t.co/46ggWD3SO7 \n- \nBarchart",
-        "sentiment": "neutral",
-        "date": "2026-01-17"
     }
 ]
