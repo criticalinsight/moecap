@@ -1,5 +1,141 @@
 [
     {
+        "id": 4430540506865016564,
+        "category": "Commodities",
+        "title": "UBS raises gold target to $6,200/oz",
+        "content": "UBS raises gold target to $6,200/oz",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -4165813129328043514,
+        "category": "Macro",
+        "title": "Representative Nancy Pelosi has lost $2,490,000 in...",
+        "content": "Representative Nancy Pelosi has lost $2,490,000 in the stock market today, per our estimates.\nShe is now worth just $274M. \nhttps://t.co/Ai5hg4e1OP",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": 8121022234904544095,
+        "category": "Macro",
+        "title": "RT ",
+        "content": "RT \n@AsifSuria\n: I don't exactly remember why I was looking at United Rentals $URI in October 2023 but I added this quick note when I added it to my watchlist. \nThe stock was trading at $305.77 back then and was trading over $900 yesterday. \nThat was before the big 14% decline in a single day today. The street was not pleased with fourth quarter results and their guidance. \nUnited Rentals also announced a large stock buyback yesterday, which made me take another look at the company and I was reminded of that note from 2023. \nThe new $5 billion buyback announcement (8.6% of its market cap yesterday) is significantly larger than its prior announcements of $1.5 billion in 2024 and $2 billion in 2025 (across two announcements).\nI am not sure if this industrial equipment rental company, which Brad Jacobs founded in 1997, can get back to growth that outpaces the rate of inflation but they certainly are going to use this opportunity to retire some shares.",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -7402598770142057874,
+        "category": "Macro",
+        "title": "Can we extend this blood bath to space, energy, se...",
+        "content": "Can we extend this blood bath to space, energy, semis etc?",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -1184531958281977574,
+        "category": "Crypto",
+        "title": "RT ",
+        "content": "RT \n@xmayeth\n: A Clear Example of Automation Trading on Polymarket and How To Build It.\nThere’s a fresh wallet with 8,732 predictions and $402,513 monthly PNL trading only Crypto Markets.\nHis profile: \nhttps://t.co/WwYO3rvv2M\nHis daily outcome is close to $23,000 and the strategy is that simple you won’t even believe it.\nHow the bot works: \n> Trades only 15-minute Up/Down markets\n> Follows short-term momentum\n> Splits entries into many small orders\n> Uses small fixed position sizes\n> Scales size only when confidence is higher\n> Focused on repetition & probability edge\nWhat if I say that anyone could build their own trading bot? \n> cursor + py-clob-client + python\n> install SDK\n> get Polymarket API keys\n> prompt strategy\n> AI writes trading logic\n> test with $1\nHis biggest win so far:\n\"Bitcoin Up or Down - January 19, 5-6AM ET\"\n$13,320 —> $36,887 (+176%)\nSometimes you don’t even need to be a good trader, all you need is to track and copy the smart wallet:\nhttps://t.co/Z48Gf3QAMQ\nWhy are you still clicking buttons manually when bots are printing 24/7?",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -5700555498569007861,
+        "category": "Macro",
+        "title": "China’s Deflation Is a Signal, Not an Exception",
+        "content": "China’s Deflation Is a Signal, Not an Exception\nIt’s easy to look at China’s deflation streak and treat it like a local problem..weak demand here, excess capacity there. But the deeper message is about nominal gravity. China isn’t just growing more slowly; it’s producing output without generating enough pricing power to support incomes, profits, and debt. And that distinction matters far more than whether CPI is slightly positive or negative.\nWhen the GDP deflator stays below zero, it means the economy can keep moving in real terms while getting poorer in nominal ones. Wages lag. Profits compress. Tax receipts disappoint. Debt quietly gets heavier. That’s the kind of pressure that reshapes behavior across households, firms, and policymakers.\nWhy China can’t just stimulate its way out \nBeijing’s dilemma is structural. On one hand, it can’t allow unemployment or industrial collapse. On the other, it knows that another property led or credit heavy stimulus would just recreate the imbalance that caused this slowdown in the first place. So instead of a big reflationary jolt, it’s choosing a grind..targeted support, administrative guidance, selective bailouts, and a slow attempt to curb overcapacity without blowing up employment.\nThat choice keeps the system stable but it also locks in deflationary pressure. Firms keep producing to protect jobs and market share. Consumers stay cautious because asset prices, especially housing, don’t feel like a source of security anymore. Competition shifts from innovation to price cutting. Once that mindset sets in, reflation becomes slow by design.\nThe part that spills beyond China\nHere’s where people underestimate the impact. China is still the global price setter for a huge share of tradable goods. When China is deflating, the rest of the world either imports cheaper prices or imports conflict..usually tariffs, industrial policy, and trade friction. Either way, it changes inflation dynamics everywhere else.\nCheap exports suppress goods inflation abroad. Retaliation and tariffs try to block that pressure, but often end up reducing trade volumes, investment, and confidence instead. History shows this pattern clearly..the 1930s weren’t just about tariffs raising prices..they were about tariffs shrinking demand and turning supply shocks into deflationary ones.\nWhy this matters for the U.S.\nThe U.S. doesn’t need to copy China’s path to feel the effects. The mechanism can rhyme even if the institutions are different.\nDeflation in the U.S. wouldn’t arrive as an obvious headline like CPI turns negative. It would show up more quietly…\n•   Consumer demand softens under high rates and heavy debt.\n•   Goods prices stay under pressure from global overcapacity and imported deflation.\n•   Shelter inflation cools as supply catches up and household formation slows.\n•   Services inflation cracks once labor loses pricing power..whether through a weaker economy, automation, or both.\n•   Tariffs create short term price bumps but longer term demand destruction if trade slows and uncertainty rises.\nLayer that onto high public debt and slowing nominal growth, and the risk is an economy that struggles to generate enough nominal momentum to keep the system feeling healthy.\nThe Takeaway\nChina’s deflation streak isn’t just a China story. It’s a signal that the global economy is drifting into a regime where nominal growth is scarce, and scarcity of nominal growth is what makes high debt systems fragile. The U.S. may look insulated for now, but the channels..trade, technology, debt, and demographics are already there.\nEven if inflation never formally turns negative in the U.S., the politics and behavior can start to feel deflationary..weaker hiring, tougher pricing power, and rising sensitivity to any shock. That’s the part markets tend to underestimate..not the data point itself, but the mindset it creates.",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -6035062937448698227,
+        "category": "Macro",
+        "title": "NEW: Iran to launch “unprecedented” attack on Tel ...",
+        "content": "NEW: Iran to launch “unprecedented” attack on Tel Aviv if US military strikes Iran. -Jerusalem Post",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": 2788140709953847559,
+        "category": "Macro",
+        "title": "Amazon Discusses Investing as Much as $50 Billion ...",
+        "content": "Amazon Discusses Investing as Much as $50 Billion in OpenAI, Sources Say -- WSJ\nAmazon CEO Andy Jassy Directly Involved in Amazon's Funding Negotiations With OpenAI\nChatGPT-Maker Seeking to Raise Up to $100 Billion In New Round",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": 1525373845603588098,
+        "category": "Macro",
+        "title": "$WDC nice beat/raise",
+        "content": "$WDC nice beat/raise",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -1967509065652638389,
+        "category": "Macro",
+        "title": "$SNDK LOL",
+        "content": "$SNDK LOL",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -2003649892482389096,
+        "category": "Macro",
+        "title": "$SNDK Guidance",
+        "content": "$SNDK Guidance\nQ3 2026 EPS $12.00-$14.00, $4.21 Est\nQ3 2026 revenue $4.4-4.8B, $2.92B Est",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -309943052873012257,
+        "category": "Macro",
+        "title": "NEW: US sending several THAAD missile defense syst...",
+        "content": "NEW: US sending several THAAD missile defense systems to Israel despite previously using 25% of total stockpile to defend Israel from Iran last year.",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -7804787940983633963,
+        "category": "Macro",
+        "title": "JUST IN: Democrats now have an 82% chance of winni...",
+        "content": "JUST IN: Democrats now have an 82% chance of winning the House in 2026. \nUp 4% in the last week. \nhttps://t.co/yLsUETkdP2",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": 7875104972852094554,
+        "category": "Politics",
+        "title": "NEW: Trump says he does not want to lower housing ...",
+        "content": "NEW: Trump says he does not want to lower housing costs but instead wants home prices to increase so current homeowners gain wealth.",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": -4836071851656397402,
+        "category": "Macro",
+        "title": "OpenAI is completely cooked once they go public. ",
+        "content": "OpenAI is completely cooked once they go public. \nhttps://t.co/rH3cG9Qtye\nBREAKING: OpenAI is \"racing\" to go public by the end of 2026 as it looks to beat Anthropic as the first major generative AI startup to go public, per WSJ. https://t.co/QPChvrIqkd \n- \nThe Kobeissi Letter",
+        "sentiment": "neutral",
+        "date": "2026-01-29"
+    },
+    {
+        "id": 6575497554047433035,
+        "category": "Macro",
+        "title": "NEW: US military set to conduct “broad military ca...",
+        "content": "NEW: US military set to conduct “broad military campaign” to topple the Iranian government according to Israeli media outlet Kan News.",
+        "sentiment": "neutral",
+        "date": "2026-01-30"
+    },
+    {
+        "id": 152442757780502984,
+        "category": "Macro",
+        "title": "NEW: US military reportedly set to conduct “broad ...",
+        "content": "NEW: US military reportedly set to conduct “broad military campaign” to force regime change in Iran according to the assessment of Israeli officials, per Israeli media outlet Kan News.",
+        "sentiment": "neutral",
+        "date": "2026-01-30"
+    },
+    {
         "id": 8957954856377426102,
         "category": "Macro",
         "title": "JUST IN: Democrats now have an 80% chance of winni...",
@@ -262,141 +398,5 @@
         "content": "As economic deterioration accelerates, will the geopolitical and industrial bid for silver prove durable enough to absorb the downturn..or will weakening growth ultimately overwhelm those supports and force silver to trade like a cyclical metal once again? \nhttps://t.co/ajjhbQWq7K",
         "sentiment": "neutral",
         "date": "2026-01-26"
-    },
-    {
-        "id": -1811066007071915677,
-        "category": "Politics",
-        "title": "NEW: DHS Secretary Kristi Noem is reportedly “on t...",
-        "content": "NEW: DHS Secretary Kristi Noem is reportedly “on thin ice” with Trump due to “incompetence” & negative public perception from recent tactics.",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": 393899106037882627,
-        "category": "Macro",
-        "title": "Here are the members of Congress whose stock portf...",
-        "content": "Here are the members of Congress whose stock portfolios are performing the best in 2026, per our estimates.\nThe market is up just 1.5% over the same period.\nTrack live on Quiver: \nhttps://t.co/eXK9LJ9RJE",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": -9060504405831854984,
-        "category": "Macro",
-        "title": "BREAKING: Republican Senator John Curtis has said ...",
-        "content": "BREAKING: Republican Senator John Curtis has said that he disagrees with Secretary Noem’s response to the shooting of Alex Pretti.\nHe has said that he will call for leaders to testify.",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": -1791220946283469793,
-        "category": "Politics",
-        "title": "Here is Trump’s tariff playbook, step by step (sav...",
-        "content": "Here is Trump’s tariff playbook, step by step (save this)\n1. Trump hints at new tariffs → markets drift lower\n2. Big tariff number announced → markets sell off hard\n3. Dip gets bought → bounce fades → fresh lows hit\n4. Friday after the close → White House doubles down\n5. Weekend → target country responds in the headlines\n6. Sunday before futures → Trump signals talks or “progress”\n7. Futures gap up Sunday night → strength fades into Monday\n8. Monday morning → Treasury hits TV to calm investors\n9. Next 2 to 4 weeks → nonstop “trade deal progress” leaks\n10. Deal announced → stocks rip to new highs\nThen the cycle resets.\nTRUMP:\n- SOUTH KOREA IS NOT LIVING UP TO THEIR SIDE OF OUR TRADE DEAL\n- UNTIL THEY DO, I AM INCREASING TARIFFS ON AUTOS, PHARMA & LUMBER, FROM 15% TO 25% \nhere we go again https://t.co/S4L0sVW780 \n- \namit",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": 5745821596339628883,
-        "category": "Macro",
-        "title": "Texas Manufacturing Is Moving But The Cycle Isn’t",
-        "content": "Texas Manufacturing Is Moving But The Cycle Isn’t\nTexas manufacturing looked better in January. Production, new orders, and shipments all moved back into positive territory after a weak December. On the surface, it reads like momentum returning.\nBut when you slow down and read the full report, it feels less like a new cycle beginning and more like the system steadying itself after wobbling late last year.\nOutput Is Back But The Pipeline Isn’t\nHere’s the quiet contradiction sitting under the rebound…\n•   Firms are producing and shipping more\n•   Order growth is still negative\n•   Backlogs are still shrinking\nThat’s a classic late cycle tension. Companies are busy filling what’s in front of them, but they’re not building depth behind it. Activity improves, but future visibility doesn’t. Things are moving, but the pipeline isn’t thickening. That’s stabilization, not acceleration.\nSentiment Says Relief, Not Confidence \nBusiness sentiment barely clears neutral. Outlooks improved, but they sound cautious rather than convinced. The tone is telling..less anxiety than December, but no sense of conviction either.\nIt reads like managers saying..\n“The slide stopped… but I’m not ready to lean forward yet.”\nThat gap between better data and guarded language matters.\nLabor Looks Late Cycle, Not Expansionary \nHiring turned positive again, but hours barely moved. That’s not how companies behave when demand is taking off.\nIt suggests firms are..\n•   Adding selectively\n•   Avoiding overtime\n•   Preserving flexibility\nMore telling, fewer firms are even trying to hire at all. And the constraint isn’t a lack of applicants anymore..it’s skills and pay expectations. That’s what a cooling labor market with structural mismatches looks like. Not recession yet. But not growth confidence either.\nPricing Power Is Rising Unevenly\nOne signal policymakers won’t ignore..firms are getting better at raising prices on finished goods, even as wage pressure cools.\nThat mix implies…\n•   Margins may be improving for firms with pricing power\n•   Inflation pressure isn’t gone, just uneven and selective\nThis is uncomfortable territory. Not hot enough to force action, not cool enough to declare victory.\nRecessionary Hints Show Up In The Margins\nThe most recession sensitive signals don’t live in the headlines they leak out in the details…\n•   Backlogs continue to shrink, which often precedes pullbacks in hiring and capex\n•   Some firms report customers going out of business and payment terms stretching\n•   A meaningful share has frozen capital spending entirely due to uncertainty\nThose aren’t expansion behaviors. They’re capital preservation behaviors.\nTwo Economies Hiding In One Survey\nThe comments make the divergence clear.\nSome firms sound strong…\n•   Machinery\n•   Equipment\n•   Data center linked demand\nOthers sound strained…\n•   Food suppliers losing customers\n•   Office and hospitality linked businesses still weak\n•   Firms quietly pulling back and protecting cash\nThat split explains why the averages look fine, but confidence never really follows through.\nCapex Is Defensive, Not Exuberant \nYes, more firms expect to spend in 2026. But where they plan to spend matters.\n•   Software\n•   Automation\n•   Machinery\nThat’s productivity and risk management spending..not broad demand driven expansion. And alongside that optimism sits a non trivial group that has stopped spending altogether.\nThe Real Question Going Forward\nJanuary tells us the system didn’t break. That’s important.\nWhat it doesn’t tell us is whether demand is rebuilding beneath the surface or whether this was a catch up month after a soft December, helped by timing and seasonality.\nFebruary is the tell…\nIf orders and backlogs start to improve, this becomes the start of a real recovery narrative. If they roll over again, January will look like a pause in a slowdown..not an escape from it.\nJanuary Dallas Fed Manufactur[...]",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": 8626692311739738651,
-        "category": "Macro",
-        "title": "Texas Manufacturing Is Moving But The Cycle Isn’t ...",
-        "content": "Texas Manufacturing Is Moving But The Cycle Isn’t  Texas manufacturing looked better in January. Production, new orders, and shipments all moved back into positive territory after a weak December. On the surface, it reads like momentum returning.  But when…",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": -4092531491219140380,
-        "category": "Macro",
-        "title": "My story with using ClawdBot for Trading on Polyma...",
-        "content": "My story with using ClawdBot for Trading on Polymarket inspired someone to create a memecoin via \n@BagsApp\nJust wanna thank anyone who created it and made me earn 100% of creator fees.\nCreators supporting Creators is what I want to see in this space.\nJoined community now.\nNot saying I’ll be active, cause I’m not into memecoins.\nThank you again! \n$POLYCLAWD",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": 5323298845844104611,
-        "category": "Macro",
-        "title": "BREAKING: Greg Bovino has reportedly been relieved...",
-        "content": "BREAKING: Greg Bovino has reportedly been relieved of duty as Head of US Border Patrol.",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": -4214617061467051247,
-        "category": "Macro",
-        "title": "Charlie Munger’s point here is that reading alone ...",
-        "content": "Charlie Munger’s point here is that reading alone won’t make everyone rich, but it gives a massive lifelong advantage. Once you master reading (and basic arithmetic), you can learn endlessly, at your own pace, filtering what matters and skipping what doesn’t. That ability compounds and people who read a lot consistently outperform those who don’t.",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": -5444403388474386332,
-        "category": "Macro",
-        "title": "A New York Fed survey shows workers confidence in ...",
-        "content": "A New York Fed survey shows workers confidence in finding a job within three months fell to a record low in December 2025, despite the official unemployment rate hovering near 4%.\n🧐\n \nThat gap suggests growing hidden stress in the labor market, like hiring hesitation or skill mismatches rather than strength. Public reaction highlights frustration and polarization, with many tying the disconnect to policy choices and overly optimistic economic narratives.\nThe probability of finding a job hit a record low of 43.1% in December, per CNN \n- \nunusual_whales",
-        "sentiment": "neutral",
-        "date": "2026-01-26"
-    },
-    {
-        "id": 5555270260154476762,
-        "category": "Macro",
-        "title": "The Quiet Mechanics Behind Europe’s U.S. Equity Ex...",
-        "content": "The Quiet Mechanics Behind Europe’s U.S. Equity Exposure\nMost of these numbers are reported in market value, not net new purchases. U.S. equities massively outperformed over the last few years, and for long stretches the dollar was strong. Those two forces alone inflate the value of existing foreign holdings. Even if Europeans barely bought anything new, the same shares they already owned would still look much larger on paper.\nThat distinction matters, because rising exposure isn’t the same thing as rising conviction.\nWhy This Still Holds Even With A Weaker Dollar Now\nThis is where people get tripped up. Yes, the dollar has weakened recently and EUR/USD is higher over the past year. But the surge in reported European holdings didn’t happen overnight. It accumulated over multiple years that included long periods of U.S. equity outperformance and earlier dollar strength.\nThose valuation gains don’t disappear just because the dollar softens later. Unless assets are sold, the level effect remains. So a falling DXY today doesn’t contradict the story..it just tells you the next leg of returns may look different.\nThis Isn’t Just About Chasing Returns\nU.S. tech and AI crushed European equities. That’s the obvious part. But the quieter driver is that Europe hasn’t given its own capital many compelling alternatives. Energy costs stayed high after the Ukraine shock. Regulation keeps stacking up. Demographics are getting worse, not better. Growth feels capped before it even starts.\nSo money drifts. Not dramatically. Not ideologically. It drifts toward the place where earnings grow, liquidity is deep, and exits are easy. That’s less a vote for America than a shrug about Europe.\nThe Plumbing Matters More Than People Think\nAnother thing that gets missed..a lot of this European ownership runs through funds, custodians, and legal structures in places like Ireland, Luxembourg, or London. That doesn’t always mean European households or governments are the real decision makers. It’s global money wearing a European label.\nWhich makes the idea that Europe could suddenly dump U.S. equities way overplayed. There’s no red button.\nThe Real Lever Is Currency Risk, Not Selling\nIf something shifts, it probably won’t start with mass selling. It’ll start with hedging. For European investors, owning U.S. stocks often also means owning dollars, sometimes unintentionally. When hedging is expensive, they stay unhedged. When the math changes, they adjust.\nThose quiet changes in hedge ratios can move FX markets and risk premiums long before anyone talks about selling stocks.\nWhat This Actually Says About The System\nAt a deeper level, this is about gravity. Global portfolios follow benchmarks. Benchmarks follow market cap. And market cap followed the U.S. That creates a self reinforcing loop where capital concentrates even if no one feels especially bullish.\nThe real risk isn’t that Europe suddenly leaves. It’s that the marginal buyer slowly fades. Returns flatten, hedges rise, and the U.S. equity risk premium has to do more work on its own.\nThat’s not a crash story. It’s a regime change story.\nMy View\nThis isn’t Europeans making a loud bet on America. It’s global capital responding to performance, structure, and habit. If anything, it’s a quiet signal of how narrow the global growth menu has become.\nAnd those situations rarely end with fireworks. They end with slow shifts that only look obvious in hindsight.\nEuropeans are piling into US stocks:\nEuropean investors now own a record $10.4 trillion in US stocks.\nOwnership has surged +$4.9 trillion, or +91%, over the last 3 years.\nDenmark, Finland, France, Germany, the Netherlands, Norway, Sweden, the UK, now hold ~$5.7 trillion in US equities, or 55% of total European holdings.\nBy comparison, the rest of the world holds $10.9 trillion.\nIn other words, European investors now reflect ~49% of all foreign holdings of US equities.\nEurope’s exposure to US stocks is at unprecedented [...]",
-        "sentiment": "neutral",
-        "date": "2026-01-27"
-    },
-    {
-        "id": 2283608959122477956,
-        "category": "Macro",
-        "title": "The Quiet Mechanics Behind Europe’s U.S. Equity Ex...",
-        "content": "The Quiet Mechanics Behind Europe’s U.S. Equity Exposure  Most of these numbers are reported in market value, not net new purchases. U.S. equities massively outperformed over the last few years, and for long stretches the dollar was strong. Those two forces…",
-        "sentiment": "neutral",
-        "date": "2026-01-27"
-    },
-    {
-        "id": -7331301660077213803,
-        "category": "Macro",
-        "title": "I can’t stand the skinny guys who spend hours on t...",
-        "content": "I can’t stand the skinny guys who spend hours on treadmill or stairs. Anorexia is a real problem!",
-        "sentiment": "neutral",
-        "date": "2026-01-27"
-    },
-    {
-        "id": -8732985282491355535,
-        "category": "Crypto",
-        "title": "Peter Schiff argues that Bitcoin isn’t real money ...",
-        "content": "Peter Schiff argues that Bitcoin isn’t real money because it lacks intrinsic value, is highly volatile, and depends more on speculation than stability. From his perspective, that makes it unsuitable as a central bank reserve asset, especially compared with gold. He points to the fact that central banks continue to accumulate gold while virtually none hold Bitcoin (with El Salvador as the lone exception) as evidence that institutions still trust gold..not crypto when it comes to preserving monetary credibility and long term stability.",
-        "sentiment": "neutral",
-        "date": "2026-01-27"
-    },
-    {
-        "id": 7700847176197459539,
-        "category": "Macro",
-        "title": "$DOCN getting bid up",
-        "content": "$DOCN getting bid up\n$DOCN MAY SWEEPER .. https://t.co/kmF9LkStwP \n- \nJESUS",
-        "sentiment": "neutral",
-        "date": "2026-01-27"
-    },
-    {
-        "id": -1430184278382689862,
-        "category": "Macro",
-        "title": "RT ",
-        "content": "RT \n@fabianstelzer\n: Know the various stages of Claude Code psychosis - early warning signs are easily overlooked \nhttps://t.co/LsafOIywAW",
-        "sentiment": "neutral",
-        "date": "2026-01-25"
-    },
-    {
-        "id": 4459740809812478773,
-        "category": "Politics",
-        "title": "No-Lose Strategy or a Trump Office Insider Farming...",
-        "content": "No-Lose Strategy or a Trump Office Insider Farming $224,921?\nA fresh wallet with only 3 predictions and 100% win rate was exposed.\n> \nhttps://t.co/KNR4bHsjtV\n> $24,000 into \"Fed Chair\" market before the President Interview. \n+$434,678 potential payout.\n> $15,000 into \"NYC rents freeze\" market right before the odds skyrocketed.\n+$81,298 potential payout.\nThe funniest thing is that all predictions are tied to White House related markets, which makes this look a lot like insider trading.\nSuch wallets gives you an infinity money glitch opportunity with copytrading:\n> \nhttps://t.co/Z48Gf3R8Co\njust setup the settings clearly and start making money with insiders.",
-        "sentiment": "neutral",
-        "date": "2026-01-25"
     }
 ]
