@@ -19,8 +19,7 @@
 ├── scripts/
 │   └── build-site.ts # Main Build Controller
 ├── lib/             # Books & Investing Resources (EPUB/PDF)
-├── fx/              # Trading & Technical Analysis Resources
-└── wealth_manager/   # Restored project directory
+└── fx/              # Trading & Technical Analysis Resources
 ```
 
 ## 3. Build Process

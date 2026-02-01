@@ -8,7 +8,7 @@ The goal of this project was to restore missing and deleted content from the Moe
 
 - **Content Restoration**: Recover the full Alice Schroeder interview (Parts 1-6) and the "13F Letters" section.
 - **Link Restoration**: Recover over 50 "Kevin G. Compilations" links organized by industry.
-- **System Restoration**: Recover the `wealth_manager` directory and ensure the automated build pipeline (Bun + TypeScript) functions correctly.
+- **System Restoration**: Ensure the automated build pipeline (Bun + TypeScript) functions correctly.
 - **UI Refinement**: Group individual company cards (Noah, NuBank) into a single "Special Situations" accordion for better focus.
 
 ## 3. Features
@@ -21,5 +21,4 @@ The goal of this project was to restore missing and deleted content from the Moe
 
 - [x] Full interview text available on the site.
 - [x] 13F and Compilation links functional.
-- [x] `wealth_manager` sub-project restored from history.
 - [x] Successful deployment to Cloudflare Pages.
