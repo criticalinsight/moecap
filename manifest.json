@@ -1,0 +1,602 @@
+[
+  {
+    "id": "lib/Walton.epub",
+    "filename": "Walton.epub",
+    "name": "Walton",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 529686,
+    "lastModified": 1768166085137,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/Walton.epub"
+  },
+  {
+    "id": "lib/Outsiders.epub",
+    "filename": "Outsiders.epub",
+    "name": "Outsiders",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 635458,
+    "lastModified": 1768166085114,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/Outsiders.epub"
+  },
+  {
+    "id": "lib/WBEssays.epub",
+    "filename": "WBEssays.epub",
+    "name": "WBEssays",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 551016,
+    "lastModified": 1768166085135,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/WBEssays.epub"
+  },
+  {
+    "id": "lib/StillBeatstheMarket.epub",
+    "filename": "StillBeatstheMarket.epub",
+    "name": "StillBeatstheMarket",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 1560172,
+    "lastModified": 1768166085122,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/StillBeatstheMarket.epub"
+  },
+  {
+    "id": "lib/TheSnowball.epub",
+    "filename": "TheSnowball.epub",
+    "name": "TheSnowball",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 7596838,
+    "lastModified": 1768166085133,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/TheSnowball.epub"
+  },
+  {
+    "id": "lib/RicherWiserHappier.epub",
+    "filename": "RicherWiserHappier.epub",
+    "name": "RicherWiserHappier",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 2429179,
+    "lastModified": 1768166085119,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/RicherWiserHappier.epub"
+  },
+  {
+    "id": "lib/OptimalThinking.pdf",
+    "filename": "OptimalThinking.pdf",
+    "name": "OptimalThinking",
+    "extension": "pdf",
+    "category": "lib",
+    "sizeBytes": 1032548,
+    "lastModified": 1768166085112,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/OptimalThinking.pdf"
+  },
+  {
+    "id": "lib/ClearThinking.epub",
+    "filename": "ClearThinking.epub",
+    "name": "ClearThinking",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 4361763,
+    "lastModified": 1768166085083,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/ClearThinking.epub"
+  },
+  {
+    "id": "lib/Incerto.epub",
+    "filename": "Incerto.epub",
+    "name": "Incerto",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 7272253,
+    "lastModified": 1768166085106,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/Incerto.epub"
+  },
+  {
+    "id": "lib/ValuationLittleBook.epub",
+    "filename": "ValuationLittleBook.epub",
+    "name": "ValuationLittleBook",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 904726,
+    "lastModified": 1768166085135,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/ValuationLittleBook.epub"
+  },
+  {
+    "id": "lib/howthemarkerts.pdf.pdf",
+    "filename": "howthemarkerts.pdf.pdf",
+    "name": "howthemarkerts.pdf",
+    "extension": "pdf",
+    "category": "lib",
+    "sizeBytes": 4235973,
+    "lastModified": 1768166085146,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/howthemarkerts.pdf.pdf"
+  },
+  {
+    "id": "lib/SameasEver.epub",
+    "filename": "SameasEver.epub",
+    "name": "SameasEver",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 1211494,
+    "lastModified": 1768166085120,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/SameasEver.epub"
+  },
+  {
+    "id": "lib/PsychologyofMoney.epub",
+    "filename": "PsychologyofMoney.epub",
+    "name": "PsychologyofMoney",
+    "extension": "epub",
+    "category": "lib",
+    "sizeBytes": 1912971,
+    "lastModified": 1768166085116,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/lib/PsychologyofMoney.epub"
+  },
+  {
+    "id": "fx/Day_Trading_QuickStart_Guide_The_Simplified_Beginners_Guide_to_Winning.pdf",
+    "filename": "Day_Trading_QuickStart_Guide_The_Simplified_Beginners_Guide_to_Winning.pdf",
+    "name": "Day Trading QuickStart Guide The Simplified Beginners Guide to Winning",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 11254910,
+    "lastModified": 1768166084348,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Day_Trading_QuickStart_Guide_The_Simplified_Beginners_Guide_to_Winning.pdf"
+  },
+  {
+    "id": "fx/Trading_Without_Gambling_Develop.pdf",
+    "filename": "Trading_Without_Gambling_Develop.pdf",
+    "name": "Trading Without Gambling Develop",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 4409873,
+    "lastModified": 1768166084860,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Trading_Without_Gambling_Develop.pdf"
+  },
+  {
+    "id": "fx/New Trader, Rich Trader_ How to - Steve Burns.pdf",
+    "filename": "New Trader, Rich Trader_ How to - Steve Burns.pdf",
+    "name": "New Trader, Rich Trader How to - Steve Burns",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 831597,
+    "lastModified": 1768166084577,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/New Trader, Rich Trader_ How to - Steve Burns.pdf"
+  },
+  {
+    "id": "fx/simple trading book1.pdf",
+    "filename": "simple trading book1.pdf",
+    "name": "simple trading book1",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 6426352,
+    "lastModified": 1768166085033,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/simple trading book1.pdf"
+  },
+  {
+    "id": "fx/The ICT Bible - V1 - By Ali Khan.pdf",
+    "filename": "The ICT Bible - V1 - By Ali Khan.pdf",
+    "name": "The ICT Bible - V1 - By Ali Khan",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 5217743,
+    "lastModified": 1768166084650,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/The ICT Bible - V1 - By Ali Khan.pdf"
+  },
+  {
+    "id": "fx/Harmonic_Trading,_Advanced_Strategies_for_Profiting_from_the_Natural.pdf",
+    "filename": "Harmonic_Trading,_Advanced_Strategies_for_Profiting_from_the_Natural.pdf",
+    "name": "Harmonic Trading, Advanced Strategies for Profiting from the Natural",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 7932456,
+    "lastModified": 1768166084413,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Harmonic_Trading,_Advanced_Strategies_for_Profiting_from_the_Natural.pdf"
+  },
+  {
+    "id": "fx/Mastering_Trading_Psychology_Improve_Your_Trading_with_Firsthand.pdf",
+    "filename": "Mastering_Trading_Psychology_Improve_Your_Trading_with_Firsthand.pdf",
+    "name": "Mastering Trading Psychology Improve Your Trading with Firsthand",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2362831,
+    "lastModified": 1768166084573,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Mastering_Trading_Psychology_Improve_Your_Trading_with_Firsthand.pdf"
+  },
+  {
+    "id": "fx/Choch Trading Plan.pdf",
+    "filename": "Choch Trading Plan.pdf",
+    "name": "Choch Trading Plan",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2237886,
+    "lastModified": 1768166084308,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Choch Trading Plan.pdf"
+  },
+  {
+    "id": "fx/Candlestick Charting for Dummies.pdf",
+    "filename": "Candlestick Charting for Dummies.pdf",
+    "name": "Candlestick Charting for Dummies",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 7767169,
+    "lastModified": 1768166084298,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Candlestick Charting for Dummies.pdf"
+  },
+  {
+    "id": "fx/Supply & Demand Trading.pdf",
+    "filename": "Supply & Demand Trading.pdf",
+    "name": "Supply & Demand Trading",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 1121402,
+    "lastModified": 1768166084623,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Supply & Demand Trading.pdf"
+  },
+  {
+    "id": "fx/high performance trading.pdf",
+    "filename": "high performance trading.pdf",
+    "name": "high performance trading",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2430278,
+    "lastModified": 1768166085008,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/high performance trading.pdf"
+  },
+  {
+    "id": "fx/The Blueprint to Trading Psychology (1).pdf",
+    "filename": "The Blueprint to Trading Psychology (1).pdf",
+    "name": "The Blueprint to Trading Psychology (1)",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 560961,
+    "lastModified": 1768166084632,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/The Blueprint to Trading Psychology (1).pdf"
+  },
+  {
+    "id": "fx/So_You_Want_to_be_a_Trader_How_to_Trade_the_Stock_Market_ves_of.epub",
+    "filename": "So_You_Want_to_be_a_Trader_How_to_Trade_the_Stock_Market_ves_of.epub",
+    "name": "So You Want to be a Trader How to Trade the Stock Market ves of",
+    "extension": "epub",
+    "category": "fx",
+    "sizeBytes": 380212,
+    "lastModified": 1768166084617,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/So_You_Want_to_be_a_Trader_How_to_Trade_the_Stock_Market_ves_of.epub"
+  },
+  {
+    "id": "fx/Forex Trading All In One For Dummies - Mamta Mishra.pdf",
+    "filename": "Forex Trading All In One For Dummies - Mamta Mishra.pdf",
+    "name": "Forex Trading All In One For Dummies - Mamta Mishra",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 3228856,
+    "lastModified": 1768166084370,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Forex Trading All In One For Dummies - Mamta Mishra.pdf"
+  },
+  {
+    "id": "fx/Mark_Douglas_Trading_in_the_Zone.pdf",
+    "filename": "Mark_Douglas_Trading_in_the_Zone.pdf",
+    "name": "Mark Douglas Trading in the Zone",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 3230817,
+    "lastModified": 1768166084563,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Mark_Douglas_Trading_in_the_Zone.pdf"
+  },
+  {
+    "id": "fx/trade_forex_with_support_and_resistance_strategies.pdf",
+    "filename": "trade_forex_with_support_and_resistance_strategies.pdf",
+    "name": "trade forex with support and resistance strategies",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 911980,
+    "lastModified": 1768166085059,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/trade_forex_with_support_and_resistance_strategies.pdf"
+  },
+  {
+    "id": "fx/How to make money in intraday trading ( PDFDrive ).pdf",
+    "filename": "How to make money in intraday trading ( PDFDrive ).pdf",
+    "name": "How to make money in intraday trading ( PDFDrive )",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 12486703,
+    "lastModified": 1768166084550,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/How to make money in intraday trading ( PDFDrive ).pdf"
+  },
+  {
+    "id": "fx/The Man Who Solved the Market (1).pdf",
+    "filename": "The Man Who Solved the Market (1).pdf",
+    "name": "The Man Who Solved the Market (1)",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 9523971,
+    "lastModified": 1768166084687,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/The Man Who Solved the Market (1).pdf"
+  },
+  {
+    "id": "fx/BASICS OF FOREX TRADING -Financial Hub .pdf",
+    "filename": "BASICS OF FOREX TRADING -Financial Hub .pdf",
+    "name": "BASICS OF FOREX TRADING - Financial Hub",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2658850,
+    "lastModified": 1768166084275,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/BASICS OF FOREX TRADING -Financial Hub .pdf"
+  },
+  {
+    "id": "fx/Think & Trade Like a Champion_ - Mark Minervini.pdf",
+    "filename": "Think & Trade Like a Champion_ - Mark Minervini.pdf",
+    "name": "Think & Trade Like a Champion - Mark Minervini",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 8397204,
+    "lastModified": 1768166084831,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Think & Trade Like a Champion_ - Mark Minervini.pdf"
+  },
+  {
+    "id": "fx/Harmonic_Trading,_Profiting_from_the_Natural_Order_of_the_Financial.pdf",
+    "filename": "Harmonic_Trading,_Profiting_from_the_Natural_Order_of_the_Financial.pdf",
+    "name": "Harmonic Trading, Profiting from the Natural Order of the Financial",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 10393848,
+    "lastModified": 1768166084449,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Harmonic_Trading,_Profiting_from_the_Natural_Order_of_the_Financial.pdf"
+  },
+  {
+    "id": "fx/Support_and_Resistance_Simplified.pdf",
+    "filename": "Support_and_Resistance_Simplified.pdf",
+    "name": "Support and Resistance Simplified",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 1817285,
+    "lastModified": 1768166084630,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Support_and_Resistance_Simplified.pdf"
+  },
+  {
+    "id": "fx/STEVE NISON Japanese Candlestick Charting Techniques.pdf",
+    "filename": "STEVE NISON Japanese Candlestick Charting Techniques.pdf",
+    "name": "STEVE NISON Japanese Candlestick Charting Techniques",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 6119986,
+    "lastModified": 1768166084596,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/STEVE NISON Japanese Candlestick Charting Techniques.pdf"
+  },
+  {
+    "id": "fx/Andrew Aziz - How to Day Trade for a Living.epub",
+    "filename": "Andrew Aziz - How to Day Trade for a Living.epub",
+    "name": "Andrew Aziz - How to Day Trade for a Living",
+    "extension": "epub",
+    "category": "fx",
+    "sizeBytes": 1110850,
+    "lastModified": 1768166084265,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Andrew Aziz - How to Day Trade for a Living.epub"
+  },
+  {
+    "id": "fx/zmcapitals academy eBook.pdf",
+    "filename": "zmcapitals academy eBook.pdf",
+    "name": "zmcapitals academy eBook",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2469174,
+    "lastModified": 1768166085070,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/zmcapitals academy eBook.pdf"
+  },
+  {
+    "id": "fx/The_Trader's_Code.pdf",
+    "filename": "The_Trader's_Code.pdf",
+    "name": "The Trader's Code",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2239385,
+    "lastModified": 1768166084796,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/The_Trader's_Code.pdf"
+  },
+  {
+    "id": "fx/zentrader.epub",
+    "filename": "zentrader.epub",
+    "name": "zentrader",
+    "extension": "epub",
+    "category": "fx",
+    "sizeBytes": 1063870,
+    "lastModified": 1768166085062,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/zentrader.epub"
+  },
+  {
+    "id": "fx/daytrading.pdf",
+    "filename": "daytrading.pdf",
+    "name": "daytrading",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 11440131,
+    "lastModified": 1768166084954,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/daytrading.pdf"
+  },
+  {
+    "id": "fx/Trading_Psychology_2_0_From_Best.pdf",
+    "filename": "Trading_Psychology_2_0_From_Best.pdf",
+    "name": "Trading Psychology 2 0 From Best",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2393752,
+    "lastModified": 1768166084844,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Trading_Psychology_2_0_From_Best.pdf"
+  },
+  {
+    "id": "fx/Douglas,_Mark_The_Disciplined_Trader.pdf",
+    "filename": "Douglas,_Mark_The_Disciplined_Trader.pdf",
+    "name": "Douglas, Mark The Disciplined Trader",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 1521119,
+    "lastModified": 1768166084357,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Douglas,_Mark_The_Disciplined_Trader.pdf"
+  },
+  {
+    "id": "fx/Van K.Tharp - Super Trader - Make Consistent Profits in ....pdf",
+    "filename": "Van K.Tharp - Super Trader - Make Consistent Profits in ....pdf",
+    "name": "Van K.Tharp - Super Trader - Make Consistent Profits in ...",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2193881,
+    "lastModified": 1768166084887,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Van K.Tharp - Super Trader - Make Consistent Profits in ....pdf"
+  },
+  {
+    "id": "fx/The_Little_Book_of_Market_Wizards_Lessons_from_the_Greatest_Traders.pdf",
+    "filename": "The_Little_Book_of_Market_Wizards_Lessons_from_the_Greatest_Traders.pdf",
+    "name": "The Little Book of Market Wizards Lessons from the Greatest Traders",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 733293,
+    "lastModified": 1768166084726,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/The_Little_Book_of_Market_Wizards_Lessons_from_the_Greatest_Traders.pdf"
+  },
+  {
+    "id": "fx/[Bob_Volman]_Forex_Price_Action_Scalping(rasabourse.com).pdf",
+    "filename": "[Bob_Volman]_Forex_Price_Action_Scalping(rasabourse.com).pdf",
+    "name": "[Bob Volman] Forex Price Action Scalping(rasabourse.com)",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 6521431,
+    "lastModified": 1768166084915,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/[Bob_Volman]_Forex_Price_Action_Scalping(rasabourse.com).pdf"
+  },
+  {
+    "id": "fx/The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf",
+    "filename": "The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf",
+    "name": "The New Trading for a Living Psychology, Discipline, Trading Tools",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 13146529,
+    "lastModified": 1768166084774,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf"
+  },
+  {
+    "id": "fx/technical analysis course.pdf",
+    "filename": "technical analysis course.pdf",
+    "name": "technical analysis course",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 4630383,
+    "lastModified": 1768166085052,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/technical analysis course.pdf"
+  },
+  {
+    "id": "fx/The_Smart_Money_Concept_Forex_Advanced_Institutional_Trading_James.pdf",
+    "filename": "The_Smart_Money_Concept_Forex_Advanced_Institutional_Trading_James.pdf",
+    "name": "The Smart Money Concept Forex Advanced Institutional Trading James",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 2468021,
+    "lastModified": 1768166084788,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/The_Smart_Money_Concept_Forex_Advanced_Institutional_Trading_James.pdf"
+  },
+  {
+    "id": "fx/Advanced SMC — pt.3 (1).pdf",
+    "filename": "Advanced SMC — pt.3 (1).pdf",
+    "name": "Advanced SMC — pt.3 (1)",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 4618527,
+    "lastModified": 1768166084260,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Advanced SMC — pt.3 (1).pdf"
+  },
+  {
+    "id": "fx/demystifying ICT Trader.pdf",
+    "filename": "demystifying ICT Trader.pdf",
+    "name": "demystifying ICT Trader",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 11484116,
+    "lastModified": 1768166084996,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/demystifying ICT Trader.pdf"
+  },
+  {
+    "id": "fx/Smart_Money_Concept_SMC_Tradi_Vekariya,_Dixit.pdf",
+    "filename": "Smart_Money_Concept_SMC_Tradi_Vekariya,_Dixit.pdf",
+    "name": "Smart Money Concept SMC Tradi Vekariya, Dixit",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 5665597,
+    "lastModified": 1768166084616,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Smart_Money_Concept_SMC_Tradi_Vekariya,_Dixit.pdf"
+  },
+  {
+    "id": "fx/How To Make Money Trading With Charts ( PDFDrive ).pdf",
+    "filename": "How To Make Money Trading With Charts ( PDFDrive ).pdf",
+    "name": "How To Make Money Trading With Charts ( PDFDrive )",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 12804784,
+    "lastModified": 1768166084498,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/How To Make Money Trading With Charts ( PDFDrive ).pdf"
+  },
+  {
+    "id": "fx/042_Encyclopedia Of Chart Patterns, 2nd Edition.pdf",
+    "filename": "042_Encyclopedia Of Chart Patterns, 2nd Edition.pdf",
+    "name": "042 Encyclopedia Of Chart Patterns, 2nd Edition",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 6160716,
+    "lastModified": 1768166084184,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/042_Encyclopedia Of Chart Patterns, 2nd Edition.pdf"
+  },
+  {
+    "id": "fx/Trend_Following_Mindset_The_Genius_of_Legendary.pdf",
+    "filename": "Trend_Following_Mindset_The_Genius_of_Legendary.pdf",
+    "name": "Trend Following Mindset The Genius of Legendary",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 4603685,
+    "lastModified": 1768166084878,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Trend_Following_Mindset_The_Genius_of_Legendary.pdf"
+  },
+  {
+    "id": "fx/Wayne Walker - Advanced Technical Analysis For Forex.epub",
+    "filename": "Wayne Walker - Advanced Technical Analysis For Forex.epub",
+    "name": "Wayne Walker - Advanced Technical Analysis For Forex",
+    "extension": "epub",
+    "category": "fx",
+    "sizeBytes": 1769202,
+    "lastModified": 1768166084890,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Wayne Walker - Advanced Technical Analysis For Forex.epub"
+  },
+  {
+    "id": "fx/The_Art_and_Science_of_Trading_Course.epub",
+    "filename": "The_Art_and_Science_of_Trading_Course.epub",
+    "name": "The Art and Science of Trading Course",
+    "extension": "epub",
+    "category": "fx",
+    "sizeBytes": 12519929,
+    "lastModified": 1768166084719,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/The_Art_and_Science_of_Trading_Course.epub"
+  },
+  {
+    "id": "fx/Advanced SMC — pt.1.pdf",
+    "filename": "Advanced SMC — pt.1.pdf",
+    "name": "Advanced SMC — pt.1",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 7950295,
+    "lastModified": 1768166084205,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Advanced SMC — pt.1.pdf"
+  },
+  {
+    "id": "fx/Fundamental Analysis for Dummies (ISBN - 0470506458).pdf",
+    "filename": "Fundamental Analysis for Dummies (ISBN - 0470506458).pdf",
+    "name": "Fundamental Analysis for Dummies (ISBN - 0470506458)",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 4343199,
+    "lastModified": 1768166084385,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Fundamental Analysis for Dummies (ISBN - 0470506458).pdf"
+  },
+  {
+    "id": "fx/Advanced SMC — pt.2.pdf",
+    "filename": "Advanced SMC — pt.2.pdf",
+    "name": "Advanced SMC — pt.2",
+    "extension": "pdf",
+    "category": "fx",
+    "sizeBytes": 7825977,
+    "lastModified": 1768166084238,
+    "path": "/Users/brixelectronics/Documents/mac/criticalinsight_repos/moecap/fx/Advanced SMC — pt.2.pdf"
+  }
+]
