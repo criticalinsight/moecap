@@ -1,0 +1,58 @@
+import { renderPage } from "../src/view";
+import { getManifest } from "../src/assets";
+import { CONTENT } from "../src/content";
+import { writeFileSync, existsSync, mkdirSync, rmSync, cpSync } from "node:fs";
+import * as fs from "node:fs";
+import { join } from "node:path";
+import type { ContentNode } from "../src/assets";
+
+const BASE_PATH = process.cwd();
+const ASSET_DIRECTORIES = ["lib", "fx"];
+
+const PUBLIC_DIR = join(BASE_PATH, "public");
+
+try {
+    console.log("🚀 Starting unified site build...");
+
+    // 0. Prepare public directory
+    if (existsSync(PUBLIC_DIR)) {
+        console.log("🧹 Cleaning public directory...");
+        rmSync(PUBLIC_DIR, { recursive: true, force: true });
+    }
+    mkdirSync(PUBLIC_DIR, { recursive: true });
+
+    // 1. Get Assets from filesystem
+    const assets = getManifest(BASE_PATH, ASSET_DIRECTORIES);
+    const categories = Array.from(new Set(assets.map(a => a.category)));
+
+    const assetNodes: ContentNode[] = categories.map(cat => ({
+        id: cat.toLowerCase(),
+        title: cat.charAt(0).toUpperCase() + cat.slice(1),
+        type: 'ASSET_LIST',
+        category: 'ASSETS',
+        assets: assets.filter(a => a.category === cat)
+    }));
+
+    // 2. Merge with Static Content
+    const allNodes = [...CONTENT, ...assetNodes];
+
+    // 3. Render and Write
+    const html = renderPage(allNodes);
+
+    const outputPath = join(PUBLIC_DIR, "index.html");
+    writeFileSync(outputPath, html);
+
+    // 4. Mirror assets to public
+    for (const dir of ASSET_DIRECTORIES) {
+        const src = join(BASE_PATH, dir);
+        const dest = join(PUBLIC_DIR, dir);
+        console.log(`📂 Mirroring ${src} -> ${dest}`);
+        cpSync(src, dest, { recursive: true });
+    }
+
+    console.log(`✅ Unified site built successfully in: ${PUBLIC_DIR}`);
+    console.log(`📊 Nodes: ${allNodes.length} (Static: ${CONTENT.length}, AssetsGroups: ${assetNodes.length})`);
+} catch (error) {
+    console.error("❌ Build failed:", error);
+    process.exit(1);
+}

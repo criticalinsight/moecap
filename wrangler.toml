@@ -1,0 +1,5 @@
+name = "moecap"
+pages_build_output_dir = "public"
+
+[vars]
+BUN_VERSION = "1.1.0"

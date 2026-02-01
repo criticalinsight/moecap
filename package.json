@@ -1,10 +1,14 @@
 {
     "name": "moecap",
     "version": "1.0.0",
-    "private": true,
+    "type": "module",
     "scripts": {
-        "build": "npm run build:100",
-        "build:100": "cd 100/web && npm install && npm run build"
+        "test": "bun test",
+        "test:coverage": "bun test --coverage",
+        "build": "bun run scripts/build-site.ts",
+        "deploy": "bun run build && npx wrangler pages deploy public --project-name moecap"
     },
-    "description": "MoeCapital - Financial Analysis Platform"
+    "devDependencies": {
+        "bun-types": "latest"
+    }
 }
