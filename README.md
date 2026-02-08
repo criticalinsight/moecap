@@ -10,9 +10,8 @@ Visit: [moecapital.com](https://moecapital.com)
 
 ## 📊 Features
 
-- **Alice Schroeder Interview**: Full transcripts of the definitive "Snowball" author interview (Parts 1-6).
+- **NSE Dashboard**: Kenya Securities Exchange financials and ROIC analysis at [/nse](https://moecapital.com/nse).
 - **13F Fund Letters**: Consolidated analysis and insights from top asset managers.
-- **Kevin G. Compilations**: Over 50 curated research collections from legendary venture and value investors.
 - **Dynamic Asset Library**: Automated discovery of PDFs and EPUBs from the `lib/` and `fx/` directories.
 - **100-Bagger Analysis**: Interactive dashboard for identifying high-growth stock opportunities.
 
@@ -24,10 +23,11 @@ Visit: [moecapital.com](https://moecapital.com)
 │   ├── content.ts   # Core site content & link database
 │   ├── view.ts      # HTML Template & rendering engine
 │   └── assets.ts    # Asset Discovery & Manifest Generation
+├── functions/
+│   └── nse/         # Cloudflare Pages Function routing to Kenya-ROIC
 ├── scripts/
 │   └── build-site.ts # Main build entry point
 ├── public/          # Build output (Static files & Assets)
-├── 100/             # 100-Bagger interactive app
 ├── lib/             # Curated investing books (EPUB/PDF)
 ├── fx/              # Trading & Technical analysis resources
 └── tests/           # Vitest-based verification suite
