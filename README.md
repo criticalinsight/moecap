@@ -13,6 +13,8 @@ Visit: [moecapital.com](https://moecapital.com)
 - **NSE Dashboard**: Kenya Securities Exchange financials and ROIC analysis at [/nse](https://moecapital.com/nse).
 - **13F Fund Letters**: Consolidated analysis and insights from top asset managers.
 - **Dynamic Asset Library**: Automated discovery of PDFs and EPUBs from the `lib/` and `fx/` directories.
+- **Schematic Aesthetic**: High-contrast, monospace-focused design with adaptive **Light/Dark Mode** support.
+- **Categorized Research**: Content is automatically grouped by category with functional, anchor-based navigation.
 - **100-Bagger Analysis**: Interactive dashboard for identifying high-growth stock opportunities.
 
 ## 🏗️ Project Structure
@@ -69,7 +71,7 @@ bun run deploy
 
 - **Runtime**: Bun
 - **Language**: TypeScript
-- **Styling**: Vanilla CSS (Dark mode optimized)
+- **Styling**: Vanilla CSS (Schematic Aesthetic, adaptive Light/Dark mode)
 - **Deployment**: Cloudflare Pages
 - **Testing**: Bun Test
 

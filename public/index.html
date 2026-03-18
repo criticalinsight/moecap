@@ -1,51 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Moe Capital</title>
-	<style>
-		@media (prefers-color-scheme: dark) {
-			body { color: #fff; background: #000 }
-			a:link { color: #9cf }
-			a:hover, a:visited:hover { color: #cef }
-			a:visited { color: #c9f }
-		}
-		body {
-			margin: 1em auto;
-			max-width: 35em;
-			padding: 0 .62em;
-			font: 1.2em/1.6 Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica, Arial, sans-serif;
-			background: #001724;
-			color: #f5f5f5;
-			text-rendering: optimizeLegibility;
-		}
-		a { color: #ffdc09; }
-		details { margin: 1em 0; border: 1px solid #2a3b4c; border-radius: 4px; background: #002233; }
-		summary { padding: 1em; cursor: pointer; font-weight: bold; color: #ffdc09; background: #001724; }
-		.accordion-content { padding: 1em; background: #001724; line-height: 1.4; }
-		.accordion-content h3 { margin-top: 0; color: #ffdc09; }
-		nav { position: sticky; top: 0; background: #001724; padding: 0.5em; border-bottom: 1px solid #2a3b4c; z-index: 1000; display: flex; gap: 1em; justify-content: center; flex-wrap: wrap; }
-		nav a { color: #ffdc09; text-decoration: none; font-weight: bold; font-size: 0.8em; }
-		header h1 { text-align: center; color: #ffdc09; }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moe Capital | Anemone Zola</title>
+    <style>
+        :root {
+            --bg: #1a1b1e;
+            --surface: #25262b;
+            --accent: #78B6AD;
+            --link: #E2AEA2;
+            --text: #c1c2c5;
+            --meta: #909296;
+            --border: #373a40;
+            --bg-code: #2c2e33;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f8f9fa;
+                --surface: #ffffff;
+                --accent: #386e66;
+                --link: #a64d3d;
+                --text: #212529;
+                --meta: #6c757d;
+                --border: #dee2e6;
+                --bg-code: #f1f3f5;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', ui-monospace, monospace;
+            line-height: 1.5;
+            margin: 0;
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            width: 100%;
+            max-width: 70ch;
+        }
+
+        h1, h2, h3 { color: var(--accent); margin-top: 2.5rem; font-weight: 600; }
+        h1::before { content: '# '; opacity: 0.5; }
+        h2::before { content: '## '; opacity: 0.5; }
+        h3::before { content: '### '; opacity: 0.5; }
+
+        header { text-align: left; margin-bottom: 4rem; }
+        header h1 { margin: 0; font-size: 1.8rem; letter-spacing: -0.02em; }
+        header p { color: var(--meta); margin: 0.5rem 0 0 0; font-size: 0.9rem; }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+            padding: 1rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--meta);
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        nav a::before { content: '['; margin-right: 2px; }
+        nav a::after { content: ']'; margin-left: 2px; }
+        nav a:hover { color: var(--accent); }
+
+        a { color: var(--link); text-decoration: none; transition: opacity 0.2s; }
+        a:hover { opacity: 0.8; text-decoration: underline; }
+
+        .category-header {
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        details { 
+            margin-bottom: 1.5rem; 
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+        
+        details:hover { border-color: var(--accent); }
+
+        summary {
+            padding: 1rem;
+            cursor: pointer;
+            color: var(--text);
+            font-weight: 500;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        summary::-webkit-details-marker { display: none; }
+        summary::before { 
+            content: '>>'; 
+            color: var(--accent); 
+            margin-right: 1.5ch; 
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid var(--border);
+            color: var(--accent);
+        }
+
+        .content-body {
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .metric-row, .asset-item, .link-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .metric-row:last-child, .asset-item:last-child, .link-item:last-child { 
+            border-bottom: none; 
+        }
+
+        .label { color: var(--meta); }
+        .value { color: var(--accent); font-weight: 500; }
+        .meta { font-size: 0.75rem; color: var(--meta); opacity: 0.8; }
+
+        ul { list-style: none; padding-left: 0; }
+        ul li::before { content: '- '; color: var(--accent); margin-right: 1ch; }
+
+        hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+        .asset-grid {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        footer {
+            margin-top: 6rem;
+            padding-bottom: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 2rem 1rem; }
+            nav { gap: 0.5rem; }
+        }
+    </style>
 </head>
 <body>
-	<header><h1>MoeCapital</h1></header>
-	<nav>
-		<a href="#assets">ASSETS</a>
-		<a href="#investing">INVESTING</a>
-		<a href="#research">RESEARCH</a>
-		<a href="#situations">SITUATIONS</a>
-		<a href="#us">US</a>
-	</nav>
-	<p style="text-align:center;">Hello, We are Moe Capital and we provide market insights and help you invest wisely.</p>
-	
-	<!-- Unified Content -->
+    <main>
+        <header>
+            <h1>MoeCapital</h1>
+            <p>Unified Financial Research & Asset Library</p>
+        </header>
+        
+        <nav>
+            <a href="#assets">ASSETS</a><a href="#investing">INVESTING</a><a href="#research">RESEARCH</a><a href="#situations">SITUATIONS</a><a href="#us">US</a>
+        </nav>
+        
+        <article>
+            
+        <section id="assets" class="category-section">
+            <h2 class="category-header">ASSETS</h2>
+            <div class="category-nodes">
+                
+    <details id="lib">
+      <summary>Lib</summary>
+      <section class="content-body">
+        <div class="asset-grid">
+    <article class="asset-item">
+      <span><a href="/lib/Walton.epub" target="_blank">Walton</a></span>
+      <span class="meta">EPUB (517.3 KB)</span>
+    </article>
 
+    <article class="asset-item">
+      <span><a href="/lib/Outsiders.epub" target="_blank">Outsiders</a></span>
+      <span class="meta">EPUB (620.6 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/WBEssays.epub" target="_blank">WBEssays</a></span>
+      <span class="meta">EPUB (538.1 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/StillBeatstheMarket.epub" target="_blank">StillBeatstheMarket</a></span>
+      <span class="meta">EPUB (1523.6 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/TheSnowball.epub" target="_blank">TheSnowball</a></span>
+      <span class="meta">EPUB (7418.8 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/RicherWiserHappier.epub" target="_blank">RicherWiserHappier</a></span>
+      <span class="meta">EPUB (2372.2 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/OptimalThinking.pdf" target="_blank">OptimalThinking</a></span>
+      <span class="meta">PDF (1008.3 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/ClearThinking.epub" target="_blank">ClearThinking</a></span>
+      <span class="meta">EPUB (4259.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/Incerto.epub" target="_blank">Incerto</a></span>
+      <span class="meta">EPUB (7101.8 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/ValuationLittleBook.epub" target="_blank">ValuationLittleBook</a></span>
+      <span class="meta">EPUB (883.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/howthemarkerts.pdf.pdf" target="_blank">howthemarkerts.pdf</a></span>
+      <span class="meta">PDF (4136.7 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/SameasEver.epub" target="_blank">SameasEver</a></span>
+      <span class="meta">EPUB (1183.1 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/lib/PsychologyofMoney.epub" target="_blank">PsychologyofMoney</a></span>
+      <span class="meta">EPUB (1868.1 KB)</span>
+    </article></div>
+      </section>
+    </details>
+  
+
+    <details id="fx">
+      <summary>Fx</summary>
+      <section class="content-body">
+        <div class="asset-grid">
+    <article class="asset-item">
+      <span><a href="/fx/Day_Trading_QuickStart_Guide_The_Simplified_Beginners_Guide_to_Winning.pdf" target="_blank">Day Trading QuickStart Guide The Simplified Beginners Guide to Winning</a></span>
+      <span class="meta">PDF (10991.1 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Trading_Without_Gambling_Develop.pdf" target="_blank">Trading Without Gambling Develop</a></span>
+      <span class="meta">PDF (4306.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/New Trader, Rich Trader_ How to - Steve Burns.pdf" target="_blank">New Trader, Rich Trader How to - Steve Burns</a></span>
+      <span class="meta">PDF (812.1 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/simple trading book1.pdf" target="_blank">simple trading book1</a></span>
+      <span class="meta">PDF (6275.7 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/The ICT Bible - V1 - By Ali Khan.pdf" target="_blank">The ICT Bible - V1 - By Ali Khan</a></span>
+      <span class="meta">PDF (5095.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Harmonic_Trading,_Advanced_Strategies_for_Profiting_from_the_Natural.pdf" target="_blank">Harmonic Trading, Advanced Strategies for Profiting from the Natural</a></span>
+      <span class="meta">PDF (7746.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Mastering_Trading_Psychology_Improve_Your_Trading_with_Firsthand.pdf" target="_blank">Mastering Trading Psychology Improve Your Trading with Firsthand</a></span>
+      <span class="meta">PDF (2307.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Choch Trading Plan.pdf" target="_blank">Choch Trading Plan</a></span>
+      <span class="meta">PDF (2185.4 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Candlestick Charting for Dummies.pdf" target="_blank">Candlestick Charting for Dummies</a></span>
+      <span class="meta">PDF (7585.1 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Supply & Demand Trading.pdf" target="_blank">Supply & Demand Trading</a></span>
+      <span class="meta">PDF (1095.1 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/high performance trading.pdf" target="_blank">high performance trading</a></span>
+      <span class="meta">PDF (2373.3 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/The Blueprint to Trading Psychology (1).pdf" target="_blank">The Blueprint to Trading Psychology (1)</a></span>
+      <span class="meta">PDF (547.8 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/So_You_Want_to_be_a_Trader_How_to_Trade_the_Stock_Market_ves_of.epub" target="_blank">So You Want to be a Trader How to Trade the Stock Market ves of</a></span>
+      <span class="meta">EPUB (371.3 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Forex Trading All In One For Dummies - Mamta Mishra.pdf" target="_blank">Forex Trading All In One For Dummies - Mamta Mishra</a></span>
+      <span class="meta">PDF (3153.2 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Mark_Douglas_Trading_in_the_Zone.pdf" target="_blank">Mark Douglas Trading in the Zone</a></span>
+      <span class="meta">PDF (3155.1 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/trade_forex_with_support_and_resistance_strategies.pdf" target="_blank">trade forex with support and resistance strategies</a></span>
+      <span class="meta">PDF (890.6 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/How to make money in intraday trading ( PDFDrive ).pdf" target="_blank">How to make money in intraday trading ( PDFDrive )</a></span>
+      <span class="meta">PDF (12194.0 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/The Man Who Solved the Market (1).pdf" target="_blank">The Man Who Solved the Market (1)</a></span>
+      <span class="meta">PDF (9300.8 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/BASICS OF FOREX TRADING -Financial Hub .pdf" target="_blank">BASICS OF FOREX TRADING - Financial Hub</a></span>
+      <span class="meta">PDF (2596.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Think & Trade Like a Champion_ - Mark Minervini.pdf" target="_blank">Think & Trade Like a Champion - Mark Minervini</a></span>
+      <span class="meta">PDF (8200.4 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Harmonic_Trading,_Profiting_from_the_Natural_Order_of_the_Financial.pdf" target="_blank">Harmonic Trading, Profiting from the Natural Order of the Financial</a></span>
+      <span class="meta">PDF (10150.2 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Support_and_Resistance_Simplified.pdf" target="_blank">Support and Resistance Simplified</a></span>
+      <span class="meta">PDF (1774.7 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/STEVE NISON Japanese Candlestick Charting Techniques.pdf" target="_blank">STEVE NISON Japanese Candlestick Charting Techniques</a></span>
+      <span class="meta">PDF (5976.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Andrew Aziz - How to Day Trade for a Living.epub" target="_blank">Andrew Aziz - How to Day Trade for a Living</a></span>
+      <span class="meta">EPUB (1084.8 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/zmcapitals academy eBook.pdf" target="_blank">zmcapitals academy eBook</a></span>
+      <span class="meta">PDF (2411.3 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/The_Trader's_Code.pdf" target="_blank">The Trader's Code</a></span>
+      <span class="meta">PDF (2186.9 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/zentrader.epub" target="_blank">zentrader</a></span>
+      <span class="meta">EPUB (1038.9 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/daytrading.pdf" target="_blank">daytrading</a></span>
+      <span class="meta">PDF (11172.0 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Trading_Psychology_2_0_From_Best.pdf" target="_blank">Trading Psychology 2 0 From Best</a></span>
+      <span class="meta">PDF (2337.6 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Douglas,_Mark_The_Disciplined_Trader.pdf" target="_blank">Douglas, Mark The Disciplined Trader</a></span>
+      <span class="meta">PDF (1485.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Van K.Tharp - Super Trader - Make Consistent Profits in ....pdf" target="_blank">Van K.Tharp - Super Trader - Make Consistent Profits in ...</a></span>
+      <span class="meta">PDF (2142.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/The_Little_Book_of_Market_Wizards_Lessons_from_the_Greatest_Traders.pdf" target="_blank">The Little Book of Market Wizards Lessons from the Greatest Traders</a></span>
+      <span class="meta">PDF (716.1 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/[Bob_Volman]_Forex_Price_Action_Scalping(rasabourse.com).pdf" target="_blank">[Bob Volman] Forex Price Action Scalping(rasabourse.com)</a></span>
+      <span class="meta">PDF (6368.6 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf" target="_blank">The New Trading for a Living Psychology, Discipline, Trading Tools</a></span>
+      <span class="meta">PDF (12838.4 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/technical analysis course.pdf" target="_blank">technical analysis course</a></span>
+      <span class="meta">PDF (4521.9 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/The_Smart_Money_Concept_Forex_Advanced_Institutional_Trading_James.pdf" target="_blank">The Smart Money Concept Forex Advanced Institutional Trading James</a></span>
+      <span class="meta">PDF (2410.2 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Advanced SMC — pt.3 (1).pdf" target="_blank">Advanced SMC — pt.3 (1)</a></span>
+      <span class="meta">PDF (4510.3 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/demystifying ICT Trader.pdf" target="_blank">demystifying ICT Trader</a></span>
+      <span class="meta">PDF (11215.0 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Smart_Money_Concept_SMC_Tradi_Vekariya,_Dixit.pdf" target="_blank">Smart Money Concept SMC Tradi Vekariya, Dixit</a></span>
+      <span class="meta">PDF (5532.8 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/How To Make Money Trading With Charts ( PDFDrive ).pdf" target="_blank">How To Make Money Trading With Charts ( PDFDrive )</a></span>
+      <span class="meta">PDF (12504.7 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/042_Encyclopedia Of Chart Patterns, 2nd Edition.pdf" target="_blank">042 Encyclopedia Of Chart Patterns, 2nd Edition</a></span>
+      <span class="meta">PDF (6016.3 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Trend_Following_Mindset_The_Genius_of_Legendary.pdf" target="_blank">Trend Following Mindset The Genius of Legendary</a></span>
+      <span class="meta">PDF (4495.8 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Wayne Walker - Advanced Technical Analysis For Forex.epub" target="_blank">Wayne Walker - Advanced Technical Analysis For Forex</a></span>
+      <span class="meta">EPUB (1727.7 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/The_Art_and_Science_of_Trading_Course.epub" target="_blank">The Art and Science of Trading Course</a></span>
+      <span class="meta">EPUB (12226.5 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Advanced SMC — pt.1.pdf" target="_blank">Advanced SMC — pt.1</a></span>
+      <span class="meta">PDF (7764.0 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Fundamental Analysis for Dummies (ISBN - 0470506458).pdf" target="_blank">Fundamental Analysis for Dummies (ISBN - 0470506458)</a></span>
+      <span class="meta">PDF (4241.4 KB)</span>
+    </article>
+
+    <article class="asset-item">
+      <span><a href="/fx/Advanced SMC — pt.2.pdf" target="_blank">Advanced SMC — pt.2</a></span>
+      <span class="meta">PDF (7642.6 KB)</span>
+    </article></div>
+      </section>
+    </details>
+  
+            </div>
+        </section>
+
+        <section id="investing" class="category-section">
+            <h2 class="category-header">INVESTING</h2>
+            <div class="category-nodes">
+                
     <details id="alice-interview">
       <summary>Alice Schroeder Interview</summary>
-      <div class="accordion-content">
+      <section class="content-body">
         
         
         
@@ -69,13 +531,13 @@
       <p>...</p>
     
       
-      </div>
+      </section>
     </details>
   
 
     <details id="fund-letters">
       <summary>13F Letters</summary>
-      <div class="accordion-content">
+      <section class="content-body">
         
         
         
@@ -90,54 +552,19 @@
       <p><a href="https://www.heartlandadvisors.com/Products/Mutual-Funds/Heartland-Mid-Cap-Value-Fund/Heartland-Mid-Cap-Value-Fund-1Q24-Portfolio-Manager-Commentary">Heartland Mid Cap Value Fund</a></p>
     
       
-      </div>
+      </section>
     </details>
   
+            </div>
+        </section>
 
-    <details id="special-situations">
-      <summary>Special Situations</summary>
-      <div class="accordion-content">
-        
-        
-        
-      <h3>Noah Holdings NYSE:NOAH</h3>
-      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
-        <span>Current Price</span>
-        <span style="color:#ffdc09;">$10.30</span>
-      </div>
-      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
-        <span>Target Price</span>
-        <span style="color:#ffdc09;">$20+</span>
-      </div>
-      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
-        <span>P/E</span>
-        <span style="color:#ffdc09;">3.66</span>
-      </div>
-      <p>Noah is an investment advisor to high-net-worth Chinese clients. China's 8th largest wealth manager.</p>
-      <ul>
-        <li>Captial-light fee-generating advisory business.</li>
-        <li>43% of Revenue generated outside mainland China.</li>
-        <li>Cash dividend policy (10.3% yield in 2023).</li>
-      </ul>
-
-      <hr style="border:0; border-top:1px solid #2a3b4c; margin: 1.5em 0;">
-
-      <h3>Nu Bank NYSE:NU</h3>
-      <p>The growth engine for Nu is wonderfully simple. It generates revenue via interest income, interchange fees and some commissions.</p>
-      <ul>
-        <li>CAC is $7 (85% lower than incumbents).</li>
-        <li>Cost to serve is $0.90 per month.</li>
-        <li>40% loan-to-deposit ratio vs 100%+ for typical Brazil banks.</li>
-      </ul>
-    
-      
-      </div>
-    </details>
-  
-
+        <section id="research" class="category-section">
+            <h2 class="category-header">RESEARCH</h2>
+            <div class="category-nodes">
+                
     <details id="compilations">
       <summary>Kevin G. Compilations</summary>
-      <div class="accordion-content">
+      <section class="content-body">
         
         
         
@@ -199,172 +626,101 @@
       <a href="https://drive.google.com/open?id=1FRaJyT54BwkMBPkX0loHHZHC43vli5y1" target="_blank">Charlie Munger</a>*, Berkshire Hathaway</p>
     
       
-      </div>
+      </section>
     </details>
   
+            </div>
+        </section>
 
+        <section id="situations" class="category-section">
+            <h2 class="category-header">SITUATIONS</h2>
+            <div class="category-nodes">
+                
+    <details id="special-situations">
+      <summary>Special Situations</summary>
+      <section class="content-body">
+        
+        
+        
+      <h3>Noah Holdings NYSE:NOAH</h3>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
+        <span>Current Price</span>
+        <span style="color:#ffdc09;">$10.30</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
+        <span>Target Price</span>
+        <span style="color:#ffdc09;">$20+</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
+        <span>P/E</span>
+        <span style="color:#ffdc09;">3.66</span>
+      </div>
+      <p>Noah is an investment advisor to high-net-worth Chinese clients. China's 8th largest wealth manager.</p>
+      <ul>
+        <li>Captial-light fee-generating advisory business.</li>
+        <li>43% of Revenue generated outside mainland China.</li>
+        <li>Cash dividend policy (10.3% yield in 2023).</li>
+      </ul>
+
+      <hr style="border:0; border-top:1px solid #2a3b4c; margin: 1.5em 0;">
+
+      <h3>Nu Bank NYSE:NU</h3>
+      <p>The growth engine for Nu is wonderfully simple. It generates revenue via interest income, interchange fees and some commissions.</p>
+      <ul>
+        <li>CAC is $7 (85% lower than incumbents).</li>
+        <li>Cost to serve is $0.90 per month.</li>
+        <li>40% loan-to-deposit ratio vs 100%+ for typical Brazil banks.</li>
+      </ul>
+    
+      
+      </section>
+    </details>
+  
+            </div>
+        </section>
+
+        <section id="us" class="category-section">
+            <h2 class="category-header">US</h2>
+            <div class="category-nodes">
+                
     <details id="us-stocks">
       <summary>US Stock Ideas</summary>
-      <div class="accordion-content">
+      <section class="content-body">
         <h3>US Stock Ideas</h3>
 
-    <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
-      <span>Mastercard $MA</span>
-      <span style="color:#ffdc09;">P/E: 30.34x</span>
+    <div class="metric-row">
+      <span class="label">Mastercard $MA</span>
+      <span class="value">P/E: 30.34x</span>
     </div>
   
-    <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
-      <span>Visa $V</span>
-      <span style="color:#ffdc09;">P/E: 26.30x</span>
+    <div class="metric-row">
+      <span class="label">Visa $V</span>
+      <span class="value">P/E: 26.30x</span>
     </div>
   
-    <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
-      <span>LVMH $LVMH</span>
-      <span style="color:#ffdc09;">P/E: 22.21x</span>
+    <div class="metric-row">
+      <span class="label">LVMH $LVMH</span>
+      <span class="value">P/E: 22.21x</span>
     </div>
   
-    <div style="display:flex; justify-content:space-between; border-bottom:1px solid #2a3b4c; padding: 0.5em 0;">
-      <span>Monster Beverage $MNST</span>
-      <span style="color:#ffdc09;">P/E: 28.54x</span>
+    <div class="metric-row">
+      <span class="label">Monster Beverage $MNST</span>
+      <span class="value">P/E: 28.54x</span>
     </div>
   
-      </div>
+      </section>
     </details>
   
+            </div>
+        </section>
+        </article>
 
-    <details id="lib">
-      <summary>Lib</summary>
-      <div class="accordion-content">
-        <a href="/lib/Walton.epub" target="_blank">Walton</a><br>
-<p>Metadata: EPUB (517.3 KB)</p><br>
-<a href="/lib/Outsiders.epub" target="_blank">Outsiders</a><br>
-<p>Metadata: EPUB (620.6 KB)</p><br>
-<a href="/lib/WBEssays.epub" target="_blank">WBEssays</a><br>
-<p>Metadata: EPUB (538.1 KB)</p><br>
-<a href="/lib/StillBeatstheMarket.epub" target="_blank">StillBeatstheMarket</a><br>
-<p>Metadata: EPUB (1523.6 KB)</p><br>
-<a href="/lib/TheSnowball.epub" target="_blank">TheSnowball</a><br>
-<p>Metadata: EPUB (7418.8 KB)</p><br>
-<a href="/lib/RicherWiserHappier.epub" target="_blank">RicherWiserHappier</a><br>
-<p>Metadata: EPUB (2372.2 KB)</p><br>
-<a href="/lib/OptimalThinking.pdf" target="_blank">OptimalThinking</a><br>
-<p>Metadata: PDF (1008.3 KB)</p><br>
-<a href="/lib/ClearThinking.epub" target="_blank">ClearThinking</a><br>
-<p>Metadata: EPUB (4259.5 KB)</p><br>
-<a href="/lib/Incerto.epub" target="_blank">Incerto</a><br>
-<p>Metadata: EPUB (7101.8 KB)</p><br>
-<a href="/lib/ValuationLittleBook.epub" target="_blank">ValuationLittleBook</a><br>
-<p>Metadata: EPUB (883.5 KB)</p><br>
-<a href="/lib/howthemarkerts.pdf.pdf" target="_blank">howthemarkerts.pdf</a><br>
-<p>Metadata: PDF (4136.7 KB)</p><br>
-<a href="/lib/SameasEver.epub" target="_blank">SameasEver</a><br>
-<p>Metadata: EPUB (1183.1 KB)</p><br>
-<a href="/lib/PsychologyofMoney.epub" target="_blank">PsychologyofMoney</a><br>
-<p>Metadata: EPUB (1868.1 KB)</p><br>
-      </div>
-    </details>
-  
-
-    <details id="fx">
-      <summary>Fx</summary>
-      <div class="accordion-content">
-        <a href="/fx/Day_Trading_QuickStart_Guide_The_Simplified_Beginners_Guide_to_Winning.pdf" target="_blank">Day Trading QuickStart Guide The Simplified Beginners Guide to Winning</a><br>
-<p>Metadata: PDF (10991.1 KB)</p><br>
-<a href="/fx/Trading_Without_Gambling_Develop.pdf" target="_blank">Trading Without Gambling Develop</a><br>
-<p>Metadata: PDF (4306.5 KB)</p><br>
-<a href="/fx/New Trader, Rich Trader_ How to - Steve Burns.pdf" target="_blank">New Trader, Rich Trader How to - Steve Burns</a><br>
-<p>Metadata: PDF (812.1 KB)</p><br>
-<a href="/fx/simple trading book1.pdf" target="_blank">simple trading book1</a><br>
-<p>Metadata: PDF (6275.7 KB)</p><br>
-<a href="/fx/The ICT Bible - V1 - By Ali Khan.pdf" target="_blank">The ICT Bible - V1 - By Ali Khan</a><br>
-<p>Metadata: PDF (5095.5 KB)</p><br>
-<a href="/fx/Harmonic_Trading,_Advanced_Strategies_for_Profiting_from_the_Natural.pdf" target="_blank">Harmonic Trading, Advanced Strategies for Profiting from the Natural</a><br>
-<p>Metadata: PDF (7746.5 KB)</p><br>
-<a href="/fx/Mastering_Trading_Psychology_Improve_Your_Trading_with_Firsthand.pdf" target="_blank">Mastering Trading Psychology Improve Your Trading with Firsthand</a><br>
-<p>Metadata: PDF (2307.5 KB)</p><br>
-<a href="/fx/Choch Trading Plan.pdf" target="_blank">Choch Trading Plan</a><br>
-<p>Metadata: PDF (2185.4 KB)</p><br>
-<a href="/fx/Candlestick Charting for Dummies.pdf" target="_blank">Candlestick Charting for Dummies</a><br>
-<p>Metadata: PDF (7585.1 KB)</p><br>
-<a href="/fx/Supply & Demand Trading.pdf" target="_blank">Supply & Demand Trading</a><br>
-<p>Metadata: PDF (1095.1 KB)</p><br>
-<a href="/fx/high performance trading.pdf" target="_blank">high performance trading</a><br>
-<p>Metadata: PDF (2373.3 KB)</p><br>
-<a href="/fx/The Blueprint to Trading Psychology (1).pdf" target="_blank">The Blueprint to Trading Psychology (1)</a><br>
-<p>Metadata: PDF (547.8 KB)</p><br>
-<a href="/fx/So_You_Want_to_be_a_Trader_How_to_Trade_the_Stock_Market_ves_of.epub" target="_blank">So You Want to be a Trader How to Trade the Stock Market ves of</a><br>
-<p>Metadata: EPUB (371.3 KB)</p><br>
-<a href="/fx/Forex Trading All In One For Dummies - Mamta Mishra.pdf" target="_blank">Forex Trading All In One For Dummies - Mamta Mishra</a><br>
-<p>Metadata: PDF (3153.2 KB)</p><br>
-<a href="/fx/Mark_Douglas_Trading_in_the_Zone.pdf" target="_blank">Mark Douglas Trading in the Zone</a><br>
-<p>Metadata: PDF (3155.1 KB)</p><br>
-<a href="/fx/trade_forex_with_support_and_resistance_strategies.pdf" target="_blank">trade forex with support and resistance strategies</a><br>
-<p>Metadata: PDF (890.6 KB)</p><br>
-<a href="/fx/How to make money in intraday trading ( PDFDrive ).pdf" target="_blank">How to make money in intraday trading ( PDFDrive )</a><br>
-<p>Metadata: PDF (12194.0 KB)</p><br>
-<a href="/fx/The Man Who Solved the Market (1).pdf" target="_blank">The Man Who Solved the Market (1)</a><br>
-<p>Metadata: PDF (9300.8 KB)</p><br>
-<a href="/fx/BASICS OF FOREX TRADING -Financial Hub .pdf" target="_blank">BASICS OF FOREX TRADING - Financial Hub</a><br>
-<p>Metadata: PDF (2596.5 KB)</p><br>
-<a href="/fx/Think & Trade Like a Champion_ - Mark Minervini.pdf" target="_blank">Think & Trade Like a Champion - Mark Minervini</a><br>
-<p>Metadata: PDF (8200.4 KB)</p><br>
-<a href="/fx/Harmonic_Trading,_Profiting_from_the_Natural_Order_of_the_Financial.pdf" target="_blank">Harmonic Trading, Profiting from the Natural Order of the Financial</a><br>
-<p>Metadata: PDF (10150.2 KB)</p><br>
-<a href="/fx/Support_and_Resistance_Simplified.pdf" target="_blank">Support and Resistance Simplified</a><br>
-<p>Metadata: PDF (1774.7 KB)</p><br>
-<a href="/fx/STEVE NISON Japanese Candlestick Charting Techniques.pdf" target="_blank">STEVE NISON Japanese Candlestick Charting Techniques</a><br>
-<p>Metadata: PDF (5976.5 KB)</p><br>
-<a href="/fx/Andrew Aziz - How to Day Trade for a Living.epub" target="_blank">Andrew Aziz - How to Day Trade for a Living</a><br>
-<p>Metadata: EPUB (1084.8 KB)</p><br>
-<a href="/fx/zmcapitals academy eBook.pdf" target="_blank">zmcapitals academy eBook</a><br>
-<p>Metadata: PDF (2411.3 KB)</p><br>
-<a href="/fx/The_Trader's_Code.pdf" target="_blank">The Trader's Code</a><br>
-<p>Metadata: PDF (2186.9 KB)</p><br>
-<a href="/fx/zentrader.epub" target="_blank">zentrader</a><br>
-<p>Metadata: EPUB (1038.9 KB)</p><br>
-<a href="/fx/daytrading.pdf" target="_blank">daytrading</a><br>
-<p>Metadata: PDF (11172.0 KB)</p><br>
-<a href="/fx/Trading_Psychology_2_0_From_Best.pdf" target="_blank">Trading Psychology 2 0 From Best</a><br>
-<p>Metadata: PDF (2337.6 KB)</p><br>
-<a href="/fx/Douglas,_Mark_The_Disciplined_Trader.pdf" target="_blank">Douglas, Mark The Disciplined Trader</a><br>
-<p>Metadata: PDF (1485.5 KB)</p><br>
-<a href="/fx/Van K.Tharp - Super Trader - Make Consistent Profits in ....pdf" target="_blank">Van K.Tharp - Super Trader - Make Consistent Profits in ...</a><br>
-<p>Metadata: PDF (2142.5 KB)</p><br>
-<a href="/fx/The_Little_Book_of_Market_Wizards_Lessons_from_the_Greatest_Traders.pdf" target="_blank">The Little Book of Market Wizards Lessons from the Greatest Traders</a><br>
-<p>Metadata: PDF (716.1 KB)</p><br>
-<a href="/fx/[Bob_Volman]_Forex_Price_Action_Scalping(rasabourse.com).pdf" target="_blank">[Bob Volman] Forex Price Action Scalping(rasabourse.com)</a><br>
-<p>Metadata: PDF (6368.6 KB)</p><br>
-<a href="/fx/The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf" target="_blank">The New Trading for a Living Psychology, Discipline, Trading Tools</a><br>
-<p>Metadata: PDF (12838.4 KB)</p><br>
-<a href="/fx/technical analysis course.pdf" target="_blank">technical analysis course</a><br>
-<p>Metadata: PDF (4521.9 KB)</p><br>
-<a href="/fx/The_Smart_Money_Concept_Forex_Advanced_Institutional_Trading_James.pdf" target="_blank">The Smart Money Concept Forex Advanced Institutional Trading James</a><br>
-<p>Metadata: PDF (2410.2 KB)</p><br>
-<a href="/fx/Advanced SMC — pt.3 (1).pdf" target="_blank">Advanced SMC — pt.3 (1)</a><br>
-<p>Metadata: PDF (4510.3 KB)</p><br>
-<a href="/fx/demystifying ICT Trader.pdf" target="_blank">demystifying ICT Trader</a><br>
-<p>Metadata: PDF (11215.0 KB)</p><br>
-<a href="/fx/Smart_Money_Concept_SMC_Tradi_Vekariya,_Dixit.pdf" target="_blank">Smart Money Concept SMC Tradi Vekariya, Dixit</a><br>
-<p>Metadata: PDF (5532.8 KB)</p><br>
-<a href="/fx/How To Make Money Trading With Charts ( PDFDrive ).pdf" target="_blank">How To Make Money Trading With Charts ( PDFDrive )</a><br>
-<p>Metadata: PDF (12504.7 KB)</p><br>
-<a href="/fx/042_Encyclopedia Of Chart Patterns, 2nd Edition.pdf" target="_blank">042 Encyclopedia Of Chart Patterns, 2nd Edition</a><br>
-<p>Metadata: PDF (6016.3 KB)</p><br>
-<a href="/fx/Trend_Following_Mindset_The_Genius_of_Legendary.pdf" target="_blank">Trend Following Mindset The Genius of Legendary</a><br>
-<p>Metadata: PDF (4495.8 KB)</p><br>
-<a href="/fx/Wayne Walker - Advanced Technical Analysis For Forex.epub" target="_blank">Wayne Walker - Advanced Technical Analysis For Forex</a><br>
-<p>Metadata: EPUB (1727.7 KB)</p><br>
-<a href="/fx/The_Art_and_Science_of_Trading_Course.epub" target="_blank">The Art and Science of Trading Course</a><br>
-<p>Metadata: EPUB (12226.5 KB)</p><br>
-<a href="/fx/Advanced SMC — pt.1.pdf" target="_blank">Advanced SMC — pt.1</a><br>
-<p>Metadata: PDF (7764.0 KB)</p><br>
-<a href="/fx/Fundamental Analysis for Dummies (ISBN - 0470506458).pdf" target="_blank">Fundamental Analysis for Dummies (ISBN - 0470506458)</a><br>
-<p>Metadata: PDF (4241.4 KB)</p><br>
-<a href="/fx/Advanced SMC — pt.2.pdf" target="_blank">Advanced SMC — pt.2</a><br>
-<p>Metadata: PDF (7642.6 KB)</p><br>
-      </div>
-    </details>
-  
-
+        <footer>
+            <hr>
+            <p style="font-size: 0.75rem; color: var(--meta); text-align: center; opacity: 0.6;">
+                Built for financial clarity. Simple. Monospace. De-complexed.
+            </p>
+        </footer>
+    </main>
 </body>
 </html>

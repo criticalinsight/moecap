@@ -40,3 +40,13 @@ Content is managed as `ContentNode` objects supporting:
 - `ASSET_LIST`: Dynamic lists generated from filesystem scan.
 - `LINK_LIST`: Curated lists of external resources.
 - `METRIC_CARD`: Tabular data (PE ratios, Price Targets).
+
+## 5. UI & Aesthetic (Schematic)
+
+The site follows a **Schematic** and **Anemone Zola** aesthetic:
+
+- **Typography**: Strictly monospace (`JetBrains Mono`, `Courier New`) for a technical, de-complexed feel.
+- **Color System**: Adaptive CSS variables controlled via `@media (prefers-color-scheme: light)`.
+- **Navigation**: Dynamically generated based on content categories found in `src/content.ts` and asset manifests.
+- **Layout**: Uses a single-page anchor system. Each category is rendered as a `<section>` with an ID mapping to the navigation header.
+- **Components**: Custom-styled `details`/`summary` elements for content hierarchy, featuring custom chevron indicators (`>>`).
