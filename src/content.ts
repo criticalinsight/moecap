@@ -3,7 +3,7 @@ import type { ContentNode, SiteMetadata } from './assets';
 export const METADATA: SiteMetadata = {
   title: 'Moe Capital',
   tagline: 'Market Insights & Wise Investing',
-  bio: 'Hello, We are Moe Capital and we provide market insights and help you invest wisely.',
+  bio: 'Hello, We are Moe Capital. We provide market insights, host the <a href="/nse" style="color: var(--link); font-weight: bold;">Nairobi Securities Exchange (NSE) ROIC Terminal</a>—a real-time interactive dashboard tracking return on invested capital (ROIC), multi-year financial statements, and efficiency metrics for 46 Kenyan listed companies—and help you invest wisely.',
   socials: [
     { platform: 'Twitter', url: 'https://twitter.com/MoneyAcademyKE', handle: '@MoneyAcademyKE' },
     { platform: 'Telegram', url: 'https://t.me/MoneyAcademyKE', handle: 'Telegram' },

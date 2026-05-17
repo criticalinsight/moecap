@@ -83,3 +83,18 @@ Full Rich Hickey de-complecting by completely dismantling the serverless runtime
 3. **Optimized Client-Side Architecture**: We write a raw JSON copy to `public/nse/nse-data.json`. Upon page load, a tiny background fetch caches this database. The terminal runs entirely on highly optimized, responsive client-side vanilla JavaScript.
 4. **Resilient Dynamic Computations**: To resolve database gaps where ROIC or ROE metrics were previously missing or nested incorrectly, the client-side JavaScript performs real-time dynamic calculations of Invested Capital, NOPAT, tax rate adjustments, and ROE/ROIC ratios on-the-fly, showing 100% complete metrics with zero backend roundtrips.
 5. **Impact**: Reduced build time to <10ms, eliminated cold starts, achieved 100% data coverage, slashed cloud serverless costs to $0, and reduced operational complexity to absolute zero.
+
+---
+
+## 7. Edge-Resilient CORS Real-Time Synchronization Patterns
+
+**The Anti-Pattern**:
+Integrating real-time pricing data directly into a static site by calling a proprietary third-party market data API that requires paid licenses, secret authorization headers (introducing a massive security vulnerability if exposed in the frontend client), and has tight rate limiting. When the API fails or is throttled, the entire page UI stalls or crashes, complecting external service availability with local interface presentation.
+
+**The Solution**:
+We implemented an edge-resilient, zero-auth, live-scraping synchronization pipeline directly in client-side memory:
+1. **Public Market Scraping via Proxy**: Upon loading the page, the client performs an asynchronous, non-blocking fetch targeting a highly public-spirited, high-availability CORS raw proxy (`api.allorigins.win`) wrapping a clean, public financial index (`afx.kwayisi.org/nse/`).
+2. **Deterministic Stream Parsing**: We compile a regex-based parser that reads raw HTML rows dynamically in client memory, completely bypassing expensive DOM construction or virtual environments.
+3. **Dynamic Memory Merging**: The parsed tick-by-tick prices are merged onto the pre-rendered local static dataset (`db.market.prices`).
+4. **Resilient Degradation**: If the proxy is down or the scraper is blocked, the terminal degrades gracefully and displays the pristine, compiled, time-stamped static prices from the compiled JSON database, keeping the interface completely responsive.
+

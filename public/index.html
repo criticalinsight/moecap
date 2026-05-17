@@ -335,7 +335,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Smooth accordion open/scroll
-            document.querySelectorAll('nav a').forEach(anchor => {
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
@@ -359,7 +359,7 @@
         
         
             <div class="profile-card">
-                <p class="bio">Hello, We are Moe Capital and we provide market insights and help you invest wisely.</p>
+                <p class="bio">Hello, We are Moe Capital. We provide market insights, host the <a href="/nse" style="color: var(--link); font-weight: bold;">Nairobi Securities Exchange (NSE) ROIC Terminal</a>—a real-time interactive dashboard tracking return on invested capital (ROIC), multi-year financial statements, and efficiency metrics for 46 Kenyan listed companies—and help you invest wisely.</p>
                 
                 <p class="crypto-note">
                     🚀 Join our <a href="https://t.me/s/moecrypto" target="_blank">telegram crypto</a> community.
@@ -426,6 +426,7 @@
         
         <nav>
             <a href="#assets">ASSETS</a><a href="#investing">INVESTING</a><a href="#research">RESEARCH</a><a href="#situations">SITUATIONS</a><a href="#us">US</a>
+            <a href="/nse" style="color: var(--link); font-weight: bold; border: 1px solid var(--link); border-radius: 4px; padding: 2px 8px; margin-left: 0.5rem; text-decoration: none;">[ NSE Terminal ]</a>
         </nav>
         
         <article>

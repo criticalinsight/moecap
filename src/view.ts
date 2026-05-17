@@ -489,7 +489,7 @@ export function renderPage(nodes: ContentNode[], metadata?: SiteMetadata): strin
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Smooth accordion open/scroll
-            document.querySelectorAll('nav a').forEach(anchor => {
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
@@ -512,6 +512,7 @@ export function renderPage(nodes: ContentNode[], metadata?: SiteMetadata): strin
         
         <nav>
             ${categories.map(cat => `<a href="#${cat.toLowerCase().replace(/\s+/g, '-')}">${cat}</a>`).join('')}
+            <a href="/nse" style="color: var(--link); font-weight: bold; border: 1px solid var(--link); border-radius: 4px; padding: 2px 8px; margin-left: 0.5rem; text-decoration: none;">[ NSE Terminal ]</a>
         </nav>
         
         <article>

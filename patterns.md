@@ -219,3 +219,30 @@ We dismantle serverless functions entirely, replacing them with a hybrid **Pre-r
 - **Resilience & Autonomy**: The page is fully functional offline after the initial load.
 - **Zero Cost**: Eliminates serverless runtimes, edge functions, database calls, and infrastructure costs.
 
+---
+
+## 6. Real-Time Dynamic Edge-Resilient Client Synchronization (Dynamic Data Overlays)
+
+### Context & Problem
+We need to present real-time, highly fluctuating financial prices without introducing runtime backend scrapers, databases, or API infrastructure. Standard static pre-rendering cannot capture mid-day price changes, while pure dynamic rendering incurs high database query costs and latency.
+
+### Pattern Solution
+We implement a **Dynamic Data Overlay Pattern**:
+1. Pre-render stable historical and baseline metadata to a static file structure (`index.html` + `nse-data.json`).
+2. Implement a client-side execution block that performs a background, CORS-proxied request to live HTML sources.
+3. Use high-performance Regular Expressions directly on the response text stream, matching fields and mapping them to standardized local keys using an associative dictionary:
+   ```javascript
+   const rawTicker = match[1];
+   const price = parseFloat(match[2].replace(/,/g, ""));
+   const ticker = PRICE_TICKER_MAP[rawTicker] || rawTicker;
+   prices[ticker] = price;
+   ```
+4. Merge the dynamic dictionary values directly into the cached in-memory database (`db.market.prices`).
+5. Repopulate target DOM components instantly using precise class or ID query selectors, avoiding complete DOM re-renders.
+
+### Benefits
+- **Zero Server Overhead**: The edge and origin servers only host flat static files.
+- **Immediate Page Intactness**: The UI renders instantly with high completeness using local fallback prices if network scraping fails.
+- **Secure and Lightweight**: Shipping zero external SDKs, heavy tracking codes, or backend runtime environments.
+
+
