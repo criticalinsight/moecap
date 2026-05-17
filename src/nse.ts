@@ -794,7 +794,7 @@ export function buildNsePage(publicDir: string) {
                 const html = await response.text();
                 
                 // Regex matches: <tr><td><a href="...">TICKER</a></td><td><a href="...">NAME</a></td><td>VOLUME</td><td>PRICE</td></tr>
-                const rowRegex = /<tr><td><a [^>]+>([A-Z0-9]+)<\/a><td><a [^>]+>[^<]+<\/a><td>(?:[0-9,]+)?<td>([0-9,]+\.[0-9]+)/g;
+                const rowRegex = /<tr><td><a [^>]+>([A-Z0-9]+)<\\/a><td><a [^>]+>[^<]+<\\/a><td>(?:[0-9,]+)?<td>([0-9,]+\\.[0-9]+)/g;
                 let match;
                 let count = 0;
                 const prices = {};
