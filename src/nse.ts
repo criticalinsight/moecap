@@ -68,7 +68,7 @@ export function buildNsePage(publicDir: string) {
       >
         <div class="stock-card-row">
           <span class="stock-card-ticker">${c.ticker}</span>
-          <span class="stock-card-price">${priceStr}</span>
+          <span class="stock-card-price" id="card-price-${c.ticker}">${priceStr}</span>
         </div>
         <div class="stock-card-name">${c.name}</div>
         <div class="stock-card-sector">${c.sector}</div>
@@ -680,7 +680,10 @@ export function buildNsePage(publicDir: string) {
                                 </div>
                             </div>
                             <div class="stock-price-col" id="detail-price-col">
-                                <div class="live-price" id="detail-price">KES —</div>
+                                <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;">
+                                    <span class="live-price-badge" id="detail-price-live-badge" style="display: none; font-size: 0.6rem; color: #4ade80; border: 1px solid #4ade80; border-radius: 4px; padding: 1px 4px; font-weight: bold; letter-spacing: 0.05em; vertical-align: middle;">LIVE</span>
+                                    <div class="live-price" id="detail-price">KES —</div>
+                                </div>
                                 <div class="live-price-label">Current Price</div>
                             </div>
                         </div>
@@ -764,6 +767,87 @@ export function buildNsePage(publicDir: string) {
         let activeTicker = null;
         let activeTab = 'financials';
 
+        // Ticker mapping normalization (from AFX/Kwayisi symbols to Master symbols)
+        const PRICE_TICKER_MAP = {
+            "BKG": "BK",
+            "IMH": "IM",
+            "PORT": "BAMB",
+            "ILAM": "FAHR",
+            "FAHR": "FAHR",
+            "SCAN": "SCAN",
+            "SCOM": "SCOM",
+            "EQTY": "EQTY",
+            "KCB": "KCB",
+            "COOP": "COOP",
+            "ABSA": "ABSA"
+        };
+
+        // Real-time price synchronizer using CORS proxy
+        async function syncPricesRealtime() {
+            console.log("📡 Starting live NSE prices synchronization via CORS proxy...");
+            const kwayisiUrl = "https://afx.kwayisi.org/nse/";
+            const proxyUrl = "https://api.allorigins.win/raw?url=" + encodeURIComponent(kwayisiUrl);
+            
+            try {
+                const response = await fetch(proxyUrl);
+                if (!response.ok) throw new Error("CORS Proxy HTTP error: " + response.status);
+                const html = await response.text();
+                
+                // Regex matches: <tr><td><a href="...">TICKER</a></td><td><a href="...">NAME</a></td><td>VOLUME</td><td>PRICE</td></tr>
+                const rowRegex = /<tr><td><a [^>]+>([A-Z0-9]+)<\/a><td><a [^>]+>[^<]+<\/a><td>(?:[0-9,]+)?<td>([0-9,]+\.[0-9]+)/g;
+                let match;
+                let count = 0;
+                const prices = {};
+                
+                while ((match = rowRegex.exec(html)) !== null) {
+                    const rawTicker = match[1];
+                    const price = parseFloat(match[2].replace(/,/g, ""));
+                    const ticker = PRICE_TICKER_MAP[rawTicker] || rawTicker;
+                    prices[ticker] = price;
+                    count++;
+                }
+                
+                if (count > 0 && db) {
+                    console.log(\`✅ Live prices successfully fetched: \${count} tickers updated.\`);
+                    if (!db.market) db.market = {};
+                    db.market.prices = { ...db.market.prices, ...prices };
+                    db.market.lastUpdated = new Date().toISOString();
+                    db.market.isLive = true;
+                    
+                    // 1. Update prices in the directory sidebar
+                    updateDirectoryPrices();
+                    
+                    // 2. If an active company is selected, refresh its header price display
+                    if (activeTicker) {
+                        const currentPrice = db.market.prices[activeTicker];
+                        if (currentPrice !== undefined) {
+                            document.getElementById('detail-price').innerText = \`KES \${currentPrice.toFixed(2)}\`;
+                            const priceCol = document.getElementById('detail-price-col');
+                            if (priceCol) {
+                                priceCol.style.display = 'block';
+                                const badge = document.getElementById('detail-price-live-badge');
+                                if (badge) badge.style.display = 'inline-block';
+                            }
+                        }
+                    }
+                }
+            } catch (err) {
+                console.warn("⚠️ Live price sync failed. Gracefully falling back to static database:", err);
+            }
+        }
+
+        // Update all price badges in the sidebar dynamically
+        function updateDirectoryPrices() {
+            if (!db || !db.market || !db.market.prices) return;
+            Object.entries(db.market.prices).forEach(([ticker, price]) => {
+                const el = document.getElementById(\`card-price-\${ticker}\`);
+                if (el && price !== undefined) {
+                    el.innerText = \`KES \${price.toFixed(2)}\`;
+                    el.style.color = 'var(--link)';
+                }
+            });
+        }
+
         // Load database immediately in background
         document.addEventListener('DOMContentLoaded', async () => {
             try {
@@ -771,11 +855,17 @@ export function buildNsePage(publicDir: string) {
                 db = await response.json();
                 console.log('📡 Database fetched successfully!', db);
                 
-                // Automatically open SCOM or first company if URL hash matches
+                // Automatically open ticker if URL hash matches
                 const hash = window.location.hash.substring(1).toUpperCase();
                 if (hash && document.querySelector(\`[data-ticker="\${hash}"]\`)) {
                     selectStock(hash);
                 }
+
+                // Initial live sync
+                await syncPricesRealtime();
+
+                // Periodic refresh loop every 60 seconds
+                setInterval(syncPricesRealtime, 60000);
             } catch (e) {
                 console.error('❌ Failed to fetch database:', e);
             }
@@ -905,6 +995,10 @@ export function buildNsePage(publicDir: string) {
             if (price !== undefined) {
                 document.getElementById('detail-price').innerText = \`KES \${price.toFixed(2)}\`;
                 priceCol.style.display = 'block';
+                const badge = document.getElementById('detail-price-live-badge');
+                if (badge) {
+                    badge.style.display = (db.market && db.market.isLive) ? 'inline-block' : 'none';
+                }
             } else {
                 priceCol.style.display = 'none';
             }
