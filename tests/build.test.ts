@@ -9,15 +9,20 @@ describe("Unified Build Output Verification", () => {
 
     const htmlContent = readFileSync(indexPath, "utf-8");
     
-    // Check main section header
-    expect(htmlContent).toContain("US Stock Ideas (1191)");
+    // Check main section headers
+    expect(htmlContent).toContain("US Stock Ideas - Green/Buy");
+    expect(htmlContent).toContain("US Stock Ideas - Yellow/Neutral");
+    expect(htmlContent).toContain("US Stock Ideas - Red/Sell");
 
-    // Check search input exists
-    expect(htmlContent).toContain('id="stock-search"');
-    expect(htmlContent).toContain('placeholder="Search by ticker or company name..."');
+    // Check search inputs exist
+    expect(htmlContent).toContain('id="stock-search-us-stocks-green"');
+    expect(htmlContent).toContain('id="stock-search-us-stocks-yellow"');
+    expect(htmlContent).toContain('id="stock-search-us-stocks-red"');
 
-    // Check client-side filter script exists
-    expect(htmlContent).toContain("const searchInput = document.getElementById('stock-search')");
+    // Check client-side filter scripts exist
+    expect(htmlContent).toContain("document.getElementById('stock-search-us-stocks-green')");
+    expect(htmlContent).toContain("document.getElementById('stock-search-us-stocks-yellow')");
+    expect(htmlContent).toContain("document.getElementById('stock-search-us-stocks-red')");
 
     // Check presence of some sample tickers
     expect(htmlContent).toContain('data-ticker="aapl"');

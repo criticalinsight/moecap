@@ -34,14 +34,18 @@ try {
         assets: assets.filter(a => a.category === cat)
     }));
 
-    // 2. Merge with Static Content (integrating dynamic US stock ideas)
+    // 2. Merge with Static Content (integrating dynamic US stock ideas split by rating)
     const stocksJsonPath = join(BASE_PATH, "us-stocks.json");
     console.log(`📈 Dynamically parsing and integrating US stock ideas from: ${stocksJsonPath}`);
-    const resolvedContent = CONTENT.map(node => {
+    const resolvedContent = CONTENT.flatMap(node => {
         if (node.id === "us-stocks") {
-            return getUsStocksNode(stocksJsonPath);
+            return [
+                getUsStocksNode(stocksJsonPath, "green"),
+                getUsStocksNode(stocksJsonPath, "yellow"),
+                getUsStocksNode(stocksJsonPath, "red")
+            ];
         }
-        return node;
+        return [node];
     });
 
     const allNodes = [...resolvedContent, ...assetNodes];

@@ -231,19 +231,23 @@ export function parseStockIdeas(filePath: string): StockIdea[] {
   });
 }
 
-// Render stock ideas into dynamic details-based HTML accordions
-export function renderStockAccordions(stocks: StockIdea[]): string {
+// Render stock ideas into dynamic details-based HTML accordions with independent search scripts
+export function renderStockAccordions(stocks: StockIdea[], nodeId: string): string {
   if (stocks.length === 0) {
     return `<p style="color:var(--meta);">No stock ideas available at this time.</p>`;
   }
 
+  const searchInputId = `stock-search-${nodeId}`;
+  const wrapperId = `stocks-wrapper-${nodeId}`;
+  const accordionClass = `stock-accordion-item-${nodeId}`;
+
   return `
     <div class="search-container" style="margin-bottom: 1.5rem;">
-      <input type="text" id="stock-search" placeholder="Search by ticker or company name..." 
+      <input type="text" id="${searchInputId}" placeholder="Search by ticker or company name..." 
              style="width:100%; padding:0.8rem; border:1px solid var(--border); border-radius:6px; background:var(--bg-code); color:var(--text); font-family:inherit; outline:none; transition:border-color 0.2s;" />
     </div>
     
-    <div id="stocks-accordion-wrapper">
+    <div id="${wrapperId}">
       ${stocks.map(stock => {
         const rating = stock.meta.rating || "🟡";
         let ratingColor = "var(--meta)";
@@ -257,7 +261,7 @@ export function renderStockAccordions(stocks: StockIdea[]): string {
         const marketCap = stock.meta.market_cap_formatted || (stock.meta.market_cap ? `$${stock.meta.market_cap}B` : "N/A");
 
         return `
-          <details class="stock-accordion-item" data-ticker="${stock.ticker.toLowerCase()}" data-company="${companyName.toLowerCase()}" style="margin-bottom:1rem; border-color:var(--border);">
+          <details class="stock-accordion-item ${accordionClass}" data-ticker="${stock.ticker.toLowerCase()}" data-company="${companyName.toLowerCase()}" style="margin-bottom:1rem; border-color:var(--border);">
             <summary style="display:flex; justify-content:space-between; align-items:center; padding: 1rem;">
               <span>[${stock.ticker}] ${companyName}</span>
               <span style="color:${ratingColor}; font-weight:bold; margin-left: auto;">${rating}</span>
@@ -295,37 +299,57 @@ export function renderStockAccordions(stocks: StockIdea[]): string {
     </div>
     
     <script>
-      // High-performance client-side accordion search filter
-      const searchInput = document.getElementById('stock-search');
-      if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-          const query = e.target.value.toLowerCase().trim();
-          const items = document.querySelectorAll('.stock-accordion-item');
-          
-          items.forEach(item => {
-            const ticker = item.getAttribute('data-ticker') || '';
-            const company = item.getAttribute('data-company') || '';
+      (function() {
+        const searchInput = document.getElementById('${searchInputId}');
+        if (searchInput) {
+          searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const items = document.querySelectorAll('.${accordionClass}');
             
-            if (ticker.includes(query) || company.includes(query)) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
-            }
+            items.forEach(item => {
+              const ticker = item.getAttribute('data-ticker') || '';
+              const company = item.getAttribute('data-company') || '';
+              
+              if (ticker.includes(query) || company.includes(query)) {
+                item.style.display = '';
+              } else {
+                item.style.display = 'none';
+              }
+            });
           });
-        });
-      }
+        }
+      })();
     </script>
   `;
 }
 
-// Returns the fully constructed US stocks ContentNode
-export function getUsStocksNode(filePath: string): ContentNode {
-  const stocks = parseStockIdeas(filePath);
+// Returns the fully constructed US stocks ContentNode for a specific rating filter
+export function getUsStocksNode(filePath: string, ratingFilter: "green" | "yellow" | "red" = "green"): ContentNode {
+  const allStocks = parseStockIdeas(filePath);
+  
+  let filteredStocks = allStocks;
+  let id = "us-stocks";
+  let title = "US Stock Ideas";
+  
+  if (ratingFilter === "green") {
+    filteredStocks = allStocks.filter(s => s.meta.rating?.includes("🟢"));
+    id = "us-stocks-green";
+    title = `US Stock Ideas - Green/Buy (${filteredStocks.length})`;
+  } else if (ratingFilter === "yellow") {
+    filteredStocks = allStocks.filter(s => s.meta.rating?.includes("🟡"));
+    id = "us-stocks-yellow";
+    title = `US Stock Ideas - Yellow/Neutral (${filteredStocks.length})`;
+  } else if (ratingFilter === "red") {
+    filteredStocks = allStocks.filter(s => s.meta.rating?.includes("🔴"));
+    id = "us-stocks-red";
+    title = `US Stock Ideas - Red/Sell (${filteredStocks.length})`;
+  }
+  
   return {
-    id: "us-stocks",
-    title: `US Stock Ideas (${stocks.length})`,
+    id,
+    title,
     type: "ARTICLE",
     category: "US",
-    content: renderStockAccordions(stocks)
+    content: renderStockAccordions(filteredStocks, id)
   };
 }
