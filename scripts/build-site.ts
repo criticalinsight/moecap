@@ -2,6 +2,7 @@ import { renderPage } from "../src/view";
 import { getManifest } from "../src/assets";
 import { CONTENT, METADATA } from "../src/content";
 import { getUsStocksNode } from "../src/us-stocks";
+import { buildNsePage } from "../src/nse";
 import { writeFileSync, existsSync, mkdirSync, rmSync, cpSync } from "node:fs";
 import * as fs from "node:fs";
 import { join } from "node:path";
@@ -56,7 +57,10 @@ try {
     const outputPath = join(PUBLIC_DIR, "index.html");
     writeFileSync(outputPath, html);
 
-    // 4. Mirror assets to public
+    // 4. Compile NSE terminal
+    buildNsePage(PUBLIC_DIR);
+
+    // 5. Mirror assets to public
     for (const dir of ASSET_DIRECTORIES) {
         const src = join(BASE_PATH, dir);
         const dest = join(PUBLIC_DIR, dir);

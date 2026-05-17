@@ -3,8 +3,3 @@ pages_build_output_dir = "public"
 
 [vars]
 BUN_VERSION = "1.1.0"
-
-# Service binding to ROIC worker
-[[services]]
-binding = "NSE_SERVICE"
-service = "kenya-roic"
