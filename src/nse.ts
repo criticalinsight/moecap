@@ -851,7 +851,14 @@ export function buildNsePage(publicDir: string) {
         // Load database immediately in background
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                const response = await fetch('/nse/nse-data.json');
+                let response;
+                try {
+                    response = await fetch('/nse/nse-data.json');
+                    if (!response.ok) throw new Error("Status: " + response.status);
+                } catch (e) {
+                    console.log('⚠️ Host-relative fetch failed, falling back to relative directory fetch...');
+                    response = await fetch('nse-data.json');
+                }
                 db = await response.json();
                 console.log('📡 Database fetched successfully!', db);
                 
@@ -976,82 +983,95 @@ export function buildNsePage(publicDir: string) {
                 return;
             }
 
-            const company = db.companies.find(c => c.ticker === ticker);
-            const financials = db.financials[ticker];
-            const price = db.market?.prices[ticker];
+            try {
+                const company = db.companies.find(c => c.ticker === ticker);
+                const financials = db.financials[ticker];
+                const price = db.market?.prices[ticker];
 
-            if (!company) return;
+                if (!company) return;
 
-            // Show workspace details, hide empty state
-            document.getElementById('workspace-empty-state').style.display = 'none';
-            document.getElementById('workspace-detail-content').style.display = 'block';
+                // Show workspace details, hide empty state
+                document.getElementById('workspace-empty-state').style.display = 'none';
+                document.getElementById('workspace-detail-content').style.display = 'block';
 
-            // Populate header
-            document.getElementById('detail-name').innerText = company.name;
-            document.getElementById('detail-ticker').innerText = company.ticker;
-            document.getElementById('detail-sector').innerText = company.sector;
-            
-            const priceCol = document.getElementById('detail-price-col');
-            if (price !== undefined) {
-                document.getElementById('detail-price').innerText = \`KES \${price.toFixed(2)}\`;
-                priceCol.style.display = 'block';
-                const badge = document.getElementById('detail-price-live-badge');
-                if (badge) {
-                    badge.style.display = (db.market && db.market.isLive) ? 'inline-block' : 'none';
-                }
-            } else {
-                priceCol.style.display = 'none';
-            }
-
-            // Populate stats card & Dynamic ratios
-            if (financials && financials.metrics) {
-                const periods = Object.keys(financials.metrics).sort().reverse();
-                const latestPeriod = periods[0];
-                const latestMetrics = latestPeriod ? financials.metrics[latestPeriod] : {};
-                const latestRatios = (financials.ratios && latestPeriod) ? financials.ratios[latestPeriod] : {};
-
-                // Revenue LTM
-                const rev = latestMetrics["Revenue"];
-                document.getElementById('stat-revenue').innerText = rev !== undefined ? \`KES \${rev.toFixed(1)}B\` : '—';
-
-                // Net Income LTM
-                const net = latestMetrics["Net Income"];
-                document.getElementById('stat-netincome').innerText = net !== undefined ? \`KES \${net.toFixed(1)}B\` : '—';
-
-                // Compute dynamic ROIC
-                const roic = calculateROIC(latestMetrics);
-                document.getElementById('stat-roic').innerText = roic !== null ? \`\${roic.toFixed(1)}%\` : '—';
-
-                // Compute dynamic ROE
-                const roe = calculateROE(latestMetrics, latestRatios);
-                document.getElementById('stat-roe').innerText = roe !== null ? \`\${roe.toFixed(1)}%\` : '—';
-
-                // 1. Render Financial Table
-                renderFinancialsTable(financials.metrics, periods);
-
-                // 2. Render Key Ratios Table
-                renderRatiosTable(financials.ratios || {}, periods, financials.metrics);
-
-                // 3. Render Insights List
-                renderInsights(financials.insights || []);
-
-                // 4. Render Announcements List
-                renderAnnouncements(financials.announcements || []);
-            } else {
-                // No financials available
-                document.getElementById('stat-revenue').innerText = '—';
-                document.getElementById('stat-netincome').innerText = '—';
-                document.getElementById('stat-roic').innerText = '—';
-                document.getElementById('stat-roe').innerText = '—';
+                // Populate header
+                document.getElementById('detail-name').innerText = company.name;
+                document.getElementById('detail-ticker').innerText = company.ticker;
+                document.getElementById('detail-sector').innerText = company.sector;
                 
-                document.getElementById('financials-table-box').innerHTML = \`<p style="color: var(--meta); font-size: 0.8rem; margin: 1rem 0;">No financial metrics database found for \${ticker}</p>\`;
-                document.getElementById('ratios-table-box').innerHTML = \`<p style="color: var(--meta); font-size: 0.8rem; margin: 1rem 0;">No key efficiency ratios found for \${ticker}</p>\`;
-                document.getElementById('insights-list-box').innerHTML = \`<p style="color: var(--meta); font-size: 0.8rem; margin: 1rem 0;">No fundamental analysis quotes found for \${ticker}</p>\`;
-                document.getElementById('announcements-list-box').innerHTML = \`<p style="color: var(--meta); font-size: 0.8rem; margin: 1rem 0;">No regulatory announcements registered for \${ticker}</p>\`;
-            }
+                const priceCol = document.getElementById('detail-price-col');
+                if (price !== undefined && price !== null) {
+                    const priceNum = typeof price === 'number' ? price : parseFloat(price);
+                    if (!isNaN(priceNum)) {
+                        document.getElementById('detail-price').innerText = \`KES \${priceNum.toFixed(2)}\`;
+                        priceCol.style.display = 'block';
+                        const badge = document.getElementById('detail-price-live-badge');
+                        if (badge) {
+                            badge.style.display = (db.market && db.market.isLive) ? 'inline-block' : 'none';
+                        }
+                    } else {
+                        priceCol.style.display = 'none';
+                    }
+                } else {
+                    priceCol.style.display = 'none';
+                }
 
-            // Keep current tab active
-            switchTab(activeTab);
+                // Populate stats card & Dynamic ratios
+                if (financials && financials.metrics) {
+                    const periods = Object.keys(financials.metrics).sort().reverse();
+                    const latestPeriod = periods[0];
+                    const latestMetrics = latestPeriod ? financials.metrics[latestPeriod] : {};
+                    const latestRatios = (financials.ratios && latestPeriod) ? financials.ratios[latestPeriod] : {};
+
+                    // Revenue LTM
+                    const rev = latestMetrics["Revenue"];
+                    const revNum = typeof rev === 'number' ? rev : parseFloat(rev);
+                    document.getElementById('stat-revenue').innerText = (!isNaN(revNum) && rev !== null && rev !== undefined) ? \`KES \${revNum.toFixed(1)}B\` : '—';
+
+                    // Net Income LTM
+                    const net = latestMetrics["Net Income"];
+                    const netNum = typeof net === 'number' ? net : parseFloat(net);
+                    document.getElementById('stat-netincome').innerText = (!isNaN(netNum) && net !== null && net !== undefined) ? \`KES \${netNum.toFixed(1)}B\` : '—';
+
+                    // Compute dynamic ROIC
+                    const roic = calculateROIC(latestMetrics);
+                    const roicNum = typeof roic === 'number' ? roic : parseFloat(roic);
+                    document.getElementById('stat-roic').innerText = (!isNaN(roicNum) && roic !== null) ? \`\${roicNum.toFixed(1)}%\` : '—';
+
+                    // Compute dynamic ROE
+                    const roe = calculateROE(latestMetrics, latestRatios);
+                    const roeNum = typeof roe === 'number' ? roe : parseFloat(roe);
+                    document.getElementById('stat-roe').innerText = (!isNaN(roeNum) && roe !== null) ? \`\${roeNum.toFixed(1)}%\` : '—';
+
+                    // 1. Render Financial Table
+                    renderFinancialsTable(financials.metrics, periods);
+
+                    // 2. Render Key Ratios Table
+                    renderRatiosTable(financials.ratios || {}, periods, financials.metrics);
+
+                    // 3. Render Insights List
+                    renderInsights(financials.insights || []);
+
+                    // 4. Render Announcements List
+                    renderAnnouncements(financials.announcements || []);
+                } else {
+                    // No financials available
+                    document.getElementById('stat-revenue').innerText = '—';
+                    document.getElementById('stat-netincome').innerText = '—';
+                    document.getElementById('stat-roic').innerText = '—';
+                    document.getElementById('stat-roe').innerText = '—';
+                    
+                    document.getElementById('financials-table-box').innerHTML = \`<p style="color: var(--meta); font-size: 0.8rem; margin: 1rem 0;">No financial metrics database found for \${ticker}</p>\`;
+                    document.getElementById('ratios-table-box').innerHTML = \`<p style="color: var(--meta); font-size: 0.8rem; margin: 1rem 0;">No key efficiency ratios found for \${ticker}</p>\`;
+                    document.getElementById('insights-list-box').innerHTML = \`<p style="color: var(--meta); font-size: 0.8rem; margin: 1rem 0;">No fundamental analysis quotes found for \${ticker}</p>\`;
+                    document.getElementById('announcements-list-box').innerHTML = \`<p style="color: var(--meta); font-size: 0.8rem; margin: 1rem 0;">No regulatory announcements registered for \${ticker}</p>\`;
+                }
+
+                // Keep current tab active
+                switchTab(activeTab);
+            } catch (err) {
+                console.error("❌ Error rendering stock details:", err);
+            }
         }
 
         // Render high-performance financial metrics table
@@ -1075,7 +1095,8 @@ export function buildNsePage(publicDir: string) {
                 rowHtml += \`<tr><td class="metric-name">\${m}</td>\`;
                 periods.forEach(p => {
                     const val = metrics[p]?.[m];
-                    const valStr = val !== undefined ? val.toFixed(1) : '—';
+                    const valNum = typeof val === 'number' ? val : parseFloat(val);
+                    const valStr = (!isNaN(valNum) && val !== null && val !== undefined) ? valNum.toFixed(1) : '—';
                     rowHtml += \`<td class="period-val">\${valStr}</td>\`;
                 });
                 rowHtml += '</tr>';
@@ -1131,8 +1152,9 @@ export function buildNsePage(publicDir: string) {
                         }
                     }
 
-                    const valStr = val !== null ? val.toFixed(2) : '—';
-                    rowHtml += \`<td class="period-val">\${valStr}\${val !== null && label.includes("%") ? '%' : ''}</td>\`;
+                    const valNum = typeof val === 'number' ? val : parseFloat(val);
+                    const valStr = (!isNaN(valNum) && val !== null && val !== undefined) ? valNum.toFixed(2) : '—';
+                    rowHtml += \`<td class="period-val">\${valStr}\${!isNaN(valNum) && val !== null && label.includes("%") ? '%' : ''}</td>\`;
                 });
                 rowHtml += '</tr>';
             });

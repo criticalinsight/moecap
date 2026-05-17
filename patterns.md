@@ -245,4 +245,33 @@ We implement a **Dynamic Data Overlay Pattern**:
 - **Immediate Page Intactness**: The UI renders instantly with high completeness using local fallback prices if network scraping fails.
 - **Secure and Lightweight**: Shipping zero external SDKs, heavy tracking codes, or backend runtime environments.
 
+---
+
+## 7. Decoupled Fallback Resource Loading (Environment-Agnostic Resource Fetching)
+
+### Context & Problem
+Static files or directories that load their database asset dynamically via client-side fetches (`fetch('/nse/nse-data.json')`) are heavily coupled to the exact URL nesting structure of the production web server. If the files are previewed in other contexts (e.g. locally inside a repository folder, on a custom domain subfolder, or running a raw offline `index.html` via `file://`), the fetch requests fail with 404s, crashing the page and preventing user interactions.
+
+### Pattern Solution
+Implement an asynchronous, progressive fallback chain that gracefully walks through alternative directory structures, guaranteeing resource resolution in all contexts:
+
+```javascript
+let response;
+try {
+    // 1. Try host-relative absolute routing first
+    response = await fetch('/nse/nse-data.json');
+    if (!response.ok) throw new Error("Status: " + response.status);
+} catch (e) {
+    console.log('⚠️ Host-relative fetch failed, trying local directory fallback...');
+    // 2. Fall back to relative directory paths
+    response = await fetch('nse-data.json');
+}
+db = await response.json();
+```
+
+### Benefits
+- **Absolute Portability**: The compiled HTML and data assets can be copied, moved, or opened anywhere (even offline on a local folder) and will run perfectly.
+- **Flawless Local Development**: Developers can preview single files directly or run local test servers without having to configure virtual path mappings or complex host redirection rules.
+- **Operational Robustness**: The page behaves predictably regardless of host variations, reverse-proxy configurations, or CDN rewrite routing rules.
+
 

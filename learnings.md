@@ -98,3 +98,21 @@ We implemented an edge-resilient, zero-auth, live-scraping synchronization pipel
 3. **Dynamic Memory Merging**: The parsed tick-by-tick prices are merged onto the pre-rendered local static dataset (`db.market.prices`).
 4. **Resilient Degradation**: If the proxy is down or the scraper is blocked, the terminal degrades gracefully and displays the pristine, compiled, time-stamped static prices from the compiled JSON database, keeping the interface completely responsive.
 
+---
+
+## 8. Resilient Type-Guarding & Fallback Fetching in Client-Side Renders
+
+**The Anti-Pattern**:
+Relying on direct type-casting and assuming absolute structural validity for cached or fetched JSON databases. When a single entry is modified, is missing, or is returned as a string format (e.g. `val.toFixed(2)` being called on a string value or a missing field), the entire client-side execution throws an uncaught JavaScript runtime TypeError. This halts the click event handler silently in the background, leaving the user with a broken, frozen UI panel.
+
+Additionally, using a hardcoded, environment-coupled absolute path `/nse/nse-data.json` for data fetches will fail during local file exploration (`file://` scheme) or during developer preview servers running under different subfolders or subdomains.
+
+**The Solution (Rich Hickey De-complecting)**:
+1. **Sanitized Parsing Guards**: We refactored all visual formatting functions (`toFixed`, metrics operations, table rendering loops) to run through absolute parsing-guards. The system processes fields with safe `parseFloat` and `isNaN` filters, separating the *rendering structure* from the *underlying database types*:
+   ```javascript
+   const valNum = typeof val === 'number' ? val : parseFloat(val);
+   const valStr = (!isNaN(valNum) && val !== null && val !== undefined) ? valNum.toFixed(2) : '—';
+   ```
+2. **Environment-Decoupled Resource Fetching**: Rather than coupling resource locations to production directories, the background fetch runs an asynchronous retry-fallback sequence, trying the host-relative `/nse/nse-data.json` first, and dynamically falling back to the directory-relative `nse-data.json` if it fails.
+3. **Granular Try-Catch Isolation**: The central stock selector click handler is encapsulated inside a scoped `try-catch` wrapper. Any data anomalies or dynamic formatting failures are caught, logged, and isolated without ever halting the main thread or freezing the UI workspace, preserving absolute operational uptime.
+
