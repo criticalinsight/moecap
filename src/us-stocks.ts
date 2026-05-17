@@ -34,9 +34,31 @@ export function getMessageText(text: any): string {
   return '';
 }
 
-// Convert markdown-like text to premium semantic HTML
+// Helper to format block description text into multiple paragraphs separated by double line breaks
+export function formatRemainingText(text: string): string {
+  if (text.startsWith("-") || text.startsWith("*")) {
+    const items = text.split(/\n/).map(line => {
+      const cleaned = line.replace(/^[-*]\s*/, '').trim();
+      return `<li>${cleaned}</li>`;
+    }).join('\n');
+    return `<ul style="margin: 0.5rem 0 1.2rem 0; padding-left: 1.5rem;">${items}</ul>`;
+  }
+  
+  return text
+    .split(/\n/)
+    .map(line => line.trim())
+    .filter(line => line.length > 0)
+    .map(line => `<p style="margin: 0.5rem 0 1.2rem 0; line-height: 1.6;">${line}</p>`)
+    .join('\n');
+}
+
+// Convert markdown-like text to premium semantic HTML with beautiful colored headers and paragraph double line breaks
 export function formatStockBody(body: string): string {
-  const blocks = body.split(/\n\s*\n/).map(b => b.trim()).filter(b => b.length > 0);
+  // Pre-process the body: if a line starts with a number and dot (e.g., "1. What they sell...") or is a known header, 
+  // ensure there is a double newline before it so it splits into its own block!
+  let processedBody = body;
+  processedBody = processedBody.replace(/\n(\d+\.\s+)/g, '\n\n$1');
+
   const knownHeaders = new Set([
     "Executive Summary",
     "What They Sell and Who Buys",
@@ -54,27 +76,33 @@ export function formatStockBody(body: string): string {
     "Catalysts and Time Horizon"
   ]);
 
+  for (const header of knownHeaders) {
+    const regex = new RegExp(`\\n(${header})`, 'g');
+    processedBody = processedBody.replace(regex, '\n\n$1');
+  }
+
+  const blocks = processedBody.split(/\n\s*\n/).map(b => b.trim()).filter(b => b.length > 0);
+
   return blocks.map(block => {
     const lines = block.split('\n');
     const firstLine = lines[0].trim();
+    const cleanLine = firstLine.replace(/:$/, '').trim();
     
-    // Check if the first line is a known header or matches header characteristics
-    if (knownHeaders.has(firstLine) || (firstLine.length < 50 && !firstLine.includes(".") && !firstLine.startsWith("-") && !firstLine.startsWith("*"))) {
-      const headerHtml = `<h4 style="color:var(--accent); font-size:0.95rem; margin-top:1.5rem; margin-bottom:0.5rem; border-bottom: 1px dashed var(--border); padding-bottom:0.25rem;">${firstLine}</h4>`;
+    // Check if the first line is a numbered header or a known header
+    const numberedMatch = cleanLine.match(/^(\d+\.\s+[^:\n]+)/);
+    const isKnownHeader = Array.from(knownHeaders).some(kh => cleanLine.toLowerCase().includes(kh.toLowerCase()));
+
+    if (numberedMatch || isKnownHeader || (cleanLine.length < 60 && !cleanLine.includes(".") && !cleanLine.startsWith("-") && !cleanLine.startsWith("*"))) {
+      let titleText = cleanLine;
+      if (!titleText.endsWith(':')) {
+        titleText += ':';
+      }
+
+      const headerHtml = `<h4 style="color: var(--accent); font-size: 1.05rem; font-weight: bold; margin-top: 2rem; margin-bottom: 0.8rem; border-bottom: 1px dashed var(--border); padding-bottom: 0.3rem;">${titleText}</h4>`;
       
       const remainingText = lines.slice(1).join('\n').trim();
       if (remainingText) {
-        let remainingHtml = '';
-        if (remainingText.startsWith("-") || remainingText.startsWith("*")) {
-          const items = remainingText.split(/\n/).map(line => {
-            const cleaned = line.replace(/^[-*]\s*/, '').trim();
-            return `<li>${cleaned}</li>`;
-          }).join('\n');
-          remainingHtml = `<ul style="margin: 0.5rem 0; padding-left: 1.5rem;">${items}</ul>`;
-        } else {
-          remainingHtml = `<p style="margin: 0.5rem 0 1rem 0; line-height: 1.6;">${remainingText}</p>`;
-        }
-        return `${headerHtml}\n${remainingHtml}`;
+        return `${headerHtml}\n${formatRemainingText(remainingText)}`;
       }
       return headerHtml;
     }
@@ -85,15 +113,24 @@ export function formatStockBody(body: string): string {
         const cleaned = line.replace(/^[-*]\s*/, '').trim();
         return `<li>${cleaned}</li>`;
       }).join('\n');
-      return `<ul style="margin: 0.5rem 0; padding-left: 1.5rem;">${items}</ul>`;
+      return `<ul style="margin: 0.5rem 0 1.2rem 0; padding-left: 1.5rem;">${items}</ul>`;
     }
 
-    // Regular paragraph (no header on first line)
-    return `<p style="margin: 0.5rem 0 1rem 0; line-height: 1.6;">${block}</p>`;
+    // Regular paragraphs (no header on first line)
+    return formatRemainingText(block);
   }).join('\n');
 }
 
-// Parse, deduplicate, and sort stock ideas from us-stocks.json
+// Get sorting weight of rating: green gets highest priority, then yellow, then red
+function getRatingWeight(rating: string | undefined): number {
+  if (!rating) return 3;
+  if (rating.includes("🟢")) return 0;
+  if (rating.includes("🟡")) return 1;
+  if (rating.includes("🔴")) return 2;
+  return 3;
+}
+
+// Parse, deduplicate, and sort stock ideas from us-stocks.json (green ratings first)
 export function parseStockIdeas(filePath: string): StockIdea[] {
   if (!existsSync(filePath)) {
     console.warn(`⚠️ Warning: US stocks JSON file not found at ${filePath}`);
@@ -161,7 +198,14 @@ export function parseStockIdeas(filePath: string): StockIdea[] {
     }
   }
 
-  return Array.from(stocksMap.values()).sort((a, b) => a.ticker.localeCompare(b.ticker));
+  return Array.from(stocksMap.values()).sort((a, b) => {
+    const weightA = getRatingWeight(a.meta.rating);
+    const weightB = getRatingWeight(b.meta.rating);
+    if (weightA !== weightB) {
+      return weightA - weightB;
+    }
+    return a.ticker.localeCompare(b.ticker);
+  });
 }
 
 // Render stock ideas into dynamic details-based HTML accordions

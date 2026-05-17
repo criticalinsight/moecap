@@ -91,4 +91,68 @@ This is a regular concluding paragraph.`;
     expect(parsed[1].ticker).toBe("MSFT");
     expect(parsed[1].meta.company_name).toBe("Microsoft Corp.");
   });
+
+  test("parseStockIdeas sorts green rating first, then yellow, then red", () => {
+    const ratingMockDb = {
+      messages: [
+        {
+          id: 1,
+          type: "message",
+          date: "2026-04-20T10:00:00",
+          text: `---\ntitle: RED - Red Ticker\nrating: 🔴\n---\n\nExecutive Summary\nRed pick.`
+        },
+        {
+          id: 2,
+          type: "message",
+          date: "2026-04-20T10:00:00",
+          text: `---\ntitle: GRN - Green Ticker\nrating: 🟢\n---\n\nExecutive Summary\nGreen pick.`
+        },
+        {
+          id: 3,
+          type: "message",
+          date: "2026-04-20T10:00:00",
+          text: `---\ntitle: YEL - Yellow Ticker\nrating: 🟡\n---\n\nExecutive Summary\nYellow pick.`
+        },
+        {
+          id: 4,
+          type: "message",
+          date: "2026-04-20T10:00:00",
+          text: `---\ntitle: AAA - Another Green Ticker\nrating: 🟢\n---\n\nExecutive Summary\nAnother green pick.`
+        }
+      ]
+    };
+
+    const tempFilePath = "/tmp/mock-rating-stocks.json";
+    writeFileSync(tempFilePath, JSON.stringify(ratingMockDb), "utf-8");
+
+    const parsed = parseStockIdeas(tempFilePath);
+    
+    expect(parsed.length).toBe(4);
+    // Green picks first, sorted alphabetically within their group
+    expect(parsed[0].ticker).toBe("AAA"); // Green AAA
+    expect(parsed[1].ticker).toBe("GRN"); // Green GRN
+    expect(parsed[2].ticker).toBe("YEL"); // Yellow YEL
+    expect(parsed[3].ticker).toBe("RED"); // Red RED
+  });
+
+  test("formatStockBody splits single-spaced numbered descriptions into separate paragraphs", () => {
+    const rawBody = `Executive Summary: This is summary.
+1. What They Sell and Who Buys: They sell flash memory.
+2. How They Make Money (Revenue streams): By high volume sales.
+Some closing notes here.`;
+
+    const html = formatStockBody(rawBody);
+
+    // Section title matches
+    expect(html).toContain("color: var(--accent)");
+    expect(html).toContain("Executive Summary:");
+    expect(html).toContain("1. What They Sell and Who Buys:");
+    
+    // Check for double line breaks (paragraphs with margin)
+    expect(html).toContain('margin: 0.5rem 0 1.2rem 0');
+    expect(html).toContain("<p");
+    expect(html).toContain("They sell flash memory.");
+    expect(html).toContain("By high volume sales.");
+    expect(html).toContain("Some closing notes here.");
+  });
 });
