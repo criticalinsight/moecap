@@ -22,17 +22,19 @@ Visit: [moecapital.com](https://moecapital.com)
 ```text
 /
 ├── src/
-│   ├── content.ts   # Core site content & link database
-│   ├── view.ts      # HTML Template & rendering engine
-│   └── assets.ts    # Asset Discovery & Manifest Generation
-├── functions/
-│   └── nse/         # Cloudflare Pages Function routing to Kenya-ROIC
+│   ├── content.ts    # Core site content & watchlists metadata
+│   ├── view.ts       # Main dashboard HTML template & layout compiler
+│   ├── nse.ts        # Dynamic NSE Terminal HTML compiler
+│   ├── us-stocks.ts  # Compile-time US stock ideas database parser
+│   └── assets.ts     # Directory scanner & asset manifest generator
 ├── scripts/
-│   └── build-site.ts # Main build entry point
-├── public/          # Build output (Static files & Assets)
-├── lib/             # Curated investing books (EPUB/PDF)
-├── fx/              # Trading & Technical analysis resources
-└── tests/           # Vitest-based verification suite
+│   └── build-site.ts # Unified build pipeline controller
+├── public/           # Production ready static assets (HTML, JSON, lib, fx)
+├── lib/              # Premium investing literature (EPUB/PDF)
+├── fx/               # Trading strategies & technical reports
+├── data/
+│   └── nse-data.json # Offline Securities Exchange financials database
+└── tests/            # TDD integration & validation test suites
 ```
 
 ## 🚀 Getting Started
@@ -51,11 +53,15 @@ bun install
 ### Development & Build
 
 ```bash
-# Build the unified site
+# Compile and build the unified static site
 bun run build
 
-# Run tests
+# Run core unit and integration tests (19 tests)
 bun test
+
+# Run Playwright E2E browser details click verification
+bunx playwright install chromium
+bun run /Users/moe/.gemini/antigravity/brain/bb3c5852-964f-47b9-b717-9506102c0f9f/scratch/playwright_test.ts
 ```
 
 ### Deployment
