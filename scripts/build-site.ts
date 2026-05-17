@@ -1,6 +1,7 @@
 import { renderPage } from "../src/view";
 import { getManifest } from "../src/assets";
-import { CONTENT } from "../src/content";
+import { CONTENT, METADATA } from "../src/content";
+import { getUsStocksNode } from "../src/us-stocks";
 import { writeFileSync, existsSync, mkdirSync, rmSync, cpSync } from "node:fs";
 import * as fs from "node:fs";
 import { join } from "node:path";
@@ -33,11 +34,20 @@ try {
         assets: assets.filter(a => a.category === cat)
     }));
 
-    // 2. Merge with Static Content
-    const allNodes = [...CONTENT, ...assetNodes];
+    // 2. Merge with Static Content (integrating dynamic US stock ideas)
+    const stocksJsonPath = join(BASE_PATH, "us-stocks.json");
+    console.log(`📈 Dynamically parsing and integrating US stock ideas from: ${stocksJsonPath}`);
+    const resolvedContent = CONTENT.map(node => {
+        if (node.id === "us-stocks") {
+            return getUsStocksNode(stocksJsonPath);
+        }
+        return node;
+    });
+
+    const allNodes = [...resolvedContent, ...assetNodes];
 
     // 3. Render and Write
-    const html = renderPage(allNodes);
+    const html = renderPage(allNodes, METADATA);
 
     const outputPath = join(PUBLIC_DIR, "index.html");
     writeFileSync(outputPath, html);

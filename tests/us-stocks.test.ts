@@ -1,0 +1,94 @@
+import { describe, test, expect } from "bun:test";
+import { getMessageText, formatStockBody, parseStockIdeas } from "../src/us-stocks";
+import { writeFileSync } from "node:fs";
+
+describe("US Stocks Engine Tests", () => {
+  test("getMessageText handles string and array structures", () => {
+    expect(getMessageText("test-string")).toBe("test-string");
+    
+    const arrayFormat = [
+      "plain text ",
+      { text: "bold text", type: "bold" },
+      " normal text"
+    ];
+    expect(getMessageText(arrayFormat)).toBe("plain text bold text normal text");
+  });
+
+  test("formatStockBody parses section headers, bullet lists, and paragraphs", () => {
+    const rawBody = `Executive Summary
+The company is doing extremely well.
+
+What They Sell and Who Buys
+They sell premium software to enterprise companies.
+
+Competitive Edge
+- Brand reputation
+- High switching costs
+- Proprietary algorithms
+
+This is a regular concluding paragraph.`;
+
+    const html = formatStockBody(rawBody);
+
+    // Section headers
+    expect(html).toContain("Executive Summary");
+    expect(html).toContain("What They Sell and Who Buys");
+    expect(html).toContain("Competitive Edge");
+    expect(html).toContain("h4");
+
+    // Lists
+    expect(html).toContain("ul");
+    expect(html).toContain("li");
+    expect(html).toContain("Brand reputation");
+    expect(html).toContain("High switching costs");
+
+    // Paragraphs
+    expect(html).toContain("<p");
+    expect(html).toContain("This is a regular concluding paragraph.");
+  });
+
+  test("parseStockIdeas correctly parses and deduplicates messages", () => {
+    // Write a mock json database to test our parser
+    const mockDb = {
+      messages: [
+        {
+          id: 1,
+          type: "message",
+          date: "2026-04-20T10:00:00",
+          text: `---\ntitle: AAPL - Apple Inc. Analysis\ncompany_name: Apple Inc.\nstock_price: $170.00\npe_ratio: 28.0\nauthor: Moe\nrating: 🟢\nmarket_cap: 2700\n---\n\nExecutive Summary\nApple is great.`
+        },
+        {
+          id: 2,
+          type: "message",
+          date: "2026-04-21T10:00:00",
+          text: `---\ntitle: AAPL - Apple Inc. Analysis\ncompany_name: Apple Inc.\nstock_price: $175.00\npe_ratio: 29.0\nauthor: Moe\nrating: 🟢\nmarket_cap: 2800\n---\n\nExecutive Summary\nApple is still great, updated.`
+        },
+        {
+          id: 3,
+          type: "message",
+          date: "2026-04-20T10:00:00",
+          text: `---\ntitle: MSFT - Microsoft Analysis\ncompany_name: Microsoft Corp.\nstock_price: $400.00\npe_ratio: 35.0\nauthor: Moe\nrating: 🟢\nmarket_cap: 3000\n---\n\nExecutive Summary\nMicrosoft description.`
+        }
+      ]
+    };
+
+    const tempFilePath = "/tmp/mock-us-stocks.json";
+    writeFileSync(tempFilePath, JSON.stringify(mockDb), "utf-8");
+
+    const parsed = parseStockIdeas(tempFilePath);
+
+    // Deduplication check: should have 2 unique stocks (AAPL and MSFT)
+    expect(parsed.length).toBe(2);
+
+    // AAPL should be sorted first (alphabetical sorting by ticker)
+    expect(parsed[0].ticker).toBe("AAPL");
+    // Should have kept the latest record (id: 2, date: 2026-04-21)
+    expect(parsed[0].id).toBe(2);
+    expect(parsed[0].meta.stock_price).toBe("$175.00");
+    expect(parsed[0].body).toContain("Apple is still great, updated.");
+
+    // MSFT should be sorted second
+    expect(parsed[1].ticker).toBe("MSFT");
+    expect(parsed[1].meta.company_name).toBe("Microsoft Corp.");
+  });
+});

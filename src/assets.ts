@@ -20,6 +20,43 @@ export interface ContentNode {
   assets?: AssetMetadata[];
 }
 
+export interface SocialLink {
+  platform: string;
+  url: string;
+  handle: string;
+}
+
+export interface SiteMetadata {
+  title: string;
+  tagline: string;
+  bio: string;
+  socials: SocialLink[];
+  cryptoTelegram: {
+    url: string;
+    label: string;
+  };
+  watchlist: {
+    date: string;
+    stocks: string[];
+    description: string;
+  };
+  historicalPicks: {
+    date: string;
+    stocks: string[];
+    description: string;
+  };
+  partnershipTerms: {
+    fee: string;
+    hurdle: string;
+    performanceAllocation: string;
+    description: string;
+  };
+  kolCampaign: {
+    url: string;
+    label: string;
+  };
+}
+
 export interface AssetMetadata {
   id: string;
   filename: string;
