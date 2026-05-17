@@ -138,7 +138,7 @@ This is a regular concluding paragraph.`;
   test("formatStockBody splits single-spaced numbered descriptions into separate paragraphs", () => {
     const rawBody = `Executive Summary: This is summary.
 1. What They Sell and Who Buys: They sell flash memory.
-2. How They Make Money (Revenue streams): By high volume sales.
+2. How They Make Money (Revenue streams); By high volume sales.
 Some closing notes here.`;
 
     const html = formatStockBody(rawBody);
@@ -147,10 +147,17 @@ Some closing notes here.`;
     expect(html).toContain("color: var(--accent)");
     expect(html).toContain("Executive Summary:");
     expect(html).toContain("1. What They Sell and Who Buys:");
+    expect(html).toContain("2. How They Make Money (Revenue streams):");
+    
+    // Check that description text is NOT in h4 (colored), but in p (uncolored)
+    expect(html).not.toContain("Executive Summary: This is summary.</h4>");
+    expect(html).not.toContain("1. What They Sell and Who Buys: They sell flash memory.</h4>");
+    expect(html).not.toContain("2. How They Make Money (Revenue streams): By high volume sales.</h4>");
     
     // Check for double line breaks (paragraphs with margin)
     expect(html).toContain('margin: 0.5rem 0 1.2rem 0');
     expect(html).toContain("<p");
+    expect(html).toContain("This is summary.");
     expect(html).toContain("They sell flash memory.");
     expect(html).toContain("By high volume sales.");
     expect(html).toContain("Some closing notes here.");

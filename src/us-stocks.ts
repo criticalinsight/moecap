@@ -89,20 +89,43 @@ export function formatStockBody(body: string): string {
     const cleanLine = firstLine.replace(/:$/, '').trim();
     
     // Check if the first line is a numbered header or a known header
-    const numberedMatch = cleanLine.match(/^(\d+\.\s+[^:\n]+)/);
+    const numberedMatch = cleanLine.match(/^(\d+\.\s+[^:\n;]+)/);
     const isKnownHeader = Array.from(knownHeaders).some(kh => cleanLine.toLowerCase().includes(kh.toLowerCase()));
 
     if (numberedMatch || isKnownHeader || (cleanLine.length < 60 && !cleanLine.includes(".") && !cleanLine.startsWith("-") && !cleanLine.startsWith("*"))) {
-      let titleText = cleanLine;
-      if (!titleText.endsWith(':')) {
-        titleText += ':';
+      let titlePart = cleanLine;
+      let descriptionPart = "";
+
+      const colonIdx = cleanLine.indexOf(":");
+      const semiIdx = cleanLine.indexOf(";");
+      let splitIdx = -1;
+
+      if (colonIdx !== -1 && semiIdx !== -1) {
+        splitIdx = Math.min(colonIdx, semiIdx);
+      } else if (colonIdx !== -1) {
+        splitIdx = colonIdx;
+      } else if (semiIdx !== -1) {
+        splitIdx = semiIdx;
       }
 
+      if (splitIdx !== -1 && splitIdx < 60) {
+        titlePart = cleanLine.slice(0, splitIdx).trim();
+        descriptionPart = cleanLine.slice(splitIdx + 1).trim();
+      }
+
+      const titleText = `${titlePart}:`;
       const headerHtml = `<h4 style="color: var(--accent); font-size: 1.05rem; font-weight: bold; margin-top: 2rem; margin-bottom: 0.8rem; border-bottom: 1px dashed var(--border); padding-bottom: 0.3rem;">${titleText}</h4>`;
       
-      const remainingText = lines.slice(1).join('\n').trim();
-      if (remainingText) {
-        return `${headerHtml}\n${formatRemainingText(remainingText)}`;
+      const subsequentText = lines.slice(1).join('\n').trim();
+      let fullDescription = "";
+      if (descriptionPart && subsequentText) {
+        fullDescription = `${descriptionPart}\n${subsequentText}`;
+      } else {
+        fullDescription = descriptionPart || subsequentText;
+      }
+
+      if (fullDescription) {
+        return `${headerHtml}\n${formatRemainingText(fullDescription)}`;
       }
       return headerHtml;
     }
